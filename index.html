@@ -733,6 +733,9 @@
             <h1>Neft Premium Math Lab & Studio</h1>
         </div>
         <div class="header-btns">
+            <button class="btn" id="btn-mute" onclick="toggleMute()">
+                🔊 Audio: On
+            </button>
             <button class="btn btn-lang" id="btn-lang" onclick="toggleLanguage()">
                 🌐 EN | ES
             </button>
@@ -801,7 +804,7 @@
                     <div class="pre-lesson-body" id="body-pre-algebra">
                         <!-- Mini Balance Simulation -->
                         <div style="text-align: center;">
-                            <svg id="svg-pre-algebra-scale" viewBox="0 0 240 120" style="background: white; border-radius: var(--radius-sm); border: 1px solid var(--border-light); width: 100%; max-width: 240px; height: 120px; display: inline-block;">
+                            <svg id="svg-pre-algebra-scale" width="240" height="120" viewBox="0 0 240 120" style="background: white; border-radius: var(--radius-sm); border: 1px solid var(--border-light); width: 100%; max-width: 240px; height: 120px; display: inline-block;">
                                 <!-- Rendered dynamically -->
                             </svg>
                             <div style="display: flex; gap: 6px; justify-content: center; margin-top: 8px; flex-wrap: wrap;">
@@ -829,7 +832,7 @@
                     <p class="card-desc" id="lbl-algebra-desc">A sack of gold (x) and single coins have been placed. Drop items and adjust the unknown core (x) to balance the alchemical scale!</p>
                     
                     <!-- Balance scale SVG Viewport -->
-                    <svg id="svg-scale-plane" class="svg-viewport" viewBox="0 0 400 240" style="background: white;">
+                    <svg id="svg-scale-plane" width="400" height="240" class="svg-viewport" viewBox="0 0 400 240" style="background: white;">
                         <!-- Balance crossbar lever and pans procedurally rendered -->
                     </svg>
 
@@ -882,7 +885,7 @@
                         <!-- Plotting Activity -->
                         <div style="text-align: center;">
                             <div style="font-size: 0.85rem; font-weight: bold; margin-bottom: 4px;" id="lbl-pre-ineq-plot-instruction">Plot the number <span id="pre-ineq-target-val" style="color: var(--accent); font-weight: 800;">-3</span>:</div>
-                            <svg id="svg-pre-ineq-line" viewBox="0 0 240 60" style="background: white; border-radius: var(--radius-sm); border: 1px solid var(--border-light); width: 100%; max-width: 240px; height: 60px; display: inline-block;" onclick="handlePreIneqClick(event)">
+                            <svg id="svg-pre-ineq-line" width="240" height="60" viewBox="0 0 240 60" style="background: white; border-radius: var(--radius-sm); border: 1px solid var(--border-light); width: 100%; max-width: 240px; height: 60px; display: inline-block;" onclick="handlePreIneqClick(event)">
                                 <!-- Rendered dynamically -->
                             </svg>
                             <div class="pre-practice-feedback" id="pre-ineq-plot-feedback"></div>
@@ -957,7 +960,7 @@
                     </div>
 
                     <!-- Number Line SVG Viewport -->
-                    <svg id="svg-ineq-numberline" class="svg-viewport" viewBox="0 0 400 100" style="background: white;">
+                    <svg id="svg-ineq-numberline" width="400" height="100" class="svg-viewport" viewBox="0 0 400 100" style="background: white;">
                         <!-- Procedurally rendered inequality solutions line -->
                     </svg>
 
@@ -994,7 +997,7 @@
                         <!-- Click-to-Shade Activity -->
                         <div style="text-align: center;">
                             <div style="font-size: 0.85rem; font-weight: bold; margin-bottom: 4px;" id="lbl-pre-ratio-shade-instruction">Click slices to shade <span id="pre-ratio-target-fraction" style="color: var(--accent); font-weight: 800;">3/4</span>:</div>
-                            <svg id="svg-pre-ratio-model" viewBox="0 0 120 120" style="background: transparent; width: 100%; max-width: 120px; height: 120px; display: inline-block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));">
+                            <svg id="svg-pre-ratio-model" width="120" height="120" viewBox="0 0 120 120" style="background: white; width: 100%; max-width: 120px; height: 120px; display: inline-block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));">
                                 <!-- Rendered dynamically -->
                             </svg>
                             <div class="pre-practice-feedback" id="pre-ratio-shade-feedback"></div>
@@ -1003,7 +1006,7 @@
                         <div>
                             <div style="font-weight: bold; margin-bottom: 6px; font-size: 0.9rem;" id="lbl-pre-ratio-quest">What fraction is shaded?</div>
                             <div style="background: rgba(0,0,0,0.15); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 8px; display: flex; justify-content: center; align-items: center; margin-bottom: 8px;">
-                                <svg id="svg-pre-ratio-quest-model" viewBox="0 0 160 50" style="background: transparent; width: 100%; max-width: 160px; height: 50px; display: block;">
+                                <svg id="svg-pre-ratio-quest-model" width="160" height="50" viewBox="0 0 160 50" style="background: white; width: 100%; max-width: 160px; height: 50px; display: block;">
                                     <!-- Dynamic visual question slice model -->
                                 </svg>
                             </div>
@@ -1020,7 +1023,7 @@
                     <p class="card-desc" id="lbl-ratio-desc">Blends physical mathematical ratios into musical audio harmonies! Changing multipliers plays perfect fifth, octave, and fourth oscillator triads.</p>
                     
                     <div class="canvas-container" style="position: relative; width: 100%; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 12px;">
-                        <svg id="svg-numberline" class="svg-viewport" viewBox="0 0 500 160" style="background: white; width: 100%; display: block;">
+                        <svg id="svg-numberline" width="500" height="160" class="svg-viewport" viewBox="0 0 500 160" style="background: white; width: 100%; display: block;">
                             <!-- Double numberline axis -->
                         </svg>
                         <canvas id="ratio-sketchpad" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none; z-index: 5;"></canvas>
@@ -1076,7 +1079,7 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; flex-wrap: wrap;">
                             <!-- Fraction SVG Viewport (Circle or Bar) -->
                             <div style="background: rgba(0,0,0,0.15); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 12px; display: flex; justify-content: center; align-items: center; min-height: 150px;">
-                                <svg id="svg-fraction-model" viewBox="0 0 240 130" style="width: 100%; max-width: 240px; height: 130px; display: block; background: transparent; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));">
+                                <svg id="svg-fraction-model" width="240" height="130" viewBox="0 0 240 130" style="width: 100%; max-width: 240px; height: 130px; display: block; background: white; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));">
                                     <!-- Programmatically drawn circle sectors or bar subdivisions -->
                                 </svg>
                             </div>
@@ -1121,7 +1124,7 @@
                         
                         <!-- Single Fraction Number Line representation -->
                         <div style="margin-top: 14px; background: rgba(0,0,0,0.15); border-radius: var(--radius-sm); border: 1px solid var(--border-light); padding: 8px 12px;">
-                            <svg id="svg-fraction-numberline" viewBox="0 0 440 60" style="width: 100%; display: block; background: transparent;">
+                            <svg id="svg-fraction-numberline" width="440" height="60" viewBox="0 0 440 60" style="width: 100%; display: block; background: white;">
                                 <!-- Fraction numberline axis from 0 to 1 with ticks -->
                             </svg>
                         </div>
@@ -1141,7 +1144,7 @@
                         <!-- Hunting Activity -->
                         <div style="text-align: center;">
                             <div style="font-size: 0.85rem; font-weight: bold; margin-bottom: 4px;" id="lbl-pre-cart-instruction">Find the target star on the grid:</div>
-                            <svg id="svg-pre-cartesian-grid" viewBox="0 0 160 160" style="background: white; border-radius: var(--radius-sm); border: 1px solid var(--border-light); width: 100%; max-width: 160px; height: 160px; display: inline-block;" onclick="handlePreCartClick(event)">
+                            <svg id="svg-pre-cartesian-grid" width="160" height="160" viewBox="0 0 160 160" style="background: white; border-radius: var(--radius-sm); border: 1px solid var(--border-light); width: 100%; max-width: 160px; height: 160px; display: inline-block;" onclick="handlePreCartClick(event)">
                                 <!-- Small coordinates grid -->
                             </svg>
                             <div class="pre-practice-feedback" id="pre-cart-plot-feedback"></div>
@@ -1169,7 +1172,7 @@
                     </div>
 
                     <!-- Cartesian coordinates grid SVG Viewport -->
-                    <svg id="svg-grid-plane" class="svg-viewport" viewBox="0 0 320 320" style="background: white;" onclick="handleGridClick(event)">
+                    <svg id="svg-grid-plane" width="320" height="320" class="svg-viewport" viewBox="0 0 320 320" style="background: white;" onclick="handleGridClick(event)">
                         <!-- Grid markers and snapping dots -->
                     </svg>
 
@@ -1231,6 +1234,8 @@
                         <option value="1">Quest 1: Wizard's Sack (x + 2 = 5)</option>
                         <option value="2">Quest 2: Double Elixir (2x = 6)</option>
                         <option value="3">Quest 3: Alchemist Shields (3x + 1 = 10)</option>
+                        <option value="4">Quest 4: Champion's Scale (x + 5 = 7)</option>
+                        <option value="5">Quest 5: Elixir & Crystals (2x + 3 = 11)</option>
                     </select>
                 </div>
                 <div>
@@ -1255,18 +1260,14 @@
             <strong style="color: white; font-family: var(--font-display);">⚡ Diagnostics Console</strong>
             <button onclick="document.getElementById('diag-panel').style.display='none'" style="background:none; border:none; color:var(--danger); font-weight:800; cursor:pointer;">X</button>
         </div>
-        <div class="diag-log-container" id="diag-log"></div>
-        <button class="btn btn-primary" style="width:100%; font-size:0.8rem; height: 32px; display: flex; justify-content: center;" onclick="document.getElementById('diag-panel').style.display='none'">Close</button>
-    </div>
-
-    <footer>
+<footer>
         <p>&copy; 2026 Neft Learning Systems. Built locally, 100% offline. Designed to support Grade 6 expressions, equations, ratios, and area standards.</p>
     </footer>
 
     <script>
-        // ==========================================
+        // ============================================================================
         // 1. CONFIGURATION
-        // ==========================================
+        // ============================================================================
         const CONFIG = {
             colors: {
                 primary: '#8b5cf6',
@@ -1308,6 +1309,26 @@
                     targetX: 3,
                     leftItems: { x: 3, unit: 1 },
                     rightItems: { x: 0, unit: 10 }
+                },
+                {
+                    id: 4,
+                    title: "🛡️ Champion's Scale",
+                    titleEs: "🛡️ Escala del Campeón",
+                    desc: "A champion's sword (x) and 5 shield badges balance 7 badges on the right. Form: x + 5 = 7",
+                    descEs: "Una espada (x) y 5 insignias equilibran 7 insignias. Ecuación: x + 5 = 7",
+                    targetX: 2,
+                    leftItems: { x: 1, unit: 5 },
+                    rightItems: { x: 0, unit: 7 }
+                },
+                {
+                    id: 5,
+                    title: "🏺 Elixir & Crystals",
+                    titleEs: "🏺 Elixir y Cristales",
+                    desc: "Two jars of elixir (2x) and 3 crystals balance 11 crystals on the right. Form: 2x + 3 = 11",
+                    descEs: "Dos frascos de elixir (2x) y 3 cristales equilibran 11. Ecuación: 2x + 3 = 11",
+                    targetX: 4,
+                    leftItems: { x: 2, unit: 3 },
+                    rightItems: { x: 0, unit: 11 }
                 }
             ],
             ineqQuests: [
@@ -1337,6 +1358,24 @@
                     descEs: "Mantén estabilidad: x - 3 > -1. Forma: x - 3 > -1",
                     a: 1, b: -3, op: '>', rhs: -1,
                     targetBoundary: 2, targetDir: 'right', targetClosed: false
+                },
+                {
+                    id: 4,
+                    title: "🛡️ Frozen Perimeter",
+                    titleEs: "🛡️ Perímetro Congelado",
+                    desc: "Formulate safety: 3x - 1 >= 5. Form: 3x - 1 >= 5",
+                    descEs: "Formula seguridad: 3x - 1 >= 5. Forma: 3x - 1 >= 5",
+                    a: 3, b: -1, op: '>=', rhs: 5,
+                    targetBoundary: 2, targetDir: 'right', targetClosed: true
+                },
+                {
+                    id: 5,
+                    title: "⚡ Tesla Surge",
+                    titleEs: "⚡ Sobretensión Tesla",
+                    desc: "Stabilize current: -2x + 3 < -1. Form: -2x + 3 < -1",
+                    descEs: "Estabiliza corriente: -2x + 3 < -1. Forma: -2x + 3 < -1",
+                    a: -2, b: 3, op: '<', rhs: -1,
+                    targetBoundary: 2, targetDir: 'right', targetClosed: false
                 }
             ],
             tiles: [
@@ -1345,29 +1384,170 @@
             ]
         };
 
-        // ==========================================
-        // 2. CONFIG VALIDATOR
-        // ==========================================
-        function validateConfig() {
-            if (!CONFIG.colors || !CONFIG.quests || !CONFIG.ineqQuests || !CONFIG.tiles) {
-                throw new Error("Studio configuration is corrupt or missing standard parameters.");
-            }
-        }
+        const PRE_LESSON_QUESTIONS = {
+            algebra: [
+                { q: "4 + 3 = 5 + ?", opts: [1, 2, 3, 4], ans: 2 },
+                { q: "9 - 2 = 3 + ?", opts: [3, 4, 5, 6], ans: 4 },
+                { q: "6 + ? = 10 - 1", opts: [2, 3, 4, 5], ans: 3 }
+            ],
+            inequality: [
+                { q: "-5 [?] -2", opts: ["<", ">", "="], ans: "<" },
+                { q: "3 [?] -8", opts: ["<", ">", "="], ans: ">" },
+                { q: "-4 [?] -4", opts: ["<", ">", "="], ans: "=" }
+            ],
+            ratio: [
+                { q: "What fraction is shaded?", opts: ["1/3", "2/3", "1/2", "3/4"], ans: "2/3", num: 2, denom: 3 },
+                { q: "What fraction is shaded?", opts: ["2/5", "3/5", "3/4", "4/5"], ans: "3/5", num: 3, denom: 5 },
+                { q: "What fraction is shaded?", opts: ["1/4", "1/3", "2/4", "3/4"], ans: "1/4", num: 1, denom: 4 }
+            ],
+            cartesian: [
+                { q: "Quadrant of point (-4, 3)?", opts: ["Q1 (I)", "Q2 (II)", "Q3 (III)", "Q4 (IV)"], ans: "Q2 (II)", p: {x:-4, y:3} },
+                { q: "Quadrant of point (2, -5)?", opts: ["Q1 (I)", "Q2 (II)", "Q3 (III)", "Q4 (IV)"], ans: "Q4 (IV)", p: {x:2, y:-5} },
+                { q: "Quadrant of point (-1, -1)?", opts: ["Q1 (I)", "Q2 (II)", "Q3 (III)", "Q4 (IV)"], ans: "Q3 (III)", p: {x:-1, y:-1} }
+            ]
+        };
 
-        // ==========================================
-        // 3. STATE MACHINE
-        // ==========================================
+        const TRANSLATIONS = {
+            en: {
+                'score-level': 'Current Quest',
+                'score-stars': 'Quest Stars',
+                'score-streak': 'Balanced Streak',
+                'algebra-title': '⚖️ Alchemical Algebra Balance Scale',
+                'algebra-desc': 'A sack of gold (x) and single coins have been placed. Drop items and adjust the unknown core (x) to balance the alchemical scale!',
+                'place-hint': 'Place tile on:',
+                'opt-left': 'Left Pan',
+                'opt-right': 'Right Pan',
+                'slider-x': 'Variable Unknown Value (x)',
+                'ratio-title': '🧪 Ratio & Fractions Blender',
+                'ratio-desc': 'Blends physical mathematical ratios into musical audio harmonies! Changing multipliers plays perfect fifth, octave, and fourth oscillator triads.',
+                'ratio-base': 'Base Ratio (Beakers : Flasks)',
+                'ratio-mult': 'Scaling Factor (Multiplier)',
+                'cartesian-title': '📐 Cartesian Geometry Sandbox',
+                'cartesian-desc': 'Click snapping grid points. In Polygon mode, calculates perimeter & area. In Vectors & Lines mode, plots vectors, midpoints, slopes, and linear equations.',
+                'journal-title': '📝 Journal & Reflections Notebook',
+                'journal-prompt': 'Write down the steps you follow to balance equations, scale base ratios, and calculate shape areas inside the laboratories.',
+                'journal-placeholder': 'Type your observations here...',
+                'esol-title': 'ESOL Sentence Helper',
+                'journal-saved': 'Saved!',
+                'quest1-starter': 'The story describes "a sack of gold (x) and 2 coins." This translates to the expression x + 2. The word "balances" represents the equals sign (=). Place 1 x-block and 2 units on the Left Pan, and 5 units on the Right Pan. Then adjust x to balance the scale!',
+                'quest1-trans': 'La historia describe "un saco (x) y 2 monedas". Coloque las pesas correctas y ajuste x para equilibrar.',
+                'quest2-starter': 'The story describes "two bottles of elixir (2x) balance 6 crystals." This translates to the equation 2x = 6. Place 2 x-blocks on the Left Pan and 6 units on the Right Pan. Balance the scale by sliding x!',
+                'quest2-trans': 'La historia describe "dos frascos (2x) equilibran 6 cristales". Coloque 2 x-bloques a la izquierda y 6 a la derecha.',
+                'quest3-starter': 'The story describes "three shields (3x) and 1 shield balance 10 shields." This represents 3x + 1 = 10. Place 3 x-blocks and 1 unit on the Left Pan, and 10 units on the Right Pan.',
+                'quest3-trans': 'Representa la ecuación 3x + 1 = 10. Coloque los elementos a las balanzas y equilibre.',
+                'quest4-starter': 'The story describes "a champion\'s sword (x) and 5 shield badges balance 7 badges." This represents x + 5 = 7. Drag 1 x-block and 5 units to the Left Pan, and 7 units to the Right Pan.',
+                'quest4-trans': 'Representa la ecuación x + 5 = 7. Coloque los elementos a las balanzas y equilibre.',
+                'quest5-starter': 'The story describes "two jars of elixir (2x) and 3 crystals balance 11 crystals." This represents 2x + 3 = 11. Place 2 x-blocks and 3 units on the Left Pan, and 11 units on the Right Pan.',
+                'quest5-trans': 'Representa la ecuación 2x + 3 = 11. Coloque los elementos a las balanzas y equilibre.',
+                'ineq-title': '⚔️ Inequality & Number Line Visualizer',
+                'ineq-desc': 'Solve algebraic inequalities and visualize their solution sets on a dynamic, glowing vector number line.',
+                'fraction-sub-title': 'Visual Fraction Builder',
+                'fraction-model': 'Visual Model',
+                'fraction-num': 'Numerator (n)',
+                'fraction-denom': 'Denominator (d)',
+                'ineq-quest-title': 'Inequality Quest Challenge',
+                'coeff-a': 'coeff (a)',
+                'coeff-b': 'constant (b)',
+                'coeff-op': 'operator',
+                'coeff-c': 'constant (c)',
+                'ineq-solved-lbl': '✨ INEQUALITY SOLVED CORRECTLY! ✨',
+                'ineq-solved-lbl-es': '✨ ¡DESIGUALDAD RESUELTA CORRECTAMENTE! ✨',
+                'pre-algebra-title': 'Prerequisite Skill: Arithmetic Balancer',
+                'pre-inequality-title': 'Prerequisite Skill: Number Line Basics',
+                'pre-ratio-title': 'Prerequisite Skill: Fraction Slice Explorer',
+                'pre-cartesian-title': 'Prerequisite Skill: Coordinate Target Hunt',
+                'pre-alge-quest': 'Worksheet: Solve to balance equations',
+                'pre-ineq-quest': 'Worksheet: Choose the comparison sign',
+                'pre-ratio-quest': 'Worksheet: What fraction is shaded?',
+                'pre-cartesian-quest': 'Worksheet: Quadrant coordinate identification',
+                'pre-ineq-plot-instruction': 'Interactive Activity: Plot the target number',
+                'pre-ratio-shade-instruction': 'Interactive Activity: Shade the target slice',
+                'pre-cart-instruction': 'Interactive Activity: Hunt target star on the grid',
+                'dropdown-label': 'Select Lesson / Lab',
+                'dropdown-pre-algebra': 'Pre-Lesson 1: Arithmetic Balancer',
+                'dropdown-algebra': 'Lesson 1: Algebra Balance Scale',
+                'dropdown-pre-inequality': 'Pre-Lesson 2: Number Line Basics',
+                'dropdown-inequality': 'Lesson 2: Inequality Grapher'
+            },
+            es: {
+                'score-level': 'Misión Activa',
+                'score-stars': 'Estrellas Logradas',
+                'score-streak': 'Racha Equilibrada',
+                'algebra-title': '⚖️ Balanza de Equilibrio Algebráico',
+                'algebra-desc': 'Un saco de oro (x) y monedas simples han sido colocados. ¡Coloque pesas y ajuste x para equilibrar la balanza!',
+                'place-hint': 'Colocar ficha en:',
+                'opt-left': 'Platillo Izquierdo',
+                'opt-right': 'Platillo Derecho',
+                'slider-x': 'Valor Variable Incógnito (x)',
+                'ratio-title': '🧪 Relaciones y Fracciones Armónicas',
+                'ratio-desc': '¡Mezcla proporciones matemáticas físicas en armonías musicales de audio! Cambio de multiplicador reproduce acordes.',
+                'ratio-base': 'Relación Base (Vasos : Matraces)',
+                'ratio-mult': 'Factor de Escala (Multiplicador)',
+                'cartesian-title': '📐 Geometría Cartesiana de Sandbox',
+                'cartesian-desc': 'Haga clic en los puntos. En modo Polígono, calcula perímetro y área. En modo Vectores y Líneas, traza vectores, pendientes y ecuaciones.',
+                'journal-title': '📝 Diario y Notas de Reflexiones',
+                'journal-prompt': 'Escriba los pasos que sigue para aislar variables, equilibrar balanzas y calcular áreas poligonales.',
+                'journal-placeholder': 'Escriba sus observaciones aquí...',
+                'esol-title': 'Ayudante de Oraciones ESOL',
+                'journal-saved': '¡Guardado!',
+                'quest1-starter': 'La historia describe "un saco de oro (x) y 2 monedas". Esto se traduce en la expresión x + 2. La palabra "equilibrar" representa el signo igual (=). Coloque 1 bloque x y 2 unidades al platillo izquierdo, y 5 unidades al derecho.',
+                'quest1-trans': 'The story describes "a sack of gold (x) and 2 coins." This translates to the expression x + 2. The word "balances" represents the equals sign (=). Place 1 x-block and 2 units on the Left Pan, and 5 units on the Right Pan. Then adjust x to balance the scale!',
+                'quest2-starter': 'La historia describe "dos frascos de elixir (2x) equilibran 6 cristales". Esto se traduce en la ecuación 2x = 6. Coloque 2 bloques x a la izquierda y 6 unidades a la derecha.',
+                'quest2-trans': 'The story describes "two bottles of elixir (2x) balance 6 crystals." This translates to the equation 2x = 6. Drag 2 x-blocks to the Left Pan and 6 units to the Right Pan. Balance the scale by sliding x!',
+                'quest3-starter': 'Representa la ecuación 3x + 1 = 10. Coloque 3 bloques x y 1 unidad a la izquierda, y 10 unidades a la derecha.',
+                'quest3-trans': 'The story describes "three shields (3x) and 1 shield balance 10 shields." This represents 3x + 1 = 10. Drag 3 x-blocks and 1 unit to the Left Pan, and 10 units to the Right Pan.',
+                'quest4-starter': 'Representa la ecuación x + 5 = 7. Coloque 1 bloque x y 5 unidades a la izquierda, y 7 unidades a la derecha.',
+                'quest4-trans': 'The story describes "a champion\'s sword (x) and 5 shield badges balance 7 badges." This represents x + 5 = 7. Place 1 x-block and 5 units on the Left Pan, and 7 units on the Right Pan.',
+                'quest5-starter': 'Representa la ecuación 2x + 3 = 11. Coloque 2 bloques x y 3 unidades a la izquierda, y 11 unidades a la derecha.',
+                'quest5-trans': 'The story describes "two jars of elixir (2x) and 3 crystals balance 11 crystals." This represents 2x + 3 = 11. Place 2 x-blocks and 3 units on the Left Pan, and 11 units on the Right Pan.',
+                'ineq-title': '⚔️ Visualizador de Desigualdades y Recta Numérica',
+                'ineq-desc': 'Resuelve desigualdades algebraicas y visualiza sus conjuntos de soluciones en una recta numérica vectorial brillante y dinámica.',
+                'fraction-sub-title': 'Constructor de Fracciones Visuales',
+                'fraction-model': 'Modelo Visual',
+                'fraction-num': 'Numerador (n)',
+                'fraction-denom': 'Denominador (d)',
+                'ineq-quest-title': 'Misión de Desafío de Desigualdad',
+                'coeff-a': 'coef (a)',
+                'coeff-b': 'constante (b)',
+                'coeff-op': 'operador',
+                'coeff-c': 'constante (c)',
+                'ineq-solved-lbl': '✨ INEQUALITY SOLVED CORRECTLY! ✨',
+                'ineq-solved-lbl-es': '✨ ¡DESIGUALDAD RESUELTA CORRECTAMENTE! ✨',
+                'pre-algebra-title': 'Requisito Previsto: Balanza Aritmética',
+                'pre-inequality-title': 'Requisito Previsto: Recta Numérica Básica',
+                'pre-ratio-title': 'Requisito Previsto: Fracciones de Pastel',
+                'pre-cartesian-title': 'Requisito Previsto: Caza de Coordenadas',
+                'pre-alge-quest': 'Práctica: Ecuaciones equilibradas',
+                'pre-ineq-quest': 'Práctica: Selecciona el signo correcto',
+                'pre-ratio-quest': 'Práctica: ¿Qué fracción está coloreada?',
+                'pre-cartesian-quest': 'Práctica: Identificación de cuadrantes',
+                'pre-ineq-plot-instruction': 'Actividad: Ubica el número indicado',
+                'pre-ratio-shade-instruction': 'Actividad: Colorea la fracción indicada',
+                'pre-cart-instruction': 'Actividad: Encuentra la estrella en el plano',
+                'dropdown-label': 'Seleccionar Lección / Lab',
+                'dropdown-pre-algebra': 'Pre-Lección 1: Balanza Aritmética',
+                'dropdown-algebra': 'Lección 1: Balanza de Álgebra',
+                'dropdown-pre-inequality': 'Pre-Lección 2: Recta Numérica',
+                'dropdown-inequality': 'Lección 2: Graficador de Desigualdades'
+            }
+        };
+
+        // ============================================================================
+        // 2. STATE MACHINE
+        // ============================================================================
         const STATE = {
             activeTab: 'algebra',
             language: 'en',
             scoreStars: 0,
             scoreStreak: 0,
+            audioMuted: false,
             
             // Algebra Balance Pan states
             currentQuestId: 1,
             valX: 0,
             leftPan: { x: 0, unit: 0 },
             rightPan: { x: 0, unit: 0 },
+            dragHoverPan: null, // 'left', 'right', or null
 
             // Ratio Mixer states
             ratioA: 2,
@@ -1429,656 +1609,512 @@
             preCartAnswered: false
         };
 
-        // Pre-lesson Quiz Worksheets Database
-        const PRE_LESSON_QUESTIONS = {
-            algebra: [
-                { q: "4 + 3 = 5 + ?", opts: [1, 2, 3, 4], ans: 2 },
-                { q: "9 - 2 = 3 + ?", opts: [3, 4, 5, 6], ans: 4 },
-                { q: "6 + ? = 10 - 1", opts: [2, 3, 4, 5], ans: 3 }
-            ],
-            inequality: [
-                { q: "-5 [?] -2", opts: ["<", ">", "="], ans: "<" },
-                { q: "3 [?] -8", opts: ["<", ">", "="], ans: ">" },
-                { q: "-4 [?] -4", opts: ["<", ">", "="], ans: "=" }
-            ],
-            ratio: [
-                { q: "What fraction is shaded?", opts: ["1/3", "2/3", "1/2", "3/4"], ans: "2/3", num: 2, denom: 3 },
-                { q: "What fraction is shaded?", opts: ["2/5", "3/5", "3/4", "4/5"], ans: "3/5", num: 3, denom: 5 },
-                { q: "What fraction is shaded?", opts: ["1/4", "1/3", "2/4", "3/4"], ans: "1/4", num: 1, denom: 4 }
-            ],
-            cartesian: [
-                { q: "Quadrant of point (-4, 3)?", opts: ["Q1 (I)", "Q2 (II)", "Q3 (III)", "Q4 (IV)"], ans: "Q2 (II)", p: {x:-4, y:3} },
-                { q: "Quadrant of point (2, -5)?", opts: ["Q1 (I)", "Q2 (II)", "Q3 (III)", "Q4 (IV)"], ans: "Q4 (IV)", p: {x:2, y:-5} },
-                { q: "Quadrant of point (-1, -1)?", opts: ["Q1 (I)", "Q2 (II)", "Q3 (III)", "Q4 (IV)"], ans: "Q3 (III)", p: {x:-1, y:-1} }
-            ]
-        };
-
-        // Translation Maps
-        const TRANSLATIONS = {
-            en: {
-                'score-level': 'Current Quest',
-                'score-stars': 'Quest Stars',
-                'score-streak': 'Balanced Streak',
-                'algebra-title': '⚖️ Alchemical Algebra Balance Scale',
-                'algebra-desc': 'A sack of gold (x) and single coins have been placed. Drop items and adjust the unknown core (x) to balance the alchemical scale!',
-                'place-hint': 'Place tile on:',
-                'opt-left': 'Left Pan',
-                'opt-right': 'Right Pan',
-                'slider-x': 'Variable Unknown Value (x)',
-                'ratio-title': '🧪 Ratio & Fractions Blender',
-                'ratio-desc': 'Blends physical mathematical ratios into musical audio harmonies! Changing multipliers plays perfect fifth, octave, and fourth oscillator triads.',
-                'ratio-base': 'Base Ratio (Beakers : Flasks)',
-                'ratio-mult': 'Scaling Factor (Multiplier)',
-                'cartesian-title': '📐 Cartesian Geometry Sandbox',
-                'cartesian-desc': 'Click snapping grid points. In Polygon mode, calculates perimeter & area. In Vectors & Lines mode, plots vectors, midpoints, slopes, and linear equations.',
-                'journal-title': '📝 Journal & Reflections Notebook',
-                'journal-prompt': 'Write down the steps you follow to balance equations, scale base ratios, and calculate shape areas inside the laboratories.',
-                'journal-placeholder': 'Type your observations here...',
-                'esol-title': 'ESOL Sentence Helper',
-                'journal-saved': 'Saved!',
-                'quest1-starter': 'The story describes "a sack of gold (x) and 2 coins." This translates to the expression x + 2. The word "balances" represents the equals sign (=). Place 1 x-block and 2 units on the Left Pan, and 5 units on the Right Pan. Then adjust x to balance the scale!',
-                'quest1-trans': 'La historia describe "un saco (x) y 2 monedas". Coloque las pesas correctas y ajuste x para equilibrar.',
-                'quest2-starter': 'The story describes "two bottles of elixir (2x) balance 6 crystals." This translates to the equation 2x = 6. Place 2 x-blocks on the Left Pan and 6 units on the Right Pan. Balance the scale by sliding x!',
-                'quest2-trans': 'La historia describe "dos frascos (2x) equilibran 6 cristales". Coloque 2 x-bloques a la izquierda y 6 a la derecha.',
-                'quest3-starter': 'The story describes "three shields (3x) and 1 shield balance 10 shields." This represents 3x + 1 = 10. Place 3 x-blocks and 1 unit on the Left Pan, and 10 units on the Right Pan.',
-                'quest3-trans': 'Representa la ecuación 3x + 1 = 10. Coloque los elementos a las balanzas y equilibre.',
-                'ineq-title': '⚔️ Inequality & Number Line Visualizer',
-                'ineq-desc': 'Solve algebraic inequalities and visualize their solution sets on a dynamic, glowing vector number line.',
-                'fraction-sub-title': 'Visual Fraction Builder',
-                'fraction-model': 'Visual Model',
-                'fraction-num': 'Numerator (n)',
-                'fraction-denom': 'Denominator (d)',
-                'ineq-quest-title': 'Inequality Quest Challenge',
-                'coeff-a': 'coeff (a)',
-                'coeff-b': 'constant (b)',
-                'coeff-op': 'operator',
-                'coeff-c': 'constant (c)',
-                'ineq-solved-lbl': '✨ INEQUALITY SOLVED CORRECTLY! ✨',
-                'ineq-solved-lbl-es': '✨ ¡DESIGUALDAD RESUELTA CORRECTAMENTE! ✨',
-                
-                // Pre-lesson english translations
-                'pre-algebra-title': 'Prerequisite Skill: Arithmetic Balancer',
-                'pre-inequality-title': 'Prerequisite Skill: Number Line Basics',
-                'pre-ratio-title': 'Prerequisite Skill: Fraction Slice Explorer',
-                'pre-cartesian-title': 'Prerequisite Skill: Coordinate Target Hunt',
-                'pre-alge-quest': 'Worksheet: Solve to balance equations',
-                'pre-ineq-quest': 'Worksheet: Choose the comparison sign',
-                'pre-ratio-quest': 'Worksheet: What fraction is shaded?',
-                'pre-cartesian-quest': 'Worksheet: Quadrant coordinate identification',
-                'pre-ineq-plot-instruction': 'Interactive Activity: Plot the target number',
-                'pre-ratio-shade-instruction': 'Interactive Activity: Shade the target slice',
-                'pre-cart-instruction': 'Interactive Activity: Hunt target star on the grid',
-                
-                // Dropdown Navigation Translations
-                'dropdown-label': 'Select Lesson / Lab',
-                'dropdown-pre-algebra': 'Pre-Lesson 1: Arithmetic Balancer',
-                'dropdown-algebra': 'Lesson 1: Algebra Balance Scale',
-                'dropdown-pre-inequality': 'Pre-Lesson 2: Number Line Basics',
-                'dropdown-inequality': 'Lesson 2: Inequality Grapher',
-                'dropdown-pre-ratio': 'Pre-Lesson 3: Fraction Slice Explorer',
-                'dropdown-ratio': 'Lesson 3: Ratio & Fractions',
-                'dropdown-pre-cartesian': 'Pre-Lesson 4: Coordinate Target Hunt',
-                'dropdown-cartesian': 'Lesson 4: Cartesian Sandbox',
-                'dropdown-journal': '📝 Reflections Notepad'
+        // ============================================================================
+        // 3. REPOSITORY (Data Layer)
+        // ============================================================================
+        const Repository = {
+            saveScorecard() {
+                localStorage.setItem('neft_studio_stars', STATE.scoreStars);
+                localStorage.setItem('neft_studio_streak', STATE.scoreStreak);
+                localStorage.setItem('neft_studio_quest_id', STATE.currentQuestId);
+                localStorage.setItem('neft_studio_ineq_quest_id', STATE.ineqQuestId);
+                localStorage.setItem('neft_studio_cartesian_mode', STATE.cartesianMode);
             },
-            es: {
-                'score-level': 'Misión Activa',
-                'score-stars': 'Estrellas Logradas',
-                'score-streak': 'Racha Equilibrada',
-                'algebra-title': '⚖️ Balanza de Equilibrio Algebráico',
-                'algebra-desc': 'Un saco de oro (x) y monedas simples han sido colocados. ¡Coloque pesas y ajuste x para equilibrar la balanza!',
-                'place-hint': 'Colocar ficha en:',
-                'opt-left': 'Platillo Izquierdo',
-                'opt-right': 'Platillo Derecho',
-                'slider-x': 'Valor Variable Incógnito (x)',
-                'ratio-title': '🧪 Relaciones y Fracciones Armónicas',
-                'ratio-desc': '¡Mezcla proporciones matemáticas físicas en armonías musicales de audio! Cambio de multiplicador reproduce acordes.',
-                'ratio-base': 'Relación Base (Vasos : Matraces)',
-                'ratio-mult': 'Factor de Escala (Multiplicador)',
-                'cartesian-title': '📐 Geometría Cartesiana de Sandbox',
-                'cartesian-desc': 'Haga clic en los puntos. En modo Polígono, calcula perímetro y área. En modo Vectores y Líneas, traza vectores, pendientes y ecuaciones.',
-                'journal-title': '📝 Diario y Notas de Reflexiones',
-                'journal-prompt': 'Escriba los pasos que sigue para aislar variables, equilibrar balanzas y calcular áreas poligonales.',
-                'journal-placeholder': 'Escriba sus observaciones aquí...',
-                'esol-title': 'Ayudante de Oraciones ESOL',
-                'journal-saved': '¡Guardado!',
-                'quest1-starter': 'La historia describe "un saco de oro (x) y 2 monedas". Esto se traduce en la expresión x + 2. La palabra "equilibrar" representa el signo igual (=). Coloque 1 bloque x y 2 unidades al platillo izquierdo, y 5 unidades al derecho.',
-                'quest1-trans': 'The story describes "a sack of gold (x) and 2 coins." This translates to the expression x + 2. The word "balances" represents the equals sign (=). Place 1 x-block and 2 units on the Left Pan, and 5 units on the Right Pan. Then adjust x to balance the scale!',
-                'quest2-starter': 'La historia describe "dos frascos de elixir (2x) equilibran 6 cristales". Esto se traduce en la ecuación 2x = 6. Coloque 2 bloques x a la izquierda y 6 unidades a la derecha.',
-                'quest2-trans': 'The story describes "two bottles of elixir (2x) balance 6 crystals." This translates to the equation 2x = 6. Drag 2 x-blocks to the Left Pan and 6 units to the Right Pan. Balance the scale by sliding x!',
-                'quest3-starter': 'Representa la ecuación 3x + 1 = 10. Coloque 3 bloques x y 1 unidad a la izquierda, y 10 unidades a la derecha.',
-                'quest3-trans': 'The story describes "three shields (3x) and 1 shield balance 10 shields." This represents 3x + 1 = 10. Drag 3 x-blocks and 1 unit to the Left Pan, and 10 units to the Right Pan.',
-                'ineq-title': '⚔️ Visualizador de Desigualdades y Recta Numérica',
-                'ineq-desc': 'Resuelve desigualdades algebraicas y visualiza sus conjuntos de soluciones en una recta numérica vectorial brillante y dinámica.',
-                'fraction-sub-title': 'Constructor de Fracciones Visuales',
-                'fraction-model': 'Modelo Visual',
-                'fraction-num': 'Numerador (n)',
-                'fraction-denom': 'Denominador (d)',
-                'ineq-quest-title': 'Misión de Desafío de Desigualdad',
-                'coeff-a': 'coef (a)',
-                'coeff-b': 'constante (b)',
-                'coeff-op': 'operador',
-                'coeff-c': 'constante (c)',
-                'ineq-solved-lbl': '✨ INEQUALITY SOLVED CORRECTLY! ✨',
-                'ineq-solved-lbl-es': '✨ ¡DESIGUALDAD RESUELTA CORRECTAMENTE! ✨',
-                
-                // Pre-lesson spanish translations
-                'pre-algebra-title': 'Requisito Previsto: Balanza Aritmética',
-                'pre-inequality-title': 'Requisito Previsto: Recta Numérica Básica',
-                'pre-ratio-title': 'Requisito Previsto: Fracciones de Pastel',
-                'pre-cartesian-title': 'Requisito Previsto: Caza de Coordenadas',
-                'pre-alge-quest': 'Práctica: Ecuaciones equilibradas',
-                'pre-ineq-quest': 'Práctica: Selecciona el signo correcto',
-                'pre-ratio-quest': 'Práctica: ¿Qué fracción está coloreada?',
-                'pre-cartesian-quest': 'Práctica: Identificación de cuadrantes',
-                'pre-ineq-plot-instruction': 'Actividad: Ubica el número indicado',
-                'pre-ratio-shade-instruction': 'Actividad: Colorea la fracción indicada',
-                'pre-cart-instruction': 'Actividad: Encuentra la estrella en el plano',
-                
-                // Dropdown Navigation Translations
-                'dropdown-label': 'Seleccionar Lección / Lab',
-                'dropdown-pre-algebra': 'Pre-Lección 1: Balanza Aritmética',
-                'dropdown-algebra': 'Lección 1: Balanza de Álgebra',
-                'dropdown-pre-inequality': 'Pre-Lección 2: Recta Numérica',
-                'dropdown-inequality': 'Lección 2: Graficador de Desigualdades',
-                'dropdown-pre-ratio': 'Pre-Lección 3: Fracciones de Pastel',
-                'dropdown-ratio': 'Lección 3: Proporciones y Fracciones',
-                'dropdown-pre-cartesian': 'Pre-Lección 4: Caza de Coordenadas',
-                'dropdown-cartesian': 'Lección 4: Sandbox Cartesiano',
-                'dropdown-journal': '📝 Diario de Reflexiones'
+            loadScorecard() {
+                const stars = localStorage.getItem('neft_studio_stars');
+                const streak = localStorage.getItem('neft_studio_streak');
+                const questId = localStorage.getItem('neft_studio_quest_id');
+                const ineqQuestId = localStorage.getItem('neft_studio_ineq_quest_id');
+                const cartesianMode = localStorage.getItem('neft_studio_cartesian_mode');
+
+                if (stars !== null) STATE.scoreStars = parseInt(stars, 10);
+                if (streak !== null) STATE.scoreStreak = parseInt(streak, 10);
+                if (questId !== null) STATE.currentQuestId = parseInt(questId, 10);
+                if (ineqQuestId !== null) STATE.ineqQuestId = parseInt(ineqQuestId, 10);
+                if (cartesianMode !== null) STATE.cartesianMode = cartesianMode;
+
+                // Load pre-lesson collapsed states
+                ['algebra', 'inequality', 'ratio', 'cartesian'].forEach(tab => {
+                    const saved = localStorage.getItem('neft_pre_collapsed_' + tab);
+                    if (saved !== null) {
+                        STATE.preLcollapsed[tab] = (saved === 'true');
+                    }
+                });
+
+                // Load mute state
+                const muted = localStorage.getItem('neft_studio_audio_muted');
+                if (muted !== null) {
+                    STATE.audioMuted = (muted === 'true');
+                }
+            },
+            saveJournal(text) {
+                localStorage.setItem('neft_studio_notes', text);
+            },
+            loadJournal() {
+                return localStorage.getItem('neft_studio_notes') || '';
+            },
+            saveMuteStatus(isMuted) {
+                localStorage.setItem('neft_studio_audio_muted', isMuted ? 'true' : 'false');
+            },
+            saveCollapsible(tabId, collapsed) {
+                localStorage.setItem('neft_pre_collapsed_' + tabId, collapsed ? 'true' : 'false');
             }
         };
 
-        function transitionState(updatedFields) {
-            Object.assign(STATE, updatedFields);
-            checkQuestStatus();
-            checkIneqQuestStatus();
-            renderUI();
-            saveScorecard();
-        }
+        // ============================================================================
+        // 4. SERVICE (Math & Logic Layer)
+        // ============================================================================
+        const MathService = {
+            solveInequality(a, b, op, c) {
+                const diff = c - b;
+                const boundary = diff / a;
+                let finalOp = op;
+                
+                if (a < 0) {
+                    if (op === '<') finalOp = '>';
+                    else if (op === '<=') finalOp = '>=';
+                    else if (op === '>') finalOp = '<';
+                    else if (op === '>=') finalOp = '<=';
+                }
+                
+                const isClosed = (finalOp === '<=' || finalOp === '>=');
+                const direction = (finalOp === '<' || finalOp === '<=') ? 'left' : 'right';
+                
+                return {
+                    boundary: parseFloat(boundary.toFixed(2)),
+                    op: finalOp,
+                    isClosed: isClosed,
+                    direction: direction
+                };
+            },
+            calculateShoelaceArea(points) {
+                if (points.length < 3) return 0;
+                let areaSum = 0;
+                for (let i = 0; i < points.length; i++) {
+                    const p1 = points[i];
+                    const p2 = points[(i + 1) % points.length];
+                    areaSum += (p1.x * p2.y) - (p2.x * p1.y);
+                }
+                return Math.abs(areaSum) / 2;
+            },
+            calculatePerimeter(points) {
+                if (points.length < 2) return 0;
+                let perimeter = 0;
+                for (let i = 0; i < points.length; i++) {
+                    const p1 = points[i];
+                    const p2 = points[(i + 1) % points.length];
+                    perimeter += Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+                }
+                return perimeter;
+            },
+            getLineSegmentDetails(p1, p2) {
+                const midX = (p1.x + p2.x) / 2;
+                const midY = (p1.y + p2.y) / 2;
+                const dist = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+                
+                let eq = '';
+                let slope = '';
 
-        // ==========================================
-        // 4. INTERACTIVE HANDLERS
-        // ==========================================
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.workspace-area > section').forEach(card => card.style.display = 'none');
-            
-            document.getElementById('tab-btn-' + tabId).classList.add('active');
-            document.getElementById('card-' + tabId).style.display = 'block';
-            STATE.activeTab = tabId;
-            
-            // Sync with navigation dropdown
-            const selectEl = document.getElementById('lesson-select');
-            if (selectEl) {
-                if (tabId === 'journal') {
-                    selectEl.value = 'journal';
+                if (p1.x === p2.x) {
+                    eq = `x = ${p1.x}`;
+                    slope = STATE.language === 'en' ? 'Undefined' : 'Indefinida';
                 } else {
-                    selectEl.value = tabId;
-                }
-            }
-            
-            if (tabId === 'ratio') {
-                setTimeout(resizeRatioCanvas, 100);
-            }
-            
-            AudioSynth.playTone(400, 0.08); // navigation click
-        }
-
-        function navigateLesson(val) {
-            let tabId = '';
-            let targetElId = '';
-            
-            if (val.startsWith('pre-')) {
-                tabId = val.substring(4);
-                targetElId = 'pre-card-' + tabId;
-                if (STATE.preLcollapsed[tabId]) {
-                    togglePreLesson(tabId);
-                }
-            } else if (val === 'journal') {
-                tabId = 'journal';
-                targetElId = 'card-journal';
-            } else {
-                tabId = val;
-                targetElId = 'main-lesson-' + tabId;
-            }
-            
-            // Switch tab
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.workspace-area > section').forEach(card => card.style.display = 'none');
-            
-            document.getElementById('tab-btn-' + tabId).classList.add('active');
-            document.getElementById('card-' + tabId).style.display = 'block';
-            STATE.activeTab = tabId;
-            
-            if (tabId === 'ratio') {
-                setTimeout(resizeRatioCanvas, 100);
-            }
-            
-            AudioSynth.playTone(400, 0.08);
-            
-            // Smooth scroll to target element
-            const el = document.getElementById(targetElId);
-            if (el) {
-                setTimeout(() => {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
-            }
-            
-            document.getElementById('lesson-select').value = val;
-        }
-
-        function toggleLanguage() {
-            const next = STATE.language === 'en' ? 'es' : 'en';
-            transitionState({ language: next });
-        }
-
-        function togglePreLesson(tabId) {
-            const collapsed = !STATE.preLcollapsed[tabId];
-            STATE.preLcollapsed[tabId] = collapsed;
-            localStorage.setItem('neft_pre_collapsed_' + tabId, collapsed);
-            
-            const body = document.getElementById('body-pre-' + tabId);
-            const btn = document.getElementById('btn-toggle-pre-' + tabId);
-            if (collapsed) {
-                body.style.display = 'none';
-                btn.innerText = STATE.language === 'en' ? 'Expand' : 'Expandir';
-            } else {
-                body.style.display = 'grid';
-                btn.innerText = STATE.language === 'en' ? 'Collapse' : 'Colapsar';
-            }
-            
-            AudioSynth.playTone(450, 0.06);
-        }
-
-        // Pre-lesson Interactive weight additions
-        function addPreAlgeWeight(pan, delta) {
-            AudioSynth.playTone(600, 0.05);
-            if (pan === 'left') {
-                let l = Math.max(0, Math.min(15, STATE.preAlgeLeft + delta));
-                transitionState({ preAlgeLeft: l });
-            } else {
-                let r = Math.max(0, Math.min(15, STATE.preAlgeUserWeight + delta));
-                transitionState({ preAlgeUserWeight: r });
-            }
-        }
-
-        function resetPreAlge() {
-            AudioSynth.playTone(500, 0.06);
-            transitionState({ preAlgeUserWeight: 0, preAlgeLeft: 5, preAlgeRight: 2 });
-        }
-
-        // Plotting tick click handler on pre-lesson inequality axis
-        function handlePreIneqClick(e) {
-            const svg = document.getElementById('svg-pre-ineq-line');
-            const rect = svg.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-            
-            // Map pixel coordinate to grid index [-5, 5]
-            const startX = 25, endX = 215, width = 190;
-            const pct = (clickX - startX) / width;
-            const snappedVal = Math.round(pct * 10 - 5);
-
-            if (snappedVal >= -5 && snappedVal <= 5) {
-                const isCorrect = snappedVal === STATE.preIneqTarget;
-                const feedback = document.getElementById('pre-ineq-plot-feedback');
-                
-                if (isCorrect) {
-                    AudioSynth.playTone(880, 0.1);
-                    feedback.style.color = 'var(--secondary)';
-                    feedback.innerText = STATE.language === 'en' ? '🎉 Correct point plotted!' : '🎉 ¡Punto correcto trazado!';
-                    
-                    // Generate new target after 1.5s
-                    setTimeout(() => {
-                        let nextTarget = STATE.preIneqTarget;
-                        while (nextTarget === STATE.preIneqTarget) {
-                            nextTarget = Math.floor(Math.random() * 11) - 5;
-                        }
-                        transitionState({ preIneqTarget: nextTarget, preIneqUserVal: null });
-                        document.getElementById('pre-ineq-plot-feedback').innerText = '';
-                    }, 1400);
-                } else {
-                    AudioSynth.playTone(400, 0.12);
-                    feedback.style.color = 'var(--danger)';
-                    feedback.innerText = STATE.language === 'en' ? `Incorrect. That is ${snappedVal}` : `Incorrecto. Eso es ${snappedVal}`;
-                }
-                
-                transitionState({ preIneqUserVal: snappedVal });
-            }
-        }
-
-        // Shading click handler on pre-lesson fraction slice
-        function handlePreRatioSliceClick(sliceIdx) {
-            const nextShaded = sliceIdx + 1;
-            const target = STATE.preRatioTargetNum;
-            const feedback = document.getElementById('pre-ratio-shade-feedback');
-            
-            if (nextShaded === target) {
-                AudioSynth.playTone(950, 0.1);
-                feedback.style.color = 'var(--secondary)';
-                feedback.innerText = STATE.language === 'en' ? '🎉 Perfect fraction shaded!' : '🎉 ¡Fracción coloreada perfecta!';
-                
-                setTimeout(() => {
-                    const nextDenom = Math.floor(Math.random() * 7) + 3; // 3 to 9
-                    const nextNum = Math.floor(Math.random() * (nextDenom - 1)) + 1; // 1 to denom-1
-                    transitionState({
-                        preRatioTargetNum: nextNum,
-                        preRatioTargetDenom: nextDenom,
-                        preRatioUserNum: 0
-                    });
-                    document.getElementById('pre-ratio-shade-feedback').innerText = '';
-                }, 1400);
-            } else {
-                AudioSynth.playTone(500, 0.1);
-                feedback.style.color = 'var(--accent)';
-                feedback.innerText = STATE.language === 'en' ? `Shaded ${nextShaded}/${STATE.preRatioTargetDenom}` : `Coloreado ${nextShaded}/${STATE.preRatioTargetDenom}`;
-            }
-
-            transitionState({ preRatioUserNum: nextShaded });
-        }
-
-        // Grid coordinate snap targets hunt click handler
-        function handlePreCartClick(e) {
-            const svg = document.getElementById('svg-pre-cartesian-grid');
-            const rect = svg.getBoundingClientRect();
-            const px = e.clientX - rect.left;
-            const py = e.clientY - rect.top;
-
-            const size = 160, center = 80, step = 14;
-            const rx = (px - center) / step;
-            const ry = (center - py) / step;
-
-            const sx = Math.round(rx);
-            const sy = Math.round(ry);
-
-            if (Math.abs(sx) <= 5 && Math.abs(sy) <= 5) {
-                const isCorrect = sx === STATE.preCartTarget.x && sy === STATE.preCartTarget.y;
-                const feedback = document.getElementById('pre-cart-plot-feedback');
-
-                if (isCorrect) {
-                    AudioSynth.playTone(1000, 0.12);
-                    feedback.style.color = 'var(--secondary)';
-                    feedback.innerText = STATE.language === 'en' ? `🎉 Found star at (${sx}, ${sy})!` : `🎉 ¡Encontraste la estrella en (${sx}, ${sy})!`;
-
-                    setTimeout(() => {
-                        const nx = Math.floor(Math.random() * 11) - 5;
-                        const ny = Math.floor(Math.random() * 11) - 5;
-                        transitionState({
-                            preCartTarget: { x: nx, y: ny },
-                            preCartUser: null
-                        });
-                        document.getElementById('pre-cart-plot-feedback').innerText = '';
-                    }, 1450);
-                } else {
-                    AudioSynth.playTone(420, 0.1);
-                    feedback.style.color = 'var(--danger)';
-                    feedback.innerText = STATE.language === 'en' ? `Point is (${sx}, ${sy})` : `Punto es (${sx}, ${sy})`;
+                    const m = (p2.y - p1.y) / (p2.x - p1.x);
+                    const c = p1.y - m * p1.x;
+                    slope = m.toFixed(2);
+                    eq = `y = ${m.toFixed(2)}x ${c >= 0 ? '+' : ''} ${c.toFixed(2)}`;
                 }
 
-                transitionState({ preCartUser: { x: sx, y: sy } });
+                return { midX, midY, dist, eq, slope };
+            },
+            verifyPrereqAlgebra(left, right, userWeight) {
+                return left === right + userWeight;
             }
-        }
+        };
 
-        // Submit practice worksheet answers
-        function submitPreAnswer(tabId, selectedVal, btnId) {
-            const answeredKey = 'pre' + tabId.charAt(0).toUpperCase() + tabId.slice(1) + 'Answered';
-            if (STATE[answeredKey]) return; // locked
+        // ============================================================================
+        // 5. CONTROLLER (Bridge Layer)
+        // ============================================================================
+        const Controller = {
+            transitionState(updatedFields) {
+                Object.assign(STATE, updatedFields);
+                this.checkQuestStatus();
+                this.checkIneqQuestStatus();
+                UI.renderUI();
+                Repository.saveScorecard();
+            },
+            checkQuestStatus() {
+                const currentQuest = CONFIG.quests.find(q => q.id === STATE.currentQuestId);
+                if (!currentQuest) return;
 
-            const idxKey = 'pre' + tabId.charAt(0).toUpperCase() + tabId.slice(1) + 'QuestIdx';
-            const curIdx = STATE[idxKey];
-            const questions = PRE_LESSON_QUESTIONS[tabId];
-            const activeQuest = questions[curIdx];
+                const leftCorrect = STATE.leftPan.x === currentQuest.leftItems.x && STATE.leftPan.unit === currentQuest.leftItems.unit;
+                const rightCorrect = STATE.rightPan.x === currentQuest.rightItems.x && STATE.rightPan.unit === currentQuest.rightItems.unit;
+                const xCorrect = STATE.valX === currentQuest.targetX;
+                const leftW = STATE.leftPan.x * STATE.valX + STATE.leftPan.unit;
+                const rightW = STATE.rightPan.x * STATE.valX + STATE.rightPan.unit;
+                const scaleBalanced = leftW === rightW && leftW > 0;
 
-            const isCorrect = selectedVal === activeQuest.ans;
-            const btn = document.getElementById(btnId);
-            const feedback = document.getElementById('pre-' + (tabId === 'algebra' ? 'alge' : tabId) + '-feedback');
-
-            const updated = {};
-            updated[answeredKey] = true;
-
-            if (isCorrect) {
-                btn.classList.add('correct');
-                feedback.style.color = 'var(--secondary)';
-                feedback.innerText = STATE.language === 'en' ? '✓ Correct! Good job!' : '✓ ¡Correcto! ¡Buen trabajo!';
-                AudioSynth.playTone(880, 0.08);
-                STATE.scoreStreak += 1;
-                STATE.scoreStars += 1;
-            } else {
-                btn.classList.add('incorrect');
-                feedback.style.color = 'var(--danger)';
-                feedback.innerText = STATE.language === 'en' ? '✗ Incorrect. Try again!' : '✗ Incorrecto. ¡Inténtalo de nuevo!';
-                AudioSynth.playTone(350, 0.15);
-                STATE.scoreStreak = 0;
-            }
-
-            transitionState(updated);
-
-            // Move to next question after 1.8s
-            setTimeout(() => {
-                const nextIdx = (curIdx + 1) % questions.length;
-                
-                // If moving to next quiz, randomize pre-ratio parameters
-                if (tabId === 'ratio') {
-                    const nextQ = questions[nextIdx];
-                    transitionState({
-                        preRatioQuestNum: nextQ.num,
-                        preRatioQuestDenom: nextQ.denom
-                    });
-                }
-
-                const clearedState = {};
-                clearedState[idxKey] = nextIdx;
-                clearedState[answeredKey] = false;
-                
-                transitionState(clearedState);
-                
-                // Clear validation colors and feedback
-                document.querySelectorAll('#pre-' + tabId + '-options button').forEach(b => {
-                    b.classList.remove('correct', 'incorrect');
-                });
-                feedback.innerText = '';
-            }, 1800);
-        }
-
-        // Algebra sandbox handlers
-        function updateValX(val) {
-            const parsed = parseInt(val, 10);
-            document.getElementById('val-slider-x').innerText = parsed;
-            transitionState({ valX: parsed });
-        }
-
-        function placeAlgebraTile(type) {
-            const selectedPan = document.querySelector('input[name="alch-pan-target"]:checked').value;
-            const lPan = { ...STATE.leftPan };
-            const rPan = { ...STATE.rightPan };
-
-            if (selectedPan === 'left') {
-                lPan[type] += 1;
-            } else {
-                rPan[type] += 1;
-            }
-
-            AudioSynth.playTone(800, 0.04); 
-            transitionState({ leftPan: lPan, rightPan: rPan });
-        }
-
-        function removePanItem(pan, type) {
-            const lPan = { ...STATE.leftPan };
-            const rPan = { ...STATE.rightPan };
-
-            if (pan === 'left') {
-                if (lPan[type] > 0) lPan[type] -= 1;
-            } else {
-                if (rPan[type] > 0) rPan[type] -= 1;
-            }
-
-            AudioSynth.playTone(500, 0.05); 
-            transitionState({ leftPan: lPan, rightPan: rPan });
-        }
-
-        function clearAlgebraPans() {
-            AudioSynth.playTone(600, 0.08);
-            transitionState({
-                leftPan: { x: 0, unit: 0 },
-                rightPan: { x: 0, unit: 0 }
-            });
-        }
-
-        function checkQuestStatus() {
-            const currentQuest = CONFIG.quests.find(q => q.id === STATE.currentQuestId);
-            if (!currentQuest) return;
-
-            const leftCorrect = STATE.leftPan.x === currentQuest.leftItems.x && STATE.leftPan.unit === currentQuest.leftItems.unit;
-            const rightCorrect = STATE.rightPan.x === currentQuest.rightItems.x && STATE.rightPan.unit === currentQuest.rightItems.unit;
-            const xCorrect = STATE.valX === currentQuest.targetX;
-            const leftW = STATE.leftPan.x * STATE.valX + STATE.leftPan.unit;
-            const rightW = STATE.rightPan.x * STATE.valX + STATE.rightPan.unit;
-            const scaleBalanced = leftW === rightW && leftW > 0;
-
-            if (leftCorrect && rightCorrect && xCorrect && scaleBalanced) {
-                if (STATE.scoreStreak === 0 || STATE.scoreStars < STATE.currentQuestId) {
-                    STATE.scoreStars = STATE.currentQuestId;
-                    STATE.scoreStreak += 1;
-                    AudioSynth.playSuccessChords();
-                }
-            }
-        }
-
-        // Cartesian sandbox handlers
-        function setCartesianMode(mode) {
-            AudioSynth.playTone(500, 0.08);
-            transitionState({ cartesianMode: mode, polygonPoints: [] });
-        }
-
-        function handleGridClick(e) {
-            const svg = document.getElementById('svg-grid-plane');
-            const rect = svg.getBoundingClientRect();
-            const xVal = e.clientX - rect.left;
-            const yVal = e.clientY - rect.top;
-
-            const gridCenter = 160;
-            const stepSize = 13.5;
-            
-            const rawX = (xVal - gridCenter) / stepSize;
-            const rawY = (gridCenter - yVal) / stepSize;
-
-            const snappedX = Math.round(rawX);
-            const snappedY = Math.round(rawY);
-
-            if (Math.abs(snappedX) <= 10 && Math.abs(snappedY) <= 10) {
-                const pointIdx = STATE.polygonPoints.findIndex(p => p.x === snappedX && p.y === snappedY);
-                if (pointIdx !== -1) {
-                    STATE.polygonPoints.splice(pointIdx, 1);
-                } else {
-                    if (STATE.cartesianMode === 'polygon') {
-                        if (STATE.polygonPoints.length < 8) {
-                            STATE.polygonPoints.push({ x: snappedX, y: snappedY });
-                        }
-                    } else if (STATE.cartesianMode === 'vector-line') {
-                        if (STATE.polygonPoints.length >= 2) {
-                            STATE.polygonPoints.shift();
-                        }
-                        STATE.polygonPoints.push({ x: snappedX, y: snappedY });
-                    }
-                }
-                
-                AudioSynth.playTone(900, 0.04);
-                transitionState({ polygonPoints: [ ...STATE.polygonPoints ] });
-            }
-        }
-
-        function clearCartesianPoints() {
-            AudioSynth.playTone(600, 0.08);
-            transitionState({ polygonPoints: [] });
-        }
-
-        // Inequality handlers
-        function adjustIneqCoeff(type, delta) {
-            let a = STATE.ineqCoeffA;
-            let b = STATE.ineqCoeffB;
-            let c = STATE.ineqRhs;
-
-            if (type === 'a') {
-                a += delta;
-                if (a === 0) a = delta > 0 ? 1 : -1; 
-                a = Math.max(-5, Math.min(5, a));
-            } else if (type === 'b') {
-                b = Math.max(-10, Math.min(10, b + delta));
-            } else if (type === 'c') {
-                c = Math.max(-20, Math.min(20, c + delta));
-            }
-
-            AudioSynth.playTone(700, 0.06);
-            transitionState({ ineqCoeffA: a, ineqCoeffB: b, ineqRhs: c });
-        }
-
-        function updateIneqOp(op) {
-            AudioSynth.playTone(700, 0.05);
-            transitionState({ ineqOp: op });
-        }
-
-        function selectIneqQuest(id) {
-            const quest = CONFIG.ineqQuests.find(q => q.id === parseInt(id, 10));
-            if (!quest) return;
-            AudioSynth.playTone(800, 0.06);
-            
-            document.getElementById('select-ineq-op').value = quest.op;
-            
-            transitionState({
-                ineqQuestId: quest.id,
-                ineqCoeffA: quest.a,
-                ineqCoeffB: quest.b,
-                ineqOp: quest.op,
-                ineqRhs: quest.rhs,
-                ineqSolved: false
-            });
-        }
-
-        function resetIneqQuest() {
-            selectIneqQuest(STATE.ineqQuestId);
-        }
-
-        function checkIneqQuestStatus() {
-            const quest = CONFIG.ineqQuests.find(q => q.id === STATE.ineqQuestId);
-            if (!quest) return;
-
-            const solved = solveInequality(STATE.ineqCoeffA, STATE.ineqCoeffB, STATE.ineqOp, STATE.ineqRhs);
-            const matchesBoundary = Math.abs(solved.boundary - quest.targetBoundary) < 0.01;
-            const matchesDir = solved.direction === quest.targetDir;
-            const matchesClosed = solved.isClosed === quest.targetClosed;
-
-            if (matchesBoundary && matchesDir && matchesClosed) {
-                if (!STATE.ineqSolved) {
-                    STATE.ineqSolved = true;
-                    if (STATE.scoreStars < STATE.ineqQuestId + 3) {
-                        STATE.scoreStars = STATE.ineqQuestId + 3; 
+                if (leftCorrect && rightCorrect && xCorrect && scaleBalanced) {
+                    if (STATE.scoreStreak === 0 || STATE.scoreStars < STATE.currentQuestId) {
+                        STATE.scoreStars = STATE.currentQuestId;
                         STATE.scoreStreak += 1;
                         AudioSynth.playSuccessChords();
                     }
                 }
-            } else {
-                STATE.ineqSolved = false;
-            }
-        }
+            },
+            checkIneqQuestStatus() {
+                const quest = CONFIG.ineqQuests.find(q => q.id === STATE.ineqQuestId);
+                if (!quest) return;
 
-        function solveInequality(a, b, op, c) {
-            const diff = c - b;
-            const boundary = diff / a;
-            let finalOp = op;
-            
-            if (a < 0) {
-                if (op === '<') finalOp = '>';
-                else if (op === '<=') finalOp = '>=';
-                else if (op === '>') finalOp = '<';
-                else if (op === '>=') finalOp = '<=';
-            }
-            
-            const isClosed = (finalOp === '<=' || finalOp === '>=');
-            const direction = (finalOp === '<' || finalOp === '<=') ? 'left' : 'right';
-            
-            return {
-                boundary: parseFloat(boundary.toFixed(2)),
-                op: finalOp,
+                const solved = MathService.solveInequality(STATE.ineqCoeffA, STATE.ineqCoeffB, STATE.ineqOp, STATE.ineqRhs);
+                const matchesBoundary = Math.abs(solved.boundary - quest.targetBoundary) < 0.01;
+                const matchesDir = solved.direction === quest.targetDir;
+                const matchesClosed = solved.isClosed === quest.targetClosed;
+
+                if (matchesBoundary && matchesDir && matchesClosed) {
+                    if (!STATE.ineqSolved) {
+                        STATE.ineqSolved = true;
+                        // Quest completion stars bounds: quests 1-5 maps to stars 4-8
+                        const targetStarCount = STATE.ineqQuestId + 3;
+                        if (STATE.scoreStars < targetStarCount) {
+                            STATE.scoreStars = targetStarCount; 
+                            STATE.scoreStreak += 1;
+                            AudioSynth.playSuccessChords();
+                        }
+                    }
+                } else {
+                    STATE.ineqSolved = false;
+                }
+            },
+            switchTab(tabId) {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.workspace-area > section').forEach(card => card.style.display = 'none');
+                
+                document.getElementById('tab-btn-' + tabId).classList.add('active');
+                document.getElementById('card-' + tabId).style.display = 'block';
+                STATE.activeTab = tabId;
+                
+                const selectEl = document.getElementById('lesson-select');
+                if (selectEl) {
+                    selectEl.value = (tabId === 'journal') ? 'journal' : tabId;
+                }
+                
+                if (tabId === 'ratio') {
+                    setTimeout(UI.resizeRatioCanvas, 100);
+                }
+                
+                AudioSynth.playTone(400, 0.08);
+            },
+            navigateLesson(val) {
+                let tabId = '';
+                let targetElId = '';
+                
+                if (val.startsWith('pre-')) {
+                    tabId = val.substring(4);
+                    targetElId = 'pre-card-' + tabId;
+                    if (STATE.preLcollapsed[tabId]) {
+                        this.togglePreLesson(tabId);
+                    }
+                } else if (val === 'journal') {
+                    tabId = 'journal';
+                    targetElId = 'card-journal';
+                } else {
+                    tabId = val;
+                    targetElId = 'main-lesson-' + tabId;
+                }
+                
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.workspace-area > section').forEach(card => card.style.display = 'none');
+                
+                document.getElementById('tab-btn-' + tabId).classList.add('active');
+                document.getElementById('card-' + tabId).style.display = 'block';
+                STATE.activeTab = tabId;
+                
+                if (tabId === 'ratio') {
+                    setTimeout(UI.resizeRatioCanvas, 100);
+                }
+                
+                AudioSynth.playTone(400, 0.08);
+                
+                const el = document.getElementById(targetElId);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+                
+                document.getElementById('lesson-select').value = val;
+            },
+            toggleLanguage() {
+                const next = STATE.language === 'en' ? 'es' : 'en';
+                this.transitionState({ language: next });
+            },
+            togglePreLesson(tabId) {
+                const collapsed = !STATE.preLcollapsed[tabId];
+                STATE.preLcollapsed[tabId] = collapsed;
+                Repository.saveCollapsible(tabId, collapsed);
+                
+                const body = document.getElementById('body-pre-' + tabId);
+                const btn = document.getElementById('btn-toggle-pre-' + tabId);
+                if (collapsed) {
+                    body.style.display = 'none';
+                    btn.innerText = STATE.language === 'en' ? 'Expand' : 'Expandir';
+                } else {
+                    body.style.display = 'grid';
+                    btn.innerText = STATE.language === 'en' ? 'Collapse' : 'Colapsar';
+                }
+                
+                AudioSynth.playTone(450, 0.06);
+            },
+            addPreAlgeWeight(pan, delta) {
+                AudioSynth.playTone(600, 0.05);
+                if (pan === 'left') {
+                    let l = Math.max(0, Math.min(15, STATE.preAlgeLeft + delta));
+                    this.transitionState({ preAlgeLeft: l });
+                } else {
+                    let r = Math.max(0, Math.min(15, STATE.preAlgeUserWeight + delta));
+                    this.transitionState({ preAlgeUserWeight: r });
+                }
+            },
+            resetPreAlge() {
+                AudioSynth.playTone(500, 0.06);
+                this.transitionState({ preAlgeUserWeight: 0, preAlgeLeft: 5, preAlgeRight: 2 });
+            },
+            handlePreIneqClick(e) {
+                const svg = document.getElementById('svg-pre-ineq-line');
+                const rect = svg.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                
+                const startX = 25, endX = 215, width = 190;
+                const pct = (clickX - startX) / width;
+                const snappedVal = Math.round(pct * 10 - 5);
+
+                if (snappedVal >= -5 && snappedVal <= 5) {
+                    const isCorrect = snappedVal === STATE.preIneqTarget;
+                    const feedback = document.getElementById('pre-ineq-plot-feedback');
+                    
+                    if (isCorrect) {
+                        AudioSynth.playTone(880, 0.1);
+                        feedback.style.color = 'var(--secondary)';
+                        feedback.innerText = STATE.language === 'en' ? '🎉 Correct point plotted!' : '🎉 ¡Punto correcto trazado!';
+                        
+                        setTimeout(() => {
+                            let nextTarget = STATE.preIneqTarget;
+                            while (nextTarget === STATE.preIneqTarget) {
+                                nextTarget = Math.floor(Math.random() * 11) - 5;
+                            }
+                            Controller.transitionState({ preIneqTarget: nextTarget, preIneqUserVal: null });
+                            document.getElementById('pre-ineq-plot-feedback').innerText = '';
+                        }, 1400);
+                    } else {
+                        AudioSynth.playTone(400, 0.12);
+                        feedback.style.color = 'var(--danger)';
+                        feedback.innerText = STATE.language === 'en' ? `Incorrect. That is ${snappedVal}` : `Incorrecto. Eso es ${snappedVal}`;
+                    }
+                    
+                    this.transitionState({ preIneqUserVal: snappedVal });
+                }
+            },
+            handlePreRatioSliceClick(sliceIdx) {
+                const nextShaded = sliceIdx + 1;
+                const target = STATE.preRatioTargetNum;
+                const feedback = document.getElementById('pre-ratio-shade-feedback');
+                
+                if (nextShaded === target) {
+                    AudioSynth.playTone(950, 0.1);
+                    feedback.style.color = 'var(--secondary)';
+                    feedback.innerText = STATE.language === 'en' ? '🎉 Perfect fraction shaded!' : '🎉 ¡Fracción coloreada perfecta!';
+                    
+                    setTimeout(() => {
+                        const nextDenom = Math.floor(Math.random() * 7) + 3;
+                        const nextNum = Math.floor(Math.random() * (nextDenom - 1)) + 1;
+                        Controller.transitionState({
+                            preRatioTargetNum: nextNum,
+                            preRatioTargetDenom: nextDenom,
+                            preRatioUserNum: 0
+                        });
+                        document.getElementById('pre-ratio-shade-feedback').innerText = '';
+                    }, 1400);
+                } else {
+                    AudioSynth.playTone(500, 0.1);
+                    feedback.style.color = 'var(--accent)';
+                    feedback.innerText = STATE.language === 'en' ? `Shaded ${nextShaded}/${STATE.preRatioTargetDenom}` : `Coloreado ${nextShaded}/${STATE.preRatioTargetDenom}`;
+                }
+
+                this.transitionState({ preRatioUserNum: nextShaded });
+            },
+            handlePreCartClick(e) {
+                const svg = document.getElementById('svg-pre-cartesian-grid');
+                const rect = svg.getBoundingClientRect();
+                const px = e.clientX - rect.left;
+                const py = e.clientY - rect.top;
+
+                const center = 80, step = 14;
+                const rx = (px - center) / step;
+                const ry = (center - py) / step;
+
+                const sx = Math.round(rx);
+                const sy = Math.round(ry);
+
+                if (Math.abs(sx) <= 5 && Math.abs(sy) <= 5) {
+                    const isCorrect = sx === STATE.preCartTarget.x && sy === STATE.preCartTarget.y;
+                    const feedback = document.getElementById('pre-cart-plot-feedback');
+
+                    if (isCorrect) {
+                        AudioSynth.playTone(1000, 0.12);
+                        feedback.style.color = 'var(--secondary)';
+                        feedback.innerText = STATE.language === 'en' ? `🎉 Found star at (${sx}, ${sy})!` : `🎉 ¡Encontraste la estrella en (${sx}, ${sy})!`;
+
+                        setTimeout(() => {
+                            const nx = Math.floor(Math.random() * 11) - 5;
+                            const ny = Math.floor(Math.random() * 11) - 5;
+                            Controller.transitionState({
+                                preCartTarget: { x: nx, y: ny },
+                                preCartUser: null
+                            });
+                            document.getElementById('pre-cart-plot-feedback').innerText = '';
+                        }, 1450);
+                    } else {
+                        AudioSynth.playTone(420, 0.1);
+                        feedback.style.color = 'var(--danger)';
+                        feedback.innerText = STATE.language === 'en' ? `Point is (${sx}, ${sy})` : `Punto es (${sx}, ${sy})`;
+                    }
+
+                    this.transitionState({ preCartUser: { x: sx, y: sy } });
+                }
+            },
+            submitPreAnswer(tabId, selectedVal, btnId) {
+                const answeredKey = 'pre' + tabId.charAt(0).toUpperCase() + tabId.slice(1) + 'Answered';
+                if (STATE[answeredKey]) return;
+
+                const idxKey = 'pre' + tabId.charAt(0).toUpperCase() + tabId.slice(1) + 'QuestIdx';
+                const curIdx = STATE[idxKey];
+                const questions = PRE_LESSON_QUESTIONS[tabId];
+                const activeQuest = questions[curIdx];
+
+                const isCorrect = selectedVal === activeQuest.ans;
+                const btn = document.getElementById(btnId);
+                const feedback = document.getElementById('pre-' + (tabId === 'algebra' ? 'alge' : tabId) + '-feedback');
+
+                const updated = {};
+                updated[answeredKey] = true;
+
+                if (isCorrect) {
+                    btn.classList.add('correct');
+                    feedback.style.color = 'var(--secondary)';
+                    feedback.innerText = STATE.language === 'en' ? '✓ Correct! Good job!' : '✓ ¡Correcto! ¡Buen trabajo!';
+                    AudioSynth.playTone(880, 0.08);
+                    STATE.scoreStreak += 1;
+                    STATE.scoreStars += 1;
+                } else {
+                    btn.classList.add('incorrect');
+                    feedback.style.color = 'var(--danger)';
+                    feedback.innerText = STATE.language === 'en' ? '✗ Incorrect. Try again!' : '✗ Incorrecto. ¡Inténtalo de nuevo!';
+                    AudioSynth.playTone(350, 0.15);
+                    STATE.scoreStreak = 0;
+                }
+
+                this.transitionState(updated);
+
+                setTimeout(() => {
+                    const nextIdx = (curIdx + 1) % questions.length;
+                    
+                    if (tabId === 'ratio') {
+                        const nextQ = questions[nextIdx];
+                        Controller.transitionState({
+                            preRatioQuestNum: nextQ.num,
+                            preRatioQuestDenom: nextQ.denom
+                        });
+                    }
+
+                    const clearedState = {};
+                    clearedState[idxKey] = nextIdx;
+                    clearedState[answeredKey] = false;
+                    
+                    Controller.transitionState(clearedState);
+                    
+                    document.querySelectorAll('#pre-' + tabId + '-options button').forEach(b => {
+                        b.classList.remove('correct', 'incorrect');
+                    });
+                    feedback.innerText = '';
+                }, 1800);
+            },
+            updateValX(val) {
+                const parsed = parseInt(val, 10);
+                document.getElementById('val-slider-x').innerText = parsed;
+                this.transitionState({ valX: parsed });
+            },
+            placeAlgebraTile(type) {
+                const selectedPan = document.querySelector('input[name="alch-pan-target"]:checked').value;
+                this.placeAlgebraTileToPan(selectedPan, type);
+            },
+            placeAlgebraTileToPan(pan, type) {
+                const lPan = { ...STATE.leftPan };
+                const rPan = { ...STATE.rightPan };
+
+                if (pan === 'left') {
+                    lPan[type] += 1;
+                } else {
+                    rPan[type] += 1;
+                }
+
+                AudioSynth.playTone(800, 0.04); 
+                this.transitionState({ leftPan: lPan, rightPan: rPan });
+            },
+            removePanItem(pan, type) {
+                const lPan = { ...STATE.leftPan };
+                const rPan = { ...STATE.rightPan };
+
+                if (pan === 'left') {
+                    if (lPan[type] > 0) lPan[type] -= 1;
+                } else {
+                    if (rPan[type] > 0) rPan[type] -= 1;
+                }
+
+                AudioSynth.playTone(500, 0.05); 
+                this.transitionState({ leftPan: lPan, rightPan: rPan });
+            },
+            clearAlgebraPans() {
+                AudioSynth.playTone(600, 0.08);
+                this.transitionState({
+                    leftPan: { x: 0, unit: 0 },
+                    rightPan: { x: 0, unit: 0 }
+                });
+            },
+            setCartesianMode(mode) {
+                AudioSynth.playTone(500, 0.08);
+                this.transitionState({ cartesianMode: mode, polygonPoints: [] });
+            },
+            handleGridClick(e) {
+                const svg = document.getElementById('svg-grid-plane');
+                const rect = svg.getBoundingClientRect();
+                const xVal = e.clientX - rect.left;
+                const yVal = e.clientY - rect.top;
+
+                const gridCenter = 160;
+                const stepSize = 13.5;
+                
+                const rawX = (xVal - gridCenter) / stepSize;
+                const rawY = (gridCenter - yVal) / stepSize;
+
+                const snappedX = Math.round(rawX);
+                const snappedY = Math.round(rawY);
+
+                if (Math.abs(snappedX) <= 10 && Math.abs(snappedY) <= 10) {
+                    const pointIdx = STATE.polygonPoints.findIndex(p => p.x === snappedX && p.y === snappedY);
+                    if (pointIdx !== -1) {
+                        STATE.polygonPoints.splice(pointIdx, 1);
+                    } else {
+                        if (STATE.cartesianMode === 'polygon') {
+                            if (STATE.polygonPoints.length < 8) {
+                                STATE.polygonPoints.push({ x: snappedX, y: snappedY });
+                            }
+                        } else if (STATE.cartesianMode === 'vector-line') {
+                            if (STATE.polygonPoints.length >= 2) {
+                                STATE.polygonPoints.shift();
+                            }
+                            STATE.polygonPoints.push({ x: snappedX, y: snappedY });
+                        }
                 isClosed: isClosed,
                 direction: direction
             };
