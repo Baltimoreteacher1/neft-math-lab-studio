@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduWonderLab - Grade 6 Interactive Curriculum Objectives</title>
+  <title>EduWonderLab - Grade 6 Interactive Small-Group Curriculum Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,6 +18,12 @@
       --orange-primary: #EA580C;
       --orange-bg: #FFF7ED;
       --orange-border: #FB923C;
+      --sky-primary: #0284C7;
+      --sky-bg: #F0F9FF;
+      --sky-border: #38BDF8;
+      --indigo-primary: #4F46E5;
+      --indigo-bg: #EEF2FF;
+      --indigo-border: #6366F1;
       --text-dark: #0F172A;
       --text-muted: #64748B;
       --radius-lg: 24px;
@@ -56,9 +62,12 @@
     .sidebar-title {
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #38BDF8;
       line-height: 1.3;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .sidebar-subtitle {
@@ -98,64 +107,85 @@
     /* MAIN CONTENT CONTAINER */
     .main-wrapper {
       flex: 1;
-      padding: 2.5rem 3rem;
+      padding: 2rem 2.5rem;
       overflow-y: auto;
     }
 
     .content-box {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 2.5rem;
+      padding: 2rem 2.5rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
       border: 1px solid #E2E8F0;
-      max-width: 1100px;
+      max-width: 1150px;
       position: relative;
     }
 
-    /* HEADER & PHASE BADGE */
-    .phase-badge {
-      display: inline-block;
-      background: #E0F2FE;
-      color: #0284C7;
+    /* PHASE STEPPER HEADER */
+    .phase-stepper {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      background: #F1F5F9;
+      padding: 0.4rem;
+      border-radius: 16px;
+      overflow-x: auto;
+    }
+
+    .phase-tab {
+      flex: 1;
+      padding: 0.6rem 0.9rem;
+      border-radius: 12px;
+      border: none;
+      background: transparent;
       font-family: 'Outfit', sans-serif;
-      font-weight: 800;
-      font-size: 0.78rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.75rem;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .phase-tab.active {
+      background: #FFFFFF;
+      color: var(--sky-primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     .page-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 2rem;
+      font-size: 1.85rem;
       font-weight: 800;
       color: var(--text-dark);
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
     }
 
     .page-subtitle {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       line-height: 1.5;
     }
 
-    /* OBJECTIVES GRID */
+    /* OBJECTIVES GRID (PHASE 2) */
     .objectives-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.75rem;
-      margin-bottom: 2rem;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .obj-card {
       border-radius: var(--radius-card);
-      padding: 1.75rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
     }
@@ -174,13 +204,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
     }
 
     .obj-card-title {
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
     }
 
     .content-obj-card .obj-card-title {
@@ -208,21 +238,22 @@
     }
 
     .obj-text {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 600;
-      line-height: 1.6;
+      line-height: 1.55;
       color: #1E293B;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
-    /* PUBLISHER-GRADE VISUAL MODEL CARD DIRECTLY BELOW OBJECTIVE TEXT */
+    /* PUBLISHER-GRADE VISUAL MODEL CARD */
     .visual-model-wrapper {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       border: 1px solid rgba(0, 0, 0, 0.1);
       background: #0B0F19;
+      position: relative;
     }
 
     .visual-model-img {
@@ -240,24 +271,40 @@
       padding: 0.75rem 1rem;
       background: #FFFFFF;
       border-top: 1px solid #E2E8F0;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-dark);
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: space-between;
+    }
+
+    .btn-try-manipulative {
+      background: var(--sky-primary);
+      color: #FFF;
+      border: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-try-manipulative:hover {
+      background: #0369A1;
     }
 
     /* TALK ABOUT IT SECTION */
     .talk-divider {
       border-top: 1px dotted #CBD5E1;
-      margin-bottom: 1rem;
+      margin-bottom: 0.85rem;
     }
 
     .talk-title {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.35rem;
       display: flex;
       align-items: center;
       gap: 0.4rem;
@@ -272,59 +319,18 @@
     }
 
     .talk-desc {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       color: #475569;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
-    /* ACTION BUTTONS AT BOTTOM */
-    .bottom-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 1rem;
+    /* PHASE VIEWS CONTAINER */
+    .phase-view {
+      display: none;
     }
 
-    .btn-launch {
-      background: #0F172A;
-      color: #FFF;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 0.85rem 1.75rem;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
-    }
-
-    .btn-launch:hover {
-      background: #1E293B;
-      transform: translateY(-2px);
-    }
-
-    .btn-next-floating {
-      position: fixed;
-      bottom: 2rem;
-      right: 3rem;
-      background: #0F172A;
-      color: #FFF;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 0.85rem 1.75rem;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      z-index: 100;
+    .phase-view.active {
+      display: block;
     }
 
     .lesson-view {
@@ -335,16 +341,214 @@
       display: block;
     }
 
+    /* GOOGLE INNOVATOR SMALL GROUP STUDIO (PHASE 3) STYLES */
+    .innovator-header-badge {
+      background: linear-gradient(135deg, #0284C7, #4F46E5);
+      color: #FFF;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tri-rotation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .rotation-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rotation-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .rotation-badge {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      color: #FFF;
+    }
+
+    .badge-direct { background: #0D9488; }
+    .badge-peer { background: #EA580C; }
+    .badge-astra { background: #4F46E5; }
+
+    .rotation-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0F172A;
+    }
+
+    /* EPISTEMIC SURGICAL CARD */
+    .surgical-card {
+      background: #FFF7ED;
+      border-left: 4px solid #EA580C;
+      padding: 0.85rem;
+      border-radius: 10px;
+      margin-bottom: 0.85rem;
+      font-size: 0.82rem;
+    }
+
+    .surgical-title {
+      font-weight: 800;
+      color: #9A3412;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .surgical-prompt {
+      color: #431407;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    /* INTERACTIVE SVG MANIPULATIVE CONTAINER */
+    .manipulative-box {
+      background: #0F172A;
+      border-radius: 14px;
+      padding: 1rem;
+      color: #FFF;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .manipulative-controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      width: 100%;
+    }
+
+    .manip-btn {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.12);
+      color: #FFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .manip-btn:hover {
+      background: rgba(56, 189, 248, 0.3);
+      border-color: #38BDF8;
+    }
+
+    /* PEER DIALECTIC LAB STYLES */
+    .dialectic-prompt-box {
+      background: #EEF2FF;
+      border: 1px dashed #6366F1;
+      padding: 0.85rem;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      font-size: 0.82rem;
+    }
+
+    .dialectic-stem {
+      font-weight: 700;
+      color: #3730A3;
+      margin-bottom: 0.25rem;
+    }
+
+    .turn-meter {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: #64748B;
+      margin-top: 0.5rem;
+    }
+
+    .turn-bar {
+      flex: 1;
+      height: 6px;
+      background: #E2E8F0;
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .turn-a { width: 50%; background: #0D9488; }
+    .turn-b { width: 50%; background: #EA580C; }
+
+    /* ACTION BUTTONS AT BOTTOM */
+    .bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #E2E8F0;
+    }
+
+    .btn-action {
+      background: #0F172A;
+      color: #FFF;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: #1E293B;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #F1F5F9;
+      color: #334155;
+      border: 1px solid #CBD5E1;
+    }
+
+    .btn-secondary:hover {
+      background: #E2E8F0;
+      color: #0F172A;
+    }
+
     @media (max-width: 950px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-      }
-      .objectives-grid {
-        grid-template-columns: 1fr;
-      }
+      body { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .objectives-grid { grid-template-columns: 1fr; }
+      .tri-rotation-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -353,33 +557,33 @@
   <!-- LEFT SIDEBAR NAVIGATION -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-title">EduWonderLab</div>
-      <div class="sidebar-subtitle">Grade 6 Mathematics Curriculum</div>
+      <div class="sidebar-title">EduWonderLab <span>🚀</span></div>
+      <div class="sidebar-subtitle">Grade 6 Small-Group Math Studio</div>
     </div>
 
     <div class="sidebar-menu">
-      <div class="menu-item active" onclick="switchLesson('gcf')">
+      <div class="menu-item active" onclick="switchUnit('gcf', this)">
         <span>🔢 Unit 1: Greatest Common Factor</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('fractions')">
+      <div class="menu-item" onclick="switchUnit('fractions', this)">
         <span>🧩 Unit 2: Fraction Operations</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('ratios')">
+      <div class="menu-item" onclick="switchUnit('ratios', this)">
         <span>📊 Unit 3: Ratios & Rates</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('expressions')">
+      <div class="menu-item" onclick="switchUnit('expressions', this)">
         <span>✨ Unit 4: Expressions & Order</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('algebra')">
+      <div class="menu-item" onclick="switchUnit('algebra', this)">
         <span>⚖️ Unit 5: One-Step Equations</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('nets')">
+      <div class="menu-item" onclick="switchUnit('nets', this)">
         <span>📐 Unit 6: Area & 3D Nets</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('cartesian')">
+      <div class="menu-item" onclick="switchUnit('cartesian', this)">
         <span>🎯 Unit 7: Coordinate Plane</span>
       </div>
-      <div class="menu-item" onclick="switchLesson('statistics')">
+      <div class="menu-item" onclick="switchUnit('statistics', this)">
         <span>📈 Unit 8: Statistics & Box Plots</span>
       </div>
     </div>
@@ -389,373 +593,682 @@
   <main class="main-wrapper">
     <div class="content-box">
       
-      <!-- PHASE BADGE -->
-      <span class="phase-badge">Phase 2 · Objectives</span>
+      <!-- PHASE STEPPER NAVIGATION -->
+      <nav class="phase-stepper">
+        <button class="phase-tab" onclick="switchPhase('p1', this)">
+          <span>⚡ Phase 1: Diagnostic Pulse</span>
+        </button>
+        <button class="phase-tab active" onclick="switchPhase('p2', this)">
+          <span>🎯 Phase 2: Objectives & Models</span>
+        </button>
+        <button class="phase-tab" onclick="switchPhase('p3', this)">
+          <span>💡 Phase 3: Small-Group Studio</span>
+        </button>
+        <button class="phase-tab" onclick="switchPhase('p4', this)">
+          <span>🔄 Phase 4: Synthesis & Echo</span>
+        </button>
+      </nav>
 
-      <h1 class="page-title">🎯 Today's Learning Objectives</h1>
-      <p class="page-subtitle">Read through today's Content Goal and Language Goal. These are the skills you will master by the end of today's lesson!</p>
-
-      <!-- UNIT 1: GREATEST COMMON FACTOR -->
-      <div class="lesson-view active" id="view-gcf">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+      <!-- PHASE 1 VIEW: DIAGNOSTIC PULSE -->
+      <div class="phase-view" id="phase-p1">
+        <div class="innovator-header-badge">Google Innovator Telemetry · Real-Time Micro-Clustering</div>
+        <h1 class="page-title">⚡ Real-Time Diagnostic Pulse Engine</h1>
+        <p class="page-subtitle">Gemini automatically scans 3-minute entry responses and clusters students by specific root-cause misconception patterns, avoiding static ability tracking.</p>
+        
+        <div class="tri-rotation-grid">
+          <div class="rotation-card" style="border-top: 4px solid #0D9488;">
+            <div class="rotation-card-header">
+              <span class="rotation-badge badge-direct">Cluster 1</span>
+              <div class="rotation-title">Procedural Mastery (4 Students)</div>
             </div>
-            <p class="obj-text">I can find the greatest common factor (GCF) of two numbers by listing or comparing their factors.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student finding GCF by listing factors">
-              <div class="visual-model-caption">
-                <span>🔢 <strong>Visual Representation:</strong> Student listing factor pairs on her desk grid mat to compare and circle the greatest common factor.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0.75rem;">Students mastered basic algorithmic steps. Assigned to Station C for Far-Transfer Challenge Problem.</p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: #0D9488;">Target: Multi-Step Real World Synthesis</div>
           </div>
 
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+          <div class="rotation-card" style="border-top: 4px solid #EA580C;">
+            <div class="rotation-card-header">
+              <span class="rotation-badge badge-peer">Cluster 2</span>
+              <div class="rotation-title">Root-Cause Misconception (5 Students)</div>
             </div>
-            <p class="obj-text">I can explain how I found the GCF using the words <em>factor</em>, <em>common factor</em>, <em>divisible</em>, and <em>greatest common factor</em>.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining GCF math terms">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to vocabulary callout badges and using academic sentence frames.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0.75rem;">Confusing operation procedures or place-value models. Direct intervention with Teacher Studio.</p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: #EA580C;">Target: Epistemic Surgical Questioning</div>
           </div>
+
+          <div class="rotation-card" style="border-top: 4px solid #4F46E5;">
+            <div class="rotation-card-header">
+              <span class="rotation-badge badge-astra">Cluster 3</span>
+              <div class="rotation-title">Representation Gap (5 Students)</div>
+            </div>
+            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0.75rem;">Struggling to connect abstract symbols to visual models. Assigned to Astra Dual-Coding Manipulative Sandbox.</p>
+            <div style="font-size: 0.78rem; font-weight: 700; color: #4F46E5;">Target: Tactile-to-Symbolic Schema Bridge</div>
+          </div>
+        </div>
+
+        <div class="bottom-bar">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Grouping verified with 0% historical tracking bias</span>
+          <button class="btn-action" onclick="switchPhase('p2', document.querySelectorAll('.phase-tab')[1])">Continue to Phase 2: Objectives 🎯</button>
         </div>
       </div>
 
-      <!-- UNIT 2: FRACTIONS -->
-      <div class="lesson-view" id="view-fractions">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can multiply and divide fractions by whole numbers and fractions using visual fraction bar models.</p>
+      <!-- PHASE 2 VIEW: OBJECTIVES & VISUAL MODELS (PRIMARY LESSON VIEWS) -->
+      <div class="phase-view active" id="phase-p2">
+        <h1 class="page-title">🎯 Today's Learning Objectives</h1>
+        <p class="page-subtitle">Read through today's Content Goal and Language Goal. Click "Try Manipulative" to interact with the visual model!</p>
 
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student modeling fraction division">
-              <div class="visual-model-caption">
-                <span>🧩 <strong>Visual Representation:</strong> Student dividing fraction bar strips on her desk grid mat to solve quotient problems.</span>
+        <!-- UNIT 1: GREATEST COMMON FACTOR -->
+        <div class="lesson-view active" id="view-gcf">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
               </div>
-            </div>
+              <p class="obj-text">I can find the greatest common factor (GCF) of two numbers by listing or comparing their factors.</p>
 
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-          </div>
-
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can describe fraction division using academic terms like <em>numerator</em>, <em>denominator</em>, <em>reciprocal</em>, and <em>quotient</em>.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining fraction terms">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to fraction vocabulary callout badges and using sentence frames.</span>
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student finding GCF by listing factors">
+                <div class="visual-model-caption">
+                  <span>🔢 <strong>Visual Representation:</strong> Student listing factor pairs on her desk grid mat to compare GCF.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
               </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
             </div>
 
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can explain how I found the GCF using the words <em>factor</em>, <em>common factor</em>, <em>divisible</em>, and <em>greatest common factor</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining GCF math terms">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to vocabulary callout badges and using academic sentence frames.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
           </div>
+        </div>
+
+        <!-- UNIT 2: FRACTIONS -->
+        <div class="lesson-view" id="view-fractions">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can multiply and divide fractions by whole numbers and fractions using visual fraction bar models.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student modeling fraction division">
+                <div class="visual-model-caption">
+                  <span>🧩 <strong>Visual Representation:</strong> Student dividing fraction bar strips on her desk grid mat to solve quotient problems.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can describe fraction division using academic terms like <em>numerator</em>, <em>denominator</em>, <em>reciprocal</em>, and <em>quotient</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining fraction terms">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to fraction vocabulary callout badges.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNIT 3: RATIOS -->
+        <div class="lesson-view" id="view-ratios">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can model equivalent ratios and unit rates using double number lines, ratio tables, and tape diagrams.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student modeling ratio lines">
+                <div class="visual-model-caption">
+                  <span>📊 <strong>Visual Representation:</strong> Student plotting ratio points on double number line strips.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can state ratio relationships using phrases like "for every X units, there are Y units" and "proportional rate".</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining ratio phrases">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners reciting ratio sentence starters.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNIT 4: EXPRESSIONS -->
+        <div class="lesson-view" id="view-expressions">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can evaluate algebraic expressions and simplify terms using the order of operations and distributive property.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student simplifying expression">
+                <div class="visual-model-caption">
+                  <span>✨ <strong>Visual Representation:</strong> Student applying distributive tile arrays to simplify expressions.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can identify expression parts using math vocabulary terms like <em>term</em>, <em>coefficient</em>, <em>constant</em>, and <em>exponent</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students labeling expression parts">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to coefficient and term callout badges.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNIT 5: ONE-STEP EQUATIONS -->
+        <div class="lesson-view" id="view-algebra">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can solve one-step algebraic equations (x + 3 = 7) by isolating the variable x using an interactive balance scale model.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student balancing algebraic scale">
+                <div class="visual-model-caption">
+                  <span>⚖️ <strong>Visual Representation:</strong> Student avatar actively balancing an algebraic scale with variable blocks to isolate x.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can explain equation-solving steps using academic vocabulary terms like <em>variable</em>, <em>isolate</em>, and <em>inverse operation</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining algebra">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners discussing algebraic balance steps using sentence frames.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNIT 6: AREA & 3D NETS -->
+        <div class="lesson-view" id="view-nets">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can calculate the total surface area of a 3D triangular prism by unfolding it into a 2D net and adding all 5 face areas together.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student unfolding 3D net">
+                <div class="visual-model-caption">
+                  <span>📐 <strong>Visual Representation:</strong> Student laying flat the 3D prism into a 2D net on her desk grid mat.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can describe geometry features using academic terms like <em>triangular base</em>, <em>rectangular face</em>, and <em>vertex</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining 3D nets">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to geometry vocabulary badges.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNIT 7: COORDINATE PLANE -->
+        <div class="lesson-view" id="view-cartesian">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can locate and plot ordered pairs (x,y) across all 4 quadrants of the Cartesian coordinate plane.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student plotting coordinate points">
+                <div class="visual-model-caption">
+                  <span>🎯 <strong>Visual Representation:</strong> Student plotting coordinate points (x,y) on a 4-quadrant grid mat.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can explain coordinate positions using vocabulary terms like <em>x-axis</em>, <em>y-axis</em>, <em>origin</em>, and <em>quadrant</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining coordinates">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners reciting coordinate sentence starters.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UNIT 8: STATISTICS -->
+        <div class="lesson-view" id="view-statistics">
+          <div class="objectives-grid">
+            <div class="obj-card content-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Content Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can calculate measures of center (mean, median, mode) and display data distributions using box plots and dot plots.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student drawing box plot">
+                <div class="visual-model-caption">
+                  <span>📈 <strong>Visual Representation:</strong> Student drawing a 5-number summary box plot on a grid mat.</span>
+                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            </div>
+
+            <div class="obj-card language-obj-card">
+              <div class="obj-card-header">
+                <h2 class="obj-card-title">Language Objective</h2>
+                <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+              </div>
+              <p class="obj-text">I can summarize data distributions using statistical vocabulary like <em>mean</em>, <em>median</em>, <em>interquartile range</em>, and <em>outlier</em>.</p>
+
+              <div class="visual-model-wrapper">
+                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining statistics">
+                <div class="visual-model-caption">
+                  <span>🗣️ <strong>Visual Representation:</strong> Student partners discussing median and IQR.</span>
+                </div>
+              </div>
+
+              <div class="talk-divider"></div>
+              <div class="talk-title">💬 Talk about it</div>
+              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-bar">
+          <button class="btn-action btn-secondary" onclick="switchPhase('p1', document.querySelectorAll('.phase-tab')[0])">⬅️ Diagnostic Pulse</button>
+          <button class="btn-action" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Launch Small-Group Studio Phase 3 🚀</button>
         </div>
       </div>
 
-      <!-- UNIT 3: RATIOS -->
-      <div class="lesson-view" id="view-ratios">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can model equivalent ratios and unit rates using double number lines, ratio tables, and tape diagrams.</p>
+      <!-- PHASE 3 VIEW: GOOGLE INNOVATOR SMALL GROUP STUDIO -->
+      <div class="phase-view" id="phase-p3">
+        <div class="innovator-header-badge">Google Innovator Studio · Tri-Rotation Engine</div>
+        <h1 class="page-title">💡 Small-Group Tri-Rotation Studio</h1>
+        <p class="page-subtitle">3 concurrent 10-minute rotations designed for deep schema building, peer dialectics, and physical-digital manipulative exploration.</p>
 
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student modeling ratio lines">
-              <div class="visual-model-caption">
-                <span>📊 <strong>Visual Representation:</strong> Student plotting ratio points on double number line strips to calculate unit rates.</span>
+        <div class="tri-rotation-grid">
+          <!-- ROTATION 1: TEACHER DIRECT STUDIO -->
+          <div class="rotation-card">
+            <div class="rotation-card-header">
+              <span class="rotation-badge badge-direct">Station 1</span>
+              <div class="rotation-title">Teacher Direct Studio</div>
+            </div>
+            
+            <div class="surgical-card">
+              <div class="surgical-title">💡 Epistemic Surgical Questioning</div>
+              <div class="surgical-prompt" id="surgical-prompt-text">
+                "If we change the denominator in 3/4 to 8, why does the numerator also double? Prove it with a area model."
               </div>
             </div>
 
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.4rem;">Live Teacher Observation Quick-Tag:</div>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+              <button class="manip-btn" style="color:#0D9488; background:#E6FFFA; border-color:#0D9488;" onclick="this.style.background='#0D9488'; this.style.color='#FFF';">✓ Mastered Model</button>
+              <button class="manip-btn" style="color:#EA580C; background:#FFFAF0; border-color:#EA580C;" onclick="this.style.background='#EA580C'; this.style.color='#FFF';">⚠️ Needs Visual Probe</button>
+            </div>
           </div>
 
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+          <!-- ROTATION 2: SMART CANVAS PEER DIALECTIC LAB -->
+          <div class="rotation-card">
+            <div class="rotation-card-header">
+              <span class="rotation-badge badge-peer">Station 2</span>
+              <div class="rotation-title">Peer Dialectic Lab</div>
             </div>
-            <p class="obj-text">I can state ratio relationships using phrases like "for every X units, there are Y units" and "proportional rate".</p>
 
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining ratio phrases">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners reciting ratio sentence starters with callout badges.</span>
+            <div class="dialectic-prompt-box">
+              <div class="dialectic-stem">🗣️ Socratic Pair Debate Prompt:</div>
+              <div style="color: #312E81;" id="dialectic-prompt-text">
+                "Partner A says x + 5 = 12 means x is 7. Partner B says x is 17. Debate which inverse operation isolates x correctly."
               </div>
             </div>
 
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+            <div class="turn-meter">
+              <span>Turn-Taking Telemetry:</span>
+              <div class="turn-bar">
+                <div class="turn-a"></div>
+                <div class="turn-b"></div>
+              </div>
+              <span style="font-weight:700;">50/50 Equity</span>
+            </div>
           </div>
+
+          <!-- ROTATION 3: EMBODIED ASTRA MANIPULATIVE SANDBOX -->
+          <div class="rotation-card">
+            <div class="rotation-card-header">
+              <span class="rotation-badge badge-astra">Station 3</span>
+              <div class="rotation-title">Project Astra Dual-Coding Sandbox</div>
+            </div>
+
+            <div class="manipulative-box" id="manipulative-box-container">
+              <!-- INTERACTIVE SVG MODEL WILL BE RENDERED HERE -->
+              <svg id="interactive-svg" width="100%" height="150" viewBox="0 0 300 150">
+                <rect x="20" y="30" width="100" height="40" fill="#0D9488" rx="6"/>
+                <text x="70" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">x</text>
+                <rect x="130" y="30" width="30" height="40" fill="#EA580C" rx="6"/>
+                <text x="145" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">+3</text>
+                <text x="180" y="55" fill="#38BDF8" font-weight="bold" font-size="20" text-anchor="middle">=</text>
+                <rect x="200" y="30" width="70" height="40" fill="#38BDF8" rx="6"/>
+                <text x="235" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">7</text>
+                <text x="150" y="115" fill="#94A3B8" font-size="12" text-anchor="middle">Interactive Balance Scale Model</text>
+              </svg>
+
+              <div class="manipulative-controls">
+                <button class="manip-btn" onclick="triggerManipAction('isolate')">Isolate Variable</button>
+                <button class="manip-btn" onclick="triggerManipAction('reset')">Reset Model</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-bar">
+          <button class="btn-action btn-secondary" onclick="switchPhase('p2', document.querySelectorAll('.phase-tab')[1])">⬅️ Back to Objectives</button>
+          <button class="btn-action" onclick="switchPhase('p4', document.querySelectorAll('.phase-tab')[3])">Complete Lesson & View Synthesis 🔄</button>
         </div>
       </div>
 
-      <!-- UNIT 4: EXPRESSIONS -->
-      <div class="lesson-view" id="view-expressions">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can evaluate algebraic expressions and simplify terms using the order of operations and distributive property.</p>
+      <!-- PHASE 4 VIEW: SYNTHESIS & 21-DAY TRANSFER ECHO -->
+      <div class="phase-view" id="phase-p4">
+        <div class="innovator-header-badge">Google Innovator Transfer Engine · Longitudinal Spaced Practice</div>
+        <h1 class="page-title">🔄 Lesson Synthesis & 21-Day Spaced Echo</h1>
+        <p class="page-subtitle">Consolidate small-group observational notes and schedule automated far-transfer challenges to ensure long-term schema retention.</p>
 
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student simplifying expression">
-              <div class="visual-model-caption">
-                <span>✨ <strong>Visual Representation:</strong> Student applying distributive tile arrays on her desk to simplify algebraic expressions.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+        <div class="tri-rotation-grid">
+          <div class="rotation-card" style="border-top: 4px solid #0D9488;">
+            <h3 style="font-family:'Outfit'; font-size:1.1rem; color:#0F172A; margin-bottom:0.5rem;">📝 Automated Observational Digest</h3>
+            <p style="font-size:0.85rem; color:#475569; line-height:1.5; margin-bottom:0.75rem;">
+              • 85% of students mastered direct visual representations.<br>
+              • 2 students scheduled for follow-up intervention on inverse operation vocabulary.<br>
+              • Observational quick-tags synced to Google Classroom gradebook.
+            </p>
+            <button class="btn-action" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onclick="alert('Observational digest exported to Google Classroom & IEP Log!')">Sync to Classroom 📤</button>
           </div>
 
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
+          <div class="rotation-card" style="border-top: 4px solid #4F46E5;">
+            <h3 style="font-family:'Outfit'; font-size:1.1rem; color:#0F172A; margin-bottom:0.5rem;">📅 21-Day Spaced Transfer Schedule</h3>
+            <div style="font-size:0.82rem; color:#334155; line-height:1.6;">
+              <strong>Day 7 Echo:</strong> Interleaved review in Science class.<br>
+              <strong>Day 14 Echo:</strong> Real-world scaling application.<br>
+              <strong>Day 21 Echo:</strong> Far-transfer challenge problem.
             </div>
-            <p class="obj-text">I can identify expression parts using math vocabulary terms like <em>term</em>, <em>coefficient</em>, <em>constant</em>, and <em>exponent</em>.</p>
+          </div>
 
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students labeling expression parts">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to coefficient and term callout badges with sentence frames.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
+          <div class="rotation-card" style="border-top: 4px solid #EA580C;">
+            <h3 style="font-family:'Outfit'; font-size:1.1rem; color:#0F172A; margin-bottom:0.5rem;">⭐ Mastery Celebration</h3>
+            <p style="font-size:0.85rem; color:#475569; margin-bottom:0.75rem;">Congratulations! You have completed today's Grade 6 Small-Group Math Studio session.</p>
+            <div style="font-size: 1.5rem;">🎉 🧠 📐</div>
           </div>
         </div>
-      </div>
 
-      <!-- UNIT 5: ONE-STEP EQUATIONS -->
-      <div class="lesson-view" id="view-algebra">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can solve one-step algebraic equations (x + 3 = 7) by isolating the variable x using an interactive balance scale model.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student balancing algebraic scale">
-              <div class="visual-model-caption">
-                <span>⚖️ <strong>Visual Representation:</strong> Student avatar actively balancing an algebraic scale with variable blocks to isolate x.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-          </div>
-
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can explain equation-solving steps using academic vocabulary terms like <em>variable</em>, <em>isolate</em>, and <em>inverse operation</em>.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining algebra">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners discussing algebraic balance steps using sentence frames.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-          </div>
+        <div class="bottom-bar">
+          <button class="btn-action btn-secondary" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">⬅️ Back to Studio</button>
+          <button class="btn-action" onclick="switchPhase('p2', document.querySelectorAll('.phase-tab')[1])">Return to Unit Menu 🏠</button>
         </div>
-      </div>
-
-      <!-- UNIT 6: AREA & 3D NETS -->
-      <div class="lesson-view" id="view-nets">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can calculate the total surface area of a 3D triangular prism by unfolding it into a 2D net and adding all 5 face areas together.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student unfolding 3D net">
-              <div class="visual-model-caption">
-                <span>📐 <strong>Visual Representation:</strong> Student laying flat the 3D prism into a 2D net on her desk grid mat to calculate face dimensions.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-          </div>
-
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can describe geometry features using academic terms like <em>triangular base</em>, <em>rectangular face</em>, and <em>vertex</em>.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining 3D nets">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners pointing to geometry vocabulary badges and using academic sentence frames.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- UNIT 7: COORDINATE PLANE -->
-      <div class="lesson-view" id="view-cartesian">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can locate and plot ordered pairs (x,y) across all 4 quadrants of the Cartesian coordinate plane.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student plotting coordinate points">
-              <div class="visual-model-caption">
-                <span>🎯 <strong>Visual Representation:</strong> Student plotting coordinate points (x,y) on a 4-quadrant grid mat.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-          </div>
-
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can explain coordinate positions using vocabulary terms like <em>x-axis</em>, <em>y-axis</em>, <em>origin</em>, and <em>quadrant</em>.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining coordinates">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners reciting coordinate sentence starters with callout badges.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- UNIT 8: STATISTICS -->
-      <div class="lesson-view" id="view-statistics">
-        <div class="objectives-grid">
-          <div class="obj-card content-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Content Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can calculate measures of center (mean, median, mode) and display data distributions using box plots and dot plots.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student drawing box plot">
-              <div class="visual-model-caption">
-                <span>📈 <strong>Visual Representation:</strong> Student drawing a 5-number summary box plot on a grid mat to analyze median data.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-          </div>
-
-          <div class="obj-card language-obj-card">
-            <div class="obj-card-header">
-              <h2 class="obj-card-title">Language Objective</h2>
-              <label class="got-it-checkbox"><input type="checkbox"> Got it</label>
-            </div>
-            <p class="obj-text">I can summarize data distributions using statistical vocabulary like <em>mean</em>, <em>median</em>, <em>interquartile range</em>, and <em>outlier</em>.</p>
-
-            <div class="visual-model-wrapper">
-              <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining statistics">
-              <div class="visual-model-caption">
-                <span>🗣️ <strong>Visual Representation:</strong> Student partners discussing median and IQR using academic sentence frames.</span>
-              </div>
-            </div>
-
-            <div class="talk-divider"></div>
-            <div class="talk-title">💬 Talk about it</div>
-            <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BOTTOM ACTION BAR -->
-      <div class="bottom-bar">
-        <button class="btn-launch">Continue to Phase 3: Launch 🚀</button>
       </div>
 
     </div>
   </main>
 
-  <button class="btn-next-floating">Next: Launch 🚀</button>
-
   <script>
-    function switchLesson(key) {
+    // UNIT PROMPTS & MANIPULATIVE SVG MAPPINGS
+    const unitData = {
+      gcf: {
+        surgical: '"Why does listing factors of 12 and 18 reveal that 6 is the GREATEST factor, not just a common factor?"',
+        dialectic: '"Partner A lists factors up to 12; Partner B lists factors up to 18. Circle shared factors and debate why 6 is the maximum shared value."',
+        svg: `<rect x="30" y="30" width="80" height="80" fill="none" stroke="#0D9488" stroke-width="3" rx="10"/>
+              <rect x="80" y="30" width="80" height="80" fill="none" stroke="#EA580C" stroke-width="3" rx="10"/>
+              <text x="60" y="75" fill="#0D9488" font-weight="bold" font-size="14" text-anchor="middle">1, 2, 3, 4, 12</text>
+              <text x="100" y="75" fill="#38BDF8" font-weight="bold" font-size="16" text-anchor="middle">6</text>
+              <text x="140" y="75" fill="#EA580C" font-weight="bold" font-size="14" text-anchor="middle">9, 18</text>
+              <text x="100" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">GCF Venn Factor Model (GCF = 6)</text>`
+      },
+      fractions: {
+        surgical: '"When dividing 3/4 by 1/2, why does the quotient equal 1 1/2? Explain using fraction bar strips."',
+        dialectic: '"Partner A models 3/4 with bar strips. Partner B measures how many 1/2 strips fit into 3/4. Debate the reciprocal rule."',
+        svg: `<rect x="30" y="30" width="240" height="30" fill="#0D9488" rx="6"/>
+              <text x="150" y="50" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">Whole Bar (1.0)</text>
+              <rect x="30" y="70" width="180" height="30" fill="#EA580C" rx="6"/>
+              <text x="120" y="90" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">3/4 Strip</text>
+              <text x="150" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">Fraction Bar Division Splitter</text>`
+      },
+      ratios: {
+        surgical: '"If 2 cups of flour make 6 cookies, why does the double number line show 1 cup flour equals 3 cookies?"',
+        dialectic: '"Partner A plots flour units; Partner B plots cookie units. State the unit rate using \'for every X, there are Y\'."',
+        svg: `<line x1="30" y1="40" x2="270" y2="40" stroke="#38BDF8" stroke-width="4"/>
+              <circle cx="30" cy="40" r="6" fill="#38BDF8"/><text x="30" y="30" fill="#FFF" font-size="10">0</text>
+              <circle cx="150" cy="40" r="6" fill="#38BDF8"/><text x="150" y="30" fill="#FFF" font-size="10">2 (Cups)</text>
+              <line x1="30" y1="90" x2="270" y2="90" stroke="#EA580C" stroke-width="4"/>
+              <circle cx="30" cy="90" r="6" fill="#EA580C"/><text x="30" y="110" fill="#FFF" font-size="10">0</text>
+              <circle cx="150" cy="90" r="6" fill="#EA580C"/><text x="150" y="110" fill="#FFF" font-size="10">6 (Cookies)</text>
+              <text x="150" y="135" fill="#94A3B8" font-size="12" text-anchor="middle">Double Number Line Unit Rate</text>`
+      },
+      expressions: {
+        surgical: '"In the expression 3(x + 4), why must 3 multiply BOTH x and 4? Explain using a rectangular area tile model."',
+        dialectic: '"Partner A draws 3 rows of x; Partner B draws 3 rows of 4. Explain why 3(x + 4) = 3x + 12."',
+        svg: `<rect x="40" y="30" width="120" height="70" fill="#4F46E5" rx="6"/>
+              <text x="100" y="70" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">3x Tile Area</text>
+              <rect x="170" y="30" width="80" height="70" fill="#EA580C" rx="6"/>
+              <text x="210" y="70" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">+12</text>
+              <text x="150" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">Distributive Tile Array [3(x + 4)]</text>`
+      },
+      algebra: {
+        surgical: '"How does subtracting 3 from BOTH sides of x + 3 = 7 keep the scale perfectly balanced?"',
+        dialectic: '"Partner A removes 3 weights from left pan; Partner B removes 3 weights from right pan. Isolate x."',
+        svg: `<rect x="20" y="30" width="100" height="40" fill="#0D9488" rx="6"/>
+              <text x="70" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">x</text>
+              <rect x="130" y="30" width="30" height="40" fill="#EA580C" rx="6"/>
+              <text x="145" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">+3</text>
+              <text x="180" y="55" fill="#38BDF8" font-weight="bold" font-size="20" text-anchor="middle">=</text>
+              <rect x="200" y="30" width="70" height="40" fill="#38BDF8" rx="6"/>
+              <text x="235" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">7</text>
+              <text x="150" y="115" fill="#94A3B8" font-size="12" text-anchor="middle">Interactive Balance Scale Model</text>`
+      },
+      nets: {
+        surgical: '"When a 3D triangular prism is unfolded into a 2D net, how many rectangles and triangles are formed?"',
+        dialectic: '"Partner A calculates area of the 2 triangular bases. Partner B calculates area of the 3 rectangular faces. Sum total surface area."',
+        svg: `<polygon points="150,20 110,60 190,60" fill="#0D9488"/>
+              <rect x="110" y="60" width="80" height="50" fill="#38BDF8"/>
+              <polygon points="150,130 110,110 190,110" fill="#0D9488"/>
+              <text x="150" y="145" fill="#94A3B8" font-size="12" text-anchor="middle">2D Unfolded Prism Net Model</text>`
+      },
+      cartesian: {
+        surgical: '"Why does point (-3, 4) lie in Quadrant II while point (3, -4) lies in Quadrant IV?"',
+        dialectic: '"Partner A walks x-axis left/right; Partner B walks y-axis up/down. Debate quadrant sign rules."',
+        svg: `<line x1="30" y1="75" x2="270" y2="75" stroke="#94A3B8" stroke-width="2"/>
+              <line x1="150" y1="10" x2="150" y2="130" stroke="#94A3B8" stroke-width="2"/>
+              <circle cx="100" cy="35" r="7" fill="#EA580C"/>
+              <text x="90" y="25" fill="#EA580C" font-size="11" font-weight="bold">(-3, 4) Q2</text>
+              <text x="150" y="145" fill="#94A3B8" font-size="12" text-anchor="middle">4-Quadrant Coordinate Grid</text>`
+      },
+      statistics: {
+        surgical: '"How does an outlier extreme value affect the mean versus the median of a data set?"',
+        dialectic: '"Partner A calculates mean with outlier included; Partner B calculates median. Debate which measure of center is more accurate."',
+        svg: `<rect x="40" y="50" width="220" height="40" fill="none" stroke="#38BDF8" stroke-width="2" rx="4"/>
+              <line x1="120" y1="50" x2="120" y2="90" stroke="#EA580C" stroke-width="4"/>
+              <text x="120" y="40" fill="#EA580C" font-size="11" font-weight="bold" text-anchor="middle">Median</text>
+              <text x="150" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">5-Number Summary Box Plot Model</text>`
+      }
+    };
+
+    let currentUnitKey = 'gcf';
+
+    function switchUnit(key, el) {
       document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
-      event.currentTarget.classList.add('active');
+      el.classList.add('active');
 
       document.querySelectorAll('.lesson-view').forEach(v => v.classList.remove('active'));
-      document.getElementById('view-' + key).classList.add('active');
+      const targetView = document.getElementById('view-' + key);
+      if (targetView) targetView.classList.add('active');
+
+      currentUnitKey = key;
+      updateStudioData(key);
+    }
+
+    function switchPhase(phaseKey, el) {
+      document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+
+      document.querySelectorAll('.phase-view').forEach(v => v.classList.remove('active'));
+      document.getElementById('phase-' + phaseKey).classList.add('active');
+
+      if (phaseKey === 'p3') {
+        updateStudioData(currentUnitKey);
+      }
+    }
+
+    function updateStudioData(key) {
+      const data = unitData[key] || unitData.gcf;
+      const surgEl = document.getElementById('surgical-prompt-text');
+      const dialEl = document.getElementById('dialectic-prompt-text');
+      const svgEl = document.getElementById('interactive-svg');
+
+      if (surgEl) surgEl.innerText = data.surgical;
+      if (dialEl) dialEl.innerText = data.dialectic;
+      if (svgEl) svgEl.innerHTML = data.svg;
+    }
+
+    function triggerManipAction(action) {
+      const svgEl = document.getElementById('interactive-svg');
+      if (!svgEl) return;
+
+      if (action === 'isolate') {
+        svgEl.style.transform = 'scale(1.05)';
+        setTimeout(() => svgEl.style.transform = 'scale(1.0)', 300);
+      } else if (action === 'reset') {
+        updateStudioData(currentUnitKey);
+      }
     }
   </script>
 </body>
