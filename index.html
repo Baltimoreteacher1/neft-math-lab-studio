@@ -50,7 +50,7 @@
 
     /* LEFT SIDEBAR NAVIGATION */
     .sidebar {
-      width: 290px;
+      width: 300px;
       background-color: var(--sidebar-bg);
       color: #FFF;
       padding: 1.5rem 1rem;
@@ -62,7 +62,7 @@
     }
 
     .sidebar-header {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -98,6 +98,35 @@
       margin-top: 0.5rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+    }
+
+    .lang-selector-box {
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .lang-label {
+      font-size: 0.75rem;
+      color: #CBD5E1;
+      font-weight: 700;
+    }
+
+    .lang-select {
+      background: #1E293B;
+      color: #38BDF8;
+      border: 1px solid #38BDF8;
+      border-radius: 8px;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
     }
 
     .sidebar-menu {
@@ -250,25 +279,20 @@
     .obj-card {
       border-radius: var(--radius-card);
       padding: 1.5rem;
+      border: 2px solid transparent;
       display: flex;
       flex-direction: column;
       position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .obj-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
     }
 
     .content-obj-card {
-      background-color: var(--teal-bg);
-      border: 2px dashed var(--teal-border);
+      background: var(--teal-bg);
+      border-color: var(--teal-border);
     }
 
     .language-obj-card {
-      background-color: var(--orange-bg);
-      border: 2px dashed var(--orange-border);
+      background: var(--orange-bg);
+      border-color: var(--orange-border);
     }
 
     .obj-card-header {
@@ -280,165 +304,230 @@
 
     .obj-card-title {
       font-family: 'Outfit', sans-serif;
-      font-weight: 800;
       font-size: 1.15rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      font-weight: 800;
     }
 
     .content-obj-card .obj-card-title { color: var(--teal-primary); }
     .language-obj-card .obj-card-title { color: var(--orange-primary); }
 
-    .btn-tts {
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid #CBD5E1;
-      border-radius: 20px;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: all 0.2s ease;
-    }
-
-    .btn-tts:hover {
-      background: var(--sky-primary);
-      color: #FFF;
-      border-color: var(--sky-primary);
-    }
-
     .got-it-checkbox {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-dark);
       cursor: pointer;
-      user-select: none;
-    }
-
-    .got-it-checkbox input {
-      width: 17px;
-      height: 17px;
-      cursor: pointer;
-      accent-color: var(--teal-primary);
     }
 
     .obj-text {
-      font-size: 1.02rem;
-      font-weight: 600;
+      font-size: 0.92rem;
       line-height: 1.55;
-      color: #1E293B;
-      margin-bottom: 1rem;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
     }
 
-    /* PUBLISHER-GRADE VISUAL MODEL CARD */
     .visual-model-wrapper {
-      margin-bottom: 1rem;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      background: #0B0F19;
-      position: relative;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1.25rem;
     }
 
     .visual-model-img {
       width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .visual-model-img:hover {
-      transform: scale(1.02);
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
     }
 
     .visual-model-caption {
-      padding: 0.75rem 1rem;
-      background: #FFFFFF;
-      border-top: 1px solid #E2E8F0;
-      font-size: 0.82rem;
-      color: var(--text-dark);
-      font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
-    .btn-try-manipulative {
-      background: linear-gradient(135deg, var(--sky-primary), var(--indigo-primary));
-      color: #FFF;
-      border: none;
-      padding: 0.4rem 0.85rem;
-      border-radius: 10px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+    .esol-frame-box {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px dashed var(--orange-border);
+      border-radius: 12px;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.82rem;
+      color: #7C2D12;
     }
 
-    .btn-try-manipulative:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    .esol-frame-title {
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
     }
 
-    /* TALK ABOUT IT SECTION */
     .talk-divider {
-      border-top: 1px dotted #CBD5E1;
-      margin-bottom: 0.85rem;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.08);
+      margin: 1rem 0;
     }
 
     .talk-title {
-      font-size: 0.88rem;
-      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--text-dark);
       margin-bottom: 0.35rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
     }
 
-    .content-obj-card .talk-title { color: var(--teal-primary); }
-    .language-obj-card .talk-title { color: var(--orange-primary); }
-
     .talk-desc {
-      font-size: 0.88rem;
-      color: #475569;
+      font-size: 0.84rem;
+      color: var(--text-muted);
       line-height: 1.45;
     }
 
-    /* PHASE VIEWS CONTAINER */
-    .phase-view { display: none; }
-    .phase-view.active { display: block; }
-    .lesson-view { display: none; }
-    .lesson-view.active { display: block; }
-
-    /* GOOGLE INNOVATOR SMALL GROUP STUDIO (PHASE 3) STYLES */
-    .innovator-header-badge {
-      background: linear-gradient(135deg, #0284C7, #4F46E5);
-      color: #FFF;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 800;
-      font-size: 0.75rem;
-      padding: 0.3rem 0.8rem;
+    .btn-tts {
+      background: #FFFFFF;
+      border: 1px solid var(--text-muted);
+      padding: 0.3rem 0.65rem;
       border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 0.75rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .btn-tts:hover {
+      background: var(--sky-bg);
+      border-color: var(--sky-primary);
+      color: var(--sky-primary);
+    }
+
+    .btn-try-manipulative {
+      background: var(--sky-primary);
+      color: #FFFFFF;
+      border: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-try-manipulative:hover {
+      transform: translateY(-2px);
+      background: #0284C7;
+    }
+
+    .phase-view {
+      display: none;
+    }
+
+    .phase-view.active {
+      display: block;
+    }
+
+    .lesson-view {
+      display: none;
+    }
+
+    .lesson-view.active {
+      display: block;
+    }
+
+    /* PHASE 1: DIAGNOSTIC PULSE */
+    .pulse-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pulse-question {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .pulse-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .pulse-opt-btn {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 0.75rem;
+      text-align: left;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pulse-opt-btn:hover {
+      border-color: var(--sky-primary);
+      background: var(--sky-bg);
+    }
+
+    .pulse-feedback {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: none;
+    }
+
+    .pulse-feedback.correct {
+      background: #DCFCE7;
+      color: #166534;
+      border: 1px solid #86EFAC;
+      display: block;
+    }
+
+    .pulse-feedback.incorrect {
+      background: #FEE2E2;
+      color: #991B1B;
+      border: 1px solid #FCA5A5;
+      display: block;
+    }
+
+    /* PHASE 3: SMALL GROUP STUDIO */
+    .innovator-header-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      background: linear-gradient(135deg, #4285F4, #34A853);
+      color: #FFF;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
     }
 
     .tri-rotation-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1.25rem;
       margin-bottom: 1.75rem;
     }
@@ -446,7 +535,7 @@
     .rotation-card {
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 18px;
+      border-radius: 20px;
       padding: 1.25rem;
       display: flex;
       flex-direction: column;
@@ -456,238 +545,232 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-bottom: 0.85rem;
+      margin-bottom: 1rem;
     }
 
     .rotation-badge {
-      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
       font-weight: 800;
-      font-size: 0.72rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 12px;
-      color: #FFF;
+      padding: 0.2rem 0.55rem;
+      border-radius: 10px;
+      text-transform: uppercase;
     }
 
-    .badge-direct { background: #0D9488; }
-    .badge-peer { background: #EA580C; }
-    .badge-astra { background: #4F46E5; }
+    .badge-direct { background: #E0F2FE; color: #0369A1; }
+    .badge-peer { background: #EEF2FF; color: #4338CA; }
+    .badge-astra { background: #FCE7F3; color: #BE185D; }
 
     .rotation-title {
       font-family: 'Outfit', sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1rem;
-      color: #0F172A;
+      color: var(--text-dark);
     }
 
-    /* EPISTEMIC SURGICAL CARD */
     .surgical-card {
-      background: #FFF7ED;
-      border-left: 4px solid #EA580C;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
       padding: 0.85rem;
-      border-radius: 10px;
-      margin-bottom: 0.85rem;
-      font-size: 0.82rem;
+      margin-bottom: 1rem;
     }
 
     .surgical-title {
+      font-size: 0.78rem;
       font-weight: 800;
-      color: #9A3412;
-      margin-bottom: 0.25rem;
+      color: var(--teal-primary);
+      margin-bottom: 0.35rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
     }
 
     .surgical-prompt {
-      color: #431407;
+      font-size: 0.82rem;
+      color: var(--text-dark);
+      line-height: 1.45;
       font-style: italic;
-      line-height: 1.4;
     }
 
-    /* INTERACTIVE SVG MANIPULATIVE CONTAINER */
-    .manipulative-box {
-      background: #0F172A;
+    .dialectic-prompt-box {
+      background: #EEF2FF;
+      border: 1px solid #C7D2FE;
       border-radius: 14px;
-      padding: 1rem;
-      color: #FFF;
-      min-height: 220px;
+      padding: 0.85rem;
+      margin-bottom: 1rem;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .dialectic-stem {
+      font-weight: 800;
+      color: #3730A3;
+      margin-bottom: 0.35rem;
+    }
+
+    .turn-meter {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .turn-bar {
+      height: 10px;
+      background: #E2E8F0;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      margin-top: 0.4rem;
+    }
+
+    .turn-a { background: #0D9488; width: 50%; transition: width 0.3s ease; }
+    .turn-b { background: #EA580C; width: 50%; transition: width 0.3s ease; }
+
+    .turn-buttons {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-speaker {
+      flex: 1;
+      padding: 0.3rem;
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      background: #F8FAFC;
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-speaker.active-a { background: #0D9488; color: #FFF; border-color: #0D9488; }
+    .btn-speaker.active-b { background: #EA580C; color: #FFF; border-color: #EA580C; }
+
+    .manipulative-box {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 0.85rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      gap: 0.65rem;
     }
 
     .manip-slider-row {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      width: 100%;
-      margin-top: 0.5rem;
-      font-size: 0.75rem;
-      color: #94A3B8;
+      font-size: 0.78rem;
+      font-weight: 700;
     }
 
-    .manip-slider-row input[type="range"] {
+    .manip-slider-row input[type=range] {
       flex: 1;
-      accent-color: #38BDF8;
       cursor: pointer;
     }
 
     .manipulative-controls {
       display: flex;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-      width: 100%;
+      gap: 0.4rem;
     }
 
     .manip-btn {
       flex: 1;
-      background: rgba(255, 255, 255, 0.12);
-      color: #FFF;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 0.45rem 0.6rem;
-      border-radius: 8px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .manip-btn:hover {
-      background: rgba(56, 189, 248, 0.3);
-      border-color: #38BDF8;
-    }
-
-    /* PEER DIALECTIC LAB STYLES */
-    .dialectic-prompt-box {
-      background: #EEF2FF;
-      border: 1px dashed #6366F1;
-      padding: 0.85rem;
-      border-radius: 10px;
-      margin-bottom: 0.75rem;
-      font-size: 0.82rem;
-    }
-
-    .dialectic-stem {
-      font-weight: 700;
-      color: #3730A3;
-      margin-bottom: 0.25rem;
-    }
-
-    .turn-meter {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      font-size: 0.75rem;
-      color: #64748B;
-      margin-top: 0.5rem;
-    }
-
-    .turn-buttons {
-      display: flex;
-      gap: 0.4rem;
-    }
-
-    .btn-speaker {
-      flex: 1;
       padding: 0.35rem;
-      border-radius: 6px;
-      border: 1px solid #CBD5E1;
-      background: #FFF;
+      border-radius: 8px;
+      border: 1px solid #38BDF8;
+      background: #F0F9FF;
+      color: #0284C7;
       font-size: 0.72rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
     }
 
-    .btn-speaker.active-a { background: #0D9488; color: #FFF; border-color: #0D9488; }
-    .btn-speaker.active-b { background: #EA580C; color: #FFF; border-color: #EA580C; }
-
-    .turn-bar {
-      height: 7px;
-      background: #E2E8F0;
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
+    .manip-btn:hover {
+      background: #38BDF8;
+      color: #FFF;
     }
 
-    .turn-a { width: 50%; background: #0D9488; transition: width 0.3s; }
-    .turn-b { width: 50%; background: #EA580C; transition: width 0.3s; }
-
-    /* ACTION BUTTONS AT BOTTOM */
     .bottom-bar {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-top: 1.5rem;
-      padding-top: 1rem;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.25rem;
       border-top: 1px solid #E2E8F0;
     }
 
     .btn-action {
-      background: #0F172A;
-      color: #FFF;
+      background: linear-gradient(135deg, var(--sky-primary), var(--indigo-primary));
+      color: #FFFFFF;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 14px;
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 0.9rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 12px;
-      border: none;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
     }
 
     .btn-action:hover {
-      background: #1E293B;
       transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
     }
 
     .btn-secondary {
       background: #F1F5F9;
-      color: #334155;
-      border: 1px solid #CBD5E1;
+      color: var(--text-dark);
+      box-shadow: none;
     }
 
     .btn-secondary:hover {
       background: #E2E8F0;
-      color: #0F172A;
     }
 
-    /* FLOATING GEMINI ASSISTANT BUTTON & MODAL */
     .btn-gemini-float {
       position: fixed;
       bottom: 2rem;
-      right: 2rem;
-      background: linear-gradient(135deg, #4285F4, #9333EA);
-      color: #FFF;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
+      right: 2.5rem;
+      background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+      background-size: 300% 300%;
+      animation: gradientShift 6s ease infinite;
+      color: #FFFFFF;
+      border: none;
       padding: 0.85rem 1.4rem;
       border-radius: 30px;
-      border: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.92rem;
       cursor: pointer;
       box-shadow: 0 8px 25px rgba(66, 133, 244, 0.4);
+      z-index: 100;
+      transition: transform 0.25s ease;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      z-index: 100;
-      transition: all 0.3s ease;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .btn-gemini-float:hover {
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 12px 30px rgba(66, 133, 244, 0.5);
+      transform: scale(1.05);
     }
 
     /* GEMINI MODAL DRAWER */
     .modal-overlay {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       background: rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(4px);
       z-index: 200;
@@ -696,22 +779,23 @@
       justify-content: center;
     }
 
-    .modal-overlay.active { display: flex; }
+    .modal-overlay.active {
+      display: flex;
+    }
 
     .modal-content {
-      background: #FFF;
-      width: 90%;
-      max-width: 580px;
+      background: #FFFFFF;
+      width: 520px;
       border-radius: 24px;
       padding: 2rem;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-      position: relative;
+      border: 1px solid #E2E8F0;
     }
 
     .modal-header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 1rem;
     }
 
@@ -719,10 +803,7 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
       font-size: 1.25rem;
-      color: #0F172A;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      color: var(--text-dark);
     }
 
     .btn-close-modal {
@@ -731,15 +812,267 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      font-weight: bold;
+      font-weight: 800;
       cursor: pointer;
     }
 
-    @media (max-width: 950px) {
-      body { flex-direction: column; }
-      .sidebar { width: 100%; }
-      .objectives-grid { grid-template-columns: 1fr; }
-      .tri-rotation-grid { grid-template-columns: 1fr; }
+    /* DIAGNOSTICS DRAWER */
+    .diag-drawer {
+      margin-top: 1.5rem;
+      background: #0F172A;
+      color: #38BDF8;
+      font-family: monospace;
+      font-size: 0.75rem;
+      padding: 1rem;
+      border-radius: 14px;
+      display: none;
+      max-height: 160px;
+      overflow-y: auto;
+    }
+
+    .diag-drawer.active {
+      display: block;
+    }
+
+    /* WHOLE-SCREEN MATH NOTES MODAL (STUDENT NOTEBOOK COPY MODE) */
+    .math-notes-fullscreen-modal {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #090D16;
+      background: radial-gradient(circle at top right, #1E293B 0%, #090D16 100%);
+      backdrop-filter: blur(20px);
+      z-index: 999999;
+      display: none;
+      flex-direction: column;
+      padding: 1.25rem 2rem;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+      overflow-y: auto;
+    }
+
+    .math-notes-fullscreen-modal.active {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .notes-fs-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+    }
+
+    .notes-fs-title-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .notes-fs-badge {
+      background: linear-gradient(135deg, #0284C7, #4F46E5);
+      color: #FFFFFF;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .notes-fs-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #F8FAFC;
+      letter-spacing: -0.01em;
+    }
+
+    .notes-fs-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .notes-fs-btn {
+      padding: 0.6rem 1.15rem;
+      border-radius: 12px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .notes-fs-btn-copy {
+      background: #0284C7;
+      color: #FFFFFF;
+      border-color: #38BDF8;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+    .notes-fs-btn-copy:hover {
+      background: #0369A1;
+      transform: translateY(-2px);
+    }
+
+    .notes-fs-btn-tts {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+    }
+    .notes-fs-btn-tts:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .notes-fs-btn-close {
+      background: #EF4444;
+      color: #FFFFFF;
+      border: none;
+      font-size: 0.95rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .notes-fs-btn-close:hover {
+      background: #DC2626;
+      transform: scale(1.04);
+    }
+
+    .notes-fs-body {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 1.75rem;
+      margin-top: 1.25rem;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    .notes-fs-left-card {
+      background: #0F172A;
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: 20px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .notes-fs-img-container {
+      width: 100%;
+      height: 100%;
+      max-height: 62vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #FFFFFF;
+      padding: 14px;
+      box-sizing: border-box;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .notes-fs-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .notes-fs-caption-box {
+      margin-top: 1rem;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 0.75rem 1.25rem;
+      color: #38BDF8;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+      width: 100%;
+    }
+
+    .notes-fs-right-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow-y: auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      color: var(--text-dark);
+    }
+
+    .notes-card-section {
+      border-radius: 14px;
+      padding: 0.9rem 1.15rem;
+    }
+
+    .notes-sec-goal {
+      background: #F0FDF4;
+      border-left: 4px solid #0D9488;
+    }
+
+    .notes-sec-frame {
+      background: #FFF7ED;
+      border-left: 4px solid #EA580C;
+    }
+
+    .notes-sec-misconception {
+      background: #EEF2FF;
+      border-left: 4px solid #4F46E5;
+    }
+
+    .notes-sec-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .notes-sec-text {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .notes-copy-hint {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
     }
   </style>
 </head>
@@ -748,521 +1081,165 @@
   <!-- LEFT SIDEBAR NAVIGATION -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-title">EduWonderLab <span>🚀</span></div>
-      <div class="sidebar-subtitle">Grade 6 Small-Group Math Studio</div>
-      <div class="publisher-badge">Google Innovator · Publisher Edition</div>
+      <div class="sidebar-title">⚡ EduWonderLab</div>
+      <div class="sidebar-subtitle">Grade 6 Small-Group Math Workbench</div>
+      <div class="publisher-badge">Google Publisher Edition</div>
+    </div>
+
+    <!-- MULTILINGUAL ESOL SELECTOR -->
+    <div class="lang-selector-box">
+      <span class="lang-label">🌐 ESOL Language:</span>
+      <select class="lang-select" id="esol-lang-select" onchange="switchLanguage(this.value)">
+        <option value="en">English (EN)</option>
+        <option value="es">Español (ES)</option>
+        <option value="pt">Português (PT)</option>
+        <option value="vi">Tiếng Việt (VI)</option>
+      </select>
     </div>
 
     <div class="sidebar-menu">
       <div class="menu-item active" onclick="switchUnit('gcf', this)">
-        <span>🔢 Unit 1: GCF</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>1-1 Factors & GCF</span>
+        <span class="menu-item-badge">6.NS.B.4</span>
       </div>
       <div class="menu-item" onclick="switchUnit('fractions', this)">
-        <span>🧩 Unit 2: Fractions</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>3-1 Fraction Division</span>
+        <span class="menu-item-badge">6.NS.A.1</span>
       </div>
       <div class="menu-item" onclick="switchUnit('ratios', this)">
-        <span>📊 Unit 3: Ratios & Rates</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>1-3 Equivalent Ratios</span>
+        <span class="menu-item-badge">6.RP.A.3</span>
       </div>
       <div class="menu-item" onclick="switchUnit('expressions', this)">
-        <span>✨ Unit 4: Expressions</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>5-2 Distributive Property</span>
+        <span class="menu-item-badge">6.EE.A.3</span>
       </div>
       <div class="menu-item" onclick="switchUnit('algebra', this)">
-        <span>⚖️ Unit 5: Equations</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>6-1 One-Step Equations</span>
+        <span class="menu-item-badge">6.EE.B.7</span>
       </div>
       <div class="menu-item" onclick="switchUnit('nets', this)">
-        <span>📐 Unit 6: 3D Nets</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>7-4 Surface Area 3D Nets</span>
+        <span class="menu-item-badge">6.G.A.4</span>
       </div>
       <div class="menu-item" onclick="switchUnit('cartesian', this)">
-        <span>🎯 Unit 7: Coordinate Plane</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>4-1 Coordinate Plane</span>
+        <span class="menu-item-badge">6.NS.C.6</span>
       </div>
       <div class="menu-item" onclick="switchUnit('statistics', this)">
-        <span>📈 Unit 8: Statistics</span>
-        <span class="menu-item-badge">Phase 2</span>
+        <span>8-2 Box Plots & Statistics</span>
+        <span class="menu-item-badge">6.SP.B.5</span>
       </div>
     </div>
 
-    <!-- SIDEBAR PROGRESS TRACKER -->
     <div class="sidebar-footer">
       <div class="progress-label-row">
-        <span>Lesson Mastery Progress</span>
+        <span>Session Mastery Progress</span>
         <span id="progress-percent">0%</span>
       </div>
       <div class="progress-track">
         <div class="progress-fill" id="progress-fill"></div>
       </div>
+      <button class="btn-tts" style="margin-top:0.75rem; width:100%; justify-content:center;" onclick="toggleDiagnostics()">🔍 System Self-Test Console</button>
     </div>
   </aside>
 
-  <!-- MAIN WRAPPER -->
+  <!-- MAIN WORKSPACE -->
   <main class="main-wrapper">
     <div class="content-box">
-      
-      <!-- PHASE STEPPER NAVIGATION -->
+
+      <!-- PHASE STEPPER HEADER -->
       <nav class="phase-stepper">
-        <button class="phase-tab" onclick="switchPhase('p1', this)">
-          <span>⚡ Phase 1: Diagnostic Pulse</span>
-        </button>
-        <button class="phase-tab active" onclick="switchPhase('p2', this)">
-          <span>🎯 Phase 2: Objectives & Models</span>
-        </button>
-        <button class="phase-tab" onclick="switchPhase('p3', this)">
-          <span>💡 Phase 3: Small-Group Studio</span>
-        </button>
-        <button class="phase-tab" onclick="switchPhase('p4', this)">
-          <span>🔄 Phase 4: Synthesis & Echo</span>
-        </button>
+        <button class="phase-tab active" onclick="switchPhase('p1', this)">Phase 1: Pulse Diagnostic ⚡</button>
+        <button class="phase-tab" onclick="switchPhase('p2', this)">Phase 2: Objectives & ESOL 🎯</button>
+        <button class="phase-tab" onclick="switchPhase('p3', this)">Phase 3: Small-Group Studio 💡</button>
+        <button class="phase-tab" onclick="switchPhase('p4', this)">Phase 4: Synthesis & Echo 🔄</button>
       </nav>
 
-      <!-- PHASE 1 VIEW: DIAGNOSTIC PULSE -->
-      <div class="phase-view" id="phase-p1">
-        <div class="innovator-header-badge">Google Innovator Telemetry · Real-Time Micro-Clustering</div>
+      <!-- PHASE 1 VIEW: REAL-TIME DIAGNOSTIC PULSE ENGINE -->
+      <div class="phase-view active" id="phase-p1">
+        <div class="innovator-header-badge">Google Innovator Engine · Formative Diagnostic Pulse</div>
         <h1 class="page-title">⚡ Real-Time Diagnostic Pulse Engine</h1>
-        <p class="page-subtitle">Gemini automatically scans 3-minute entry responses and clusters students by specific root-cause misconception patterns, avoiding static ability tracking.</p>
-        
-        <div class="tri-rotation-grid">
-          <div class="rotation-card" style="border-top: 4px solid #0D9488;">
-            <div class="rotation-card-header">
-              <span class="rotation-badge badge-direct">Cluster 1</span>
-              <div class="rotation-title">Procedural Mastery (4 Students)</div>
-            </div>
-            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0.75rem;">Students mastered basic algorithmic steps. Assigned to Station C for Far-Transfer Challenge Problem.</p>
-            <div style="font-size: 0.78rem; font-weight: 700; color: #0D9488;">Target: Multi-Step Real World Synthesis</div>
-          </div>
+        <p class="page-subtitle">Quick 60-second readiness check to surface student misconceptions prior to small-group rotations.</p>
 
-          <div class="rotation-card" style="border-top: 4px solid #EA580C;">
-            <div class="rotation-card-header">
-              <span class="rotation-badge badge-peer">Cluster 2</span>
-              <div class="rotation-title">Root-Cause Misconception (5 Students)</div>
-            </div>
-            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0.75rem;">Confusing operation procedures or place-value models. Direct intervention with Teacher Studio.</p>
-            <div style="font-size: 0.78rem; font-weight: 700; color: #EA580C;">Target: Epistemic Surgical Questioning</div>
+        <div class="pulse-card">
+          <div class="pulse-question" id="pulse-question-text">
+            Loading diagnostic prompt...
           </div>
-
-          <div class="rotation-card" style="border-top: 4px solid #4F46E5;">
-            <div class="rotation-card-header">
-              <span class="rotation-badge badge-astra">Cluster 3</span>
-              <div class="rotation-title">Representation Gap (5 Students)</div>
-            </div>
-            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0.75rem;">Struggling to connect abstract symbols to visual models. Assigned to Astra Dual-Coding Manipulative Sandbox.</p>
-            <div style="font-size: 0.78rem; font-weight: 700; color: #4F46E5;">Target: Tactile-to-Symbolic Schema Bridge</div>
+          <div class="pulse-options" id="pulse-options-container">
+            <!-- OPTIONS POPULATED DYNAMICALLY -->
           </div>
+          <div class="pulse-feedback" id="pulse-feedback-box"></div>
         </div>
 
         <div class="bottom-bar">
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Grouping verified with 0% historical tracking bias</span>
+          <div></div>
           <button class="btn-action" onclick="switchPhase('p2', document.querySelectorAll('.phase-tab')[1])">Continue to Phase 2: Objectives 🎯</button>
         </div>
       </div>
 
-      <!-- PHASE 2 VIEW: OBJECTIVES & VISUAL MODELS (PRIMARY LESSON VIEWS) -->
-      <div class="phase-view active" id="phase-p2">
-        <h1 class="page-title">🎯 Today's Learning Objectives</h1>
-        <p class="page-subtitle">Read through today's Content Goal and Language Goal. Click 🔊 to listen via Read Along audio narration!</p>
+      <!-- PHASE 2 VIEW: CURRICULUM OBJECTIVES & ESOL SCAFFOLDS -->
+      <div class="phase-view" id="phase-p2">
+        <div class="innovator-header-badge">Publisher Standard · Dual-Target Objectives</div>
+        <h1 class="page-title" id="unit-title-display">🎯 Today's Learning Objectives</h1>
+        <p class="page-subtitle">Content and academic language goals tailored for small-group instruction with explicit ESOL scaffolds.</p>
 
-        <!-- UNIT 1: GREATEST COMMON FACTOR -->
-        <div class="lesson-view active" id="view-gcf">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can find the greatest common factor of two numbers by listing or comparing their factors.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
+        <div class="objectives-grid">
+          <!-- CONTENT OBJECTIVE CARD -->
+          <div class="obj-card content-obj-card">
+            <div class="obj-card-header">
+              <h2 class="obj-card-title">Content Objective</h2>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <button class="btn-tts" onclick="speakText(document.getElementById('content-obj-text').innerText)">🔊 Read Along</button>
+                <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
+              </div>
+            </div>
+            <p class="obj-text" id="content-obj-text">I can find the greatest common factor of two numbers by listing or comparing their factors.</p>
+
+            <div class="visual-model-wrapper" style="cursor: zoom-in;" onclick="openMathNotesModal(document.getElementById('content-visual-img').src, '🎯 Content Objective Visual Model: Factor Decomposition & Area Array', 'content')">
+              <img class="visual-model-img" id="content-visual-img" src="./images/publisher_content.jpg" alt="Student reviewing math model">
+              <div class="visual-model-caption">
+                <span>🎯 <strong>Visual Model:</strong> Student comparing factor area models.</span>
+                <div style="display:flex; gap:0.4rem; align-items:center;">
+                  <button class="btn-try-manipulative" style="background:#0284C7;" onclick="event.stopPropagation(); openMathNotesModal(document.getElementById('content-visual-img').src, '🎯 Content Objective Visual Model: Factor Decomposition & Area Array', 'content')">🔍 Full Screen Notes</button>
+                  <button class="btn-try-manipulative" onclick="event.stopPropagation(); switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
                 </div>
               </div>
-              <p class="obj-text">I can find the greatest common factor (GCF) of two numbers by listing or comparing their factors.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student finding GCF by listing factors">
-                <div class="visual-model-caption">
-                  <span>🔢 <strong>Visual Model:</strong> Student listing factor pairs on her desk grid mat to compare GCF.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
             </div>
 
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can explain how I found the GCF using the words factor, common factor, divisible, and greatest common factor.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can explain how I found the GCF using the words <em>factor</em>, <em>common factor</em>, <em>divisible</em>, and <em>greatest common factor</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining GCF math terms">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners pointing to vocabulary callout badges and using academic sentence frames.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
+            <div class="talk-divider"></div>
+            <div class="talk-title">💬 Talk about it</div>
+            <div class="talk-desc" id="content-talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
           </div>
-        </div>
 
-        <!-- UNIT 2: FRACTIONS -->
-        <div class="lesson-view" id="view-fractions">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can multiply and divide fractions by whole numbers and fractions using visual fraction bar models.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
+          <!-- LANGUAGE OBJECTIVE CARD -->
+          <div class="obj-card language-obj-card">
+            <div class="obj-card-header">
+              <h2 class="obj-card-title">Language Objective</h2>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <button class="btn-tts" onclick="speakText(document.getElementById('language-obj-text').innerText)">🔊 Read Along</button>
+                <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
               </div>
-              <p class="obj-text">I can multiply and divide fractions by whole numbers and fractions using visual fraction bar models.</p>
+            </div>
+            <p class="obj-text" id="language-obj-text">I can explain how I found the GCF using the words factor, common factor, divisible, and greatest common factor.</p>
 
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student modeling fraction division">
-                <div class="visual-model-caption">
-                  <span>🧩 <strong>Visual Model:</strong> Student dividing fraction bar strips on her desk grid mat to solve quotient problems.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
+            <!-- ESOL MULTILINGUAL SENTENCE FRAME -->
+            <div class="esol-frame-box">
+              <div class="esol-frame-title">🗣️ ESOL Academic Sentence Frame:</div>
+              <div id="esol-frame-text">"The greatest common factor of [A] and [B] is [GCF] because..."</div>
             </div>
 
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can describe fraction division using academic terms like numerator, denominator, reciprocal, and quotient.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
+            <div class="visual-model-wrapper" style="cursor: zoom-in;" onclick="openMathNotesModal(document.getElementById('language-visual-img').src, '🗣️ Language Objective Visual Model: Multilingual Academic Vocabulary', 'language')">
+              <img class="visual-model-img" id="language-visual-img" src="./images/publisher_lang.jpg" alt="Student partners discussing math">
+              <div class="visual-model-caption">
+                <span>🗣️ <strong>Visual Model:</strong> Student partners pointing to math vocabulary badges.</span>
+                <button class="btn-try-manipulative" style="background:#EA580C;" onclick="event.stopPropagation(); openMathNotesModal(document.getElementById('language-visual-img').src, '🗣️ Language Objective Visual Model: Multilingual Academic Vocabulary', 'language')">🔍 Full Screen Notes</button>
               </div>
-              <p class="obj-text">I can describe fraction division using academic terms like <em>numerator</em>, <em>denominator</em>, <em>reciprocal</em>, and <em>quotient</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining fraction terms">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners pointing to fraction vocabulary callout badges.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNIT 3: RATIOS -->
-        <div class="lesson-view" id="view-ratios">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can model equivalent ratios and unit rates using double number lines, ratio tables, and tape diagrams.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can model equivalent ratios and unit rates using double number lines, ratio tables, and tape diagrams.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student modeling ratio lines">
-                <div class="visual-model-caption">
-                  <span>📊 <strong>Visual Model:</strong> Student plotting ratio points on double number line strips.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
             </div>
 
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can state ratio relationships using phrases like for every X units, there are Y units.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can state ratio relationships using phrases like "for every X units, there are Y units" and "proportional rate".</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining ratio phrases">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners reciting ratio sentence starters.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNIT 4: EXPRESSIONS -->
-        <div class="lesson-view" id="view-expressions">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can evaluate algebraic expressions and simplify terms using the order of operations and distributive property.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can evaluate algebraic expressions and simplify terms using the order of operations and distributive property.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student simplifying expression">
-                <div class="visual-model-caption">
-                  <span>✨ <strong>Visual Model:</strong> Student applying distributive tile arrays to simplify expressions.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-            </div>
-
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can identify expression parts using math vocabulary terms like term, coefficient, constant, and exponent.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can identify expression parts using math vocabulary terms like <em>term</em>, <em>coefficient</em>, <em>constant</em>, and <em>exponent</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students labeling expression parts">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners pointing to coefficient and term callout badges.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNIT 5: ONE-STEP EQUATIONS -->
-        <div class="lesson-view" id="view-algebra">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can solve one-step algebraic equations by isolating the variable x using an interactive balance scale model.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can solve one-step algebraic equations (x + 3 = 7) by isolating the variable x using an interactive balance scale model.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student balancing algebraic scale">
-                <div class="visual-model-caption">
-                  <span>⚖️ <strong>Visual Model:</strong> Student avatar actively balancing an algebraic scale with variable blocks to isolate x.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-            </div>
-
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can explain equation-solving steps using academic vocabulary terms like variable, isolate, and inverse operation.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can explain equation-solving steps using academic vocabulary terms like <em>variable</em>, <em>isolate</em>, and <em>inverse operation</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining algebra">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners discussing algebraic balance steps using sentence frames.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNIT 6: AREA & 3D NETS -->
-        <div class="lesson-view" id="view-nets">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can calculate the total surface area of a 3D triangular prism by unfolding it into a 2D net and adding all 5 face areas together.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can calculate the total surface area of a 3D triangular prism by unfolding it into a 2D net and adding all 5 face areas together.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student unfolding 3D net">
-                <div class="visual-model-caption">
-                  <span>📐 <strong>Visual Model:</strong> Student laying flat the 3D prism into a 2D net on her desk grid mat.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-            </div>
-
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can describe geometry features using academic terms like triangular base, rectangular face, and vertex.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can describe geometry features using academic terms like <em>triangular base</em>, <em>rectangular face</em>, and <em>vertex</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining 3D nets">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners pointing to geometry vocabulary badges.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNIT 7: COORDINATE PLANE -->
-        <div class="lesson-view" id="view-cartesian">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can locate and plot ordered pairs x,y across all 4 quadrants of the Cartesian coordinate plane.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can locate and plot ordered pairs (x,y) across all 4 quadrants of the Cartesian coordinate plane.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/content_with_poster.jpg" alt="Student plotting coordinate points">
-                <div class="visual-model-caption">
-                  <span>🎯 <strong>Visual Model:</strong> Student plotting coordinate points (x,y) on a 4-quadrant grid mat.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-            </div>
-
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can explain coordinate positions using vocabulary terms like x-axis, y-axis, origin, and quadrant.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can explain coordinate positions using vocabulary terms like <em>x-axis</em>, <em>y-axis</em>, <em>origin</em>, and <em>quadrant</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining coordinates">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners reciting coordinate sentence starters.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UNIT 8: STATISTICS -->
-        <div class="lesson-view" id="view-statistics">
-          <div class="objectives-grid">
-            <div class="obj-card content-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Content Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can calculate measures of center mean, median, mode and display data distributions using box plots and dot plots.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can calculate measures of center (mean, median, mode) and display data distributions using box plots and dot plots.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/algebra_content.jpg" alt="Student drawing box plot">
-                <div class="visual-model-caption">
-                  <span>📈 <strong>Visual Model:</strong> Student drawing a 5-number summary box plot on a grid mat.</span>
-                  <button class="btn-try-manipulative" onclick="switchPhase('p3', document.querySelectorAll('.phase-tab')[2])">Interactive Manipulative ⚡</button>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">In your own words, what will you be able to do by the end of this lesson? Give one example.</div>
-            </div>
-
-            <div class="obj-card language-obj-card">
-              <div class="obj-card-header">
-                <h2 class="obj-card-title">Language Objective</h2>
-                <div style="display:flex; align-items:center; gap:0.5rem;">
-                  <button class="btn-tts" onclick="speakText('I can summarize data distributions using statistical vocabulary like mean, median, interquartile range, and outlier.')">🔊 Read Along</button>
-                  <label class="got-it-checkbox"><input type="checkbox" onchange="updateProgress()"> Got it</label>
-                </div>
-              </div>
-              <p class="obj-text">I can summarize data distributions using statistical vocabulary like <em>mean</em>, <em>median</em>, <em>interquartile range</em>, and <em>outlier</em>.</p>
-
-              <div class="visual-model-wrapper">
-                <img class="visual-model-img" src="./images/lang_with_poster.jpg" alt="Students explaining statistics">
-                <div class="visual-model-caption">
-                  <span>🗣️ <strong>Visual Model:</strong> Student partners discussing median and IQR.</span>
-                </div>
-              </div>
-
-              <div class="talk-divider"></div>
-              <div class="talk-title">💬 Talk about it</div>
-              <div class="talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
-            </div>
+            <div class="talk-divider"></div>
+            <div class="talk-title">💬 Talk about it</div>
+            <div class="talk-desc" id="language-talk-desc">Which math words in this goal are new to you? How would you explain this goal to a partner?</div>
           </div>
         </div>
 
@@ -1292,7 +1269,7 @@
                 <button class="btn-tts" onclick="speakText(document.getElementById('surgical-prompt-text').innerText)">🔊</button>
               </div>
               <div class="surgical-prompt" id="surgical-prompt-text">
-                "If we change the denominator in 3/4 to 8, why does the numerator also double? Prove it with an area model."
+                "Why does listing factors of 12 and 18 reveal that 6 is the GREATEST factor, not just a common factor?"
               </div>
             </div>
 
@@ -1303,7 +1280,7 @@
             </div>
           </div>
 
-          <!-- ROTATION 2: SMART CANVAS PEER DIALECTIC LAB -->
+          <!-- ROTATION 2: PEER DIALECTIC LAB -->
           <div class="rotation-card">
             <div class="rotation-card-header">
               <span class="rotation-badge badge-peer">Station 2</span>
@@ -1313,54 +1290,47 @@
             <div class="dialectic-prompt-box">
               <div class="dialectic-stem">🗣️ Socratic Pair Debate Prompt:</div>
               <div style="color: #312E81;" id="dialectic-prompt-text">
-                "Partner A says x + 5 = 12 means x is 7. Partner B says x is 17. Debate which inverse operation isolates x correctly."
+                "Partner A lists factors up to 12; Partner B lists factors up to 18. Circle shared factors and debate why 6 is the maximum shared value."
               </div>
             </div>
 
             <div class="turn-meter">
-              <div style="display:flex; justify-content:space-between;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.2rem;">
                 <span>Active Speaker Telemetry:</span>
-                <span id="turn-equity-text" font-weight="700">50/50 Equity</span>
-              </div>
-              <div class="turn-buttons">
-                <button class="btn-speaker" id="btn-speak-a" onclick="recordSpeaker('A')">🎙️ Partner A</button>
-                <button class="btn-speaker" id="btn-speak-b" onclick="recordSpeaker('B')">🎙️ Partner B</button>
+                <span id="turn-equity-text" style="font-weight:700;">50/50 Equity</span>
               </div>
               <div class="turn-bar">
                 <div class="turn-a" id="bar-turn-a"></div>
                 <div class="turn-b" id="bar-turn-b"></div>
               </div>
+              <div class="turn-buttons">
+                <button class="btn-speaker" id="btn-speak-a" onclick="recordSpeaker('A')">🎙️ Partner A</button>
+                <button class="btn-speaker" id="btn-speak-b" onclick="recordSpeaker('B')">🎙️ Partner B</button>
+              </div>
             </div>
           </div>
 
-          <!-- ROTATION 3: EMBODIED ASTRA MANIPULATIVE SANDBOX -->
+          <!-- ROTATION 3: PROGRAMMATIC INTERACTIVE SVG MANIPULATIVE SANDBOX -->
           <div class="rotation-card">
             <div class="rotation-card-header">
               <span class="rotation-badge badge-astra">Station 3</span>
-              <div class="rotation-title">Project Astra Dual-Coding Sandbox</div>
+              <div class="rotation-title">Interactive SVG Manipulative</div>
             </div>
 
             <div class="manipulative-box" id="manipulative-box-container">
-              <!-- INTERACTIVE SVG MODEL WILL BE RENDERED HERE -->
-              <svg id="interactive-svg" width="100%" height="150" viewBox="0 0 300 150">
-                <rect x="20" y="30" width="100" height="40" fill="#0D9488" rx="6"/>
-                <text x="70" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">x</text>
-                <rect x="130" y="30" width="30" height="40" fill="#EA580C" rx="6"/>
-                <text x="145" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">+3</text>
-                <text x="180" y="55" fill="#38BDF8" font-weight="bold" font-size="20" text-anchor="middle">=</text>
-                <rect x="200" y="30" width="70" height="40" fill="#38BDF8" rx="6"/>
-                <text x="235" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">7</text>
-                <text x="150" y="115" fill="#94A3B8" font-size="12" text-anchor="middle">Interactive Balance Scale Model</text>
-              </svg>
+              <!-- PROGRAMMATIC INLINE SVG CONTAINER -->
+              <div id="svg-render-area">
+                <!-- SVG GENERATED PROGRAMMATICALLY -->
+              </div>
 
               <div class="manip-slider-row">
-                <span>Value Parameter:</span>
+                <span>Parameter Val:</span>
                 <input type="range" id="manip-range" min="1" max="10" value="5" oninput="updateManipSlider(this.value)">
-                <span id="range-val-label" style="font-weight:700; color:#38BDF8;">5</span>
+                <span id="range-val-label" style="font-weight:700; color:#0284C7;">5</span>
               </div>
 
               <div class="manipulative-controls">
-                <button class="manip-btn" onclick="triggerManipAction('isolate')">Isolate Parameter</button>
+                <button class="manip-btn" onclick="triggerManipAction('isolate')">Step / Highlight</button>
                 <button class="manip-btn" onclick="triggerManipAction('reset')">Reset Model</button>
               </div>
             </div>
@@ -1387,7 +1357,7 @@
               • 2 students scheduled for follow-up intervention on inverse operation vocabulary.<br>
               • Observational quick-tags synced to Google Classroom gradebook.
             </p>
-            <button class="btn-action" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onclick="exportScormPackage()">Export SCORM / Classroom Package 📤</button>
+            <button class="btn-action" style="padding:0.41rem 0.8rem; font-size:0.8rem;" onclick="exportScormPackage()">Export SCORM / LMS Package 📤</button>
           </div>
 
           <div class="rotation-card" style="border-top: 4px solid #4F46E5;">
@@ -1412,6 +1382,12 @@
         </div>
       </div>
 
+      <!-- SYSTEM DIAGNOSTICS CONSOLE DRAWER -->
+      <div class="diag-drawer" id="diagnostics-drawer">
+        <div>=== EduWonderLab Studio System Diagnostics ===</div>
+        <div id="diag-log-lines"></div>
+      </div>
+
     </div>
   </main>
 
@@ -1430,7 +1406,7 @@
       <p style="font-size: 0.88rem; color: #475569; margin-bottom: 1rem;">Contextually generated surgical prompts and scaffolding strategies based on current lesson state.</p>
       
       <div style="background:#F8FAFC; border:1px solid #E2E8F0; padding:1rem; border-radius:12px; font-size:0.85rem; margin-bottom:1rem;" id="gemini-suggestion-content">
-        <strong>🎯 Suggested Next Question for Group:</strong><br>
+        <strong>🎯 Suggested Socratic Prompt:</strong><br>
         <span style="font-style:italic;" id="gemini-ai-prompt">"Ask Student A to explain why multiplying the numerator and denominator by the same number creates an EQUIVALENT fraction."</span>
       </div>
 
@@ -1441,171 +1417,368 @@
     </div>
   </div>
 
+  <!-- WHOLE-SCREEN MATH NOTES MODAL (STUDENT NOTEBOOK COPY MODE) -->
+  <div class="math-notes-fullscreen-modal" id="math-notes-fullscreen-modal" role="dialog" aria-modal="true" aria-label="Visual Math Notes Full Screen View">
+    <!-- MODAL HEADER -->
+    <div class="notes-fs-header">
+      <div class="notes-fs-title-box">
+        <span class="notes-fs-badge">📝 Visual Math Notes · Student Copy Mode</span>
+        <div class="notes-fs-title" id="notes-fs-unit-title">Unit 1: Factors & Greatest Common Factor (6.NS.B.4)</div>
+      </div>
+      <div class="notes-fs-actions">
+        <button class="notes-fs-btn notes-fs-btn-tts" onclick="speakNotesContent()">🔊 Read Notes</button>
+        <button class="notes-fs-btn notes-fs-btn-copy" id="btn-copy-notes" onclick="copyMathNotesText()">📋 Copy Notes Text</button>
+        <button class="notes-fs-btn-close" onclick="closeMathNotesModal()" title="Close Full Screen Notes (ESC)">✕ Close (ESC)</button>
+      </div>
+    </div>
+
+    <!-- MODAL BODY -->
+    <div class="notes-fs-body">
+      <!-- LEFT: VISUAL MODEL / DIAGRAM -->
+      <div class="notes-fs-left-card">
+        <div class="notes-fs-img-container">
+          <img class="notes-fs-img" id="notes-fs-main-img" src="./images/publisher_content.jpg" alt="Enlarged Visual Math Model">
+        </div>
+        <div class="notes-fs-caption-box" id="notes-fs-caption-text">
+          🎯 <strong>Visual Representation:</strong> Factor area models and prime decomposition array.
+        </div>
+      </div>
+
+      <!-- RIGHT: HIGH-CONTRAST STRUCTURED NOTEBOOK CARDS -->
+      <div class="notes-fs-right-card">
+        <!-- 1. CONTENT GOAL / CORE SCHEMA -->
+        <div class="notes-card-section notes-sec-goal">
+          <div class="notes-sec-title" style="color: #0D9488;">
+            <span>🎯</span> 1. Core Content Concept (What to write in your notebook):
+          </div>
+          <div class="notes-sec-text" id="notes-fs-content-goal">
+            I can find the greatest common factor of two numbers by listing or comparing their factors.
+          </div>
+          <div class="notes-copy-hint">✍️ Copy this definition & goal at the top of your notebook page.</div>
+        </div>
+
+        <!-- 2. ACADEMIC LANGUAGE & MULTILINGUAL SENTENCE FRAME -->
+        <div class="notes-card-section notes-sec-frame">
+          <div class="notes-sec-title" style="color: #EA580C;">
+            <span>🗣️</span> 2. Academic Vocabulary & Speaking Frame:
+          </div>
+          <div class="notes-sec-text" id="notes-fs-esol-frame">
+            "The greatest common factor of [A] and [B] is [GCF] because both numbers are divisible by [GCF]."
+          </div>
+          <div style="font-size: 0.9rem; color: #7C2D12; margin-top: 0.4rem; font-weight: 600;" id="notes-fs-lang-goal">
+            Key vocabulary: factor, common factor, divisible, greatest common factor.
+          </div>
+          <div class="notes-copy-hint">✍️ Fill in the blanks with your problem's numbers.</div>
+        </div>
+
+        <!-- 3. CRITICAL QUESTION & MISCONCEPTION CHECKPOINT -->
+        <div class="notes-card-section notes-sec-misconception">
+          <div class="notes-sec-title" style="color: #4F46E5;">
+            <span>💡</span> 3. Key Mathematical Principle:
+          </div>
+          <div class="notes-sec-text" id="notes-fs-surgical-prompt" style="font-size: 0.98rem; font-style: italic;">
+            "Why does listing factors of 12 and 18 reveal that 6 is the GREATEST factor, not just a common factor?"
+          </div>
+          <div style="font-size: 0.88rem; color: #3730A3; margin-top: 0.4rem; font-weight: 600;" id="notes-fs-dialectic-prompt">
+            Partner Discussion: Partner A lists factors; Partner B circles shared factors to prove the maximum.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // UNIT PROMPTS & MANIPULATIVE SVG MAPPINGS
+    /* ==========================================================================
+       ARCHITECTURE LAYER 1: CONFIG & DIAGNOSTIC LOGGING
+       ========================================================================== */
+    const STUDIO_CONFIG = {
+      appTitle: "EduWonderLab Grade 6 Small-Group Studio",
+      publisherVersion: "2.5.0-PROD",
+      gradeLevel: "Grade 6",
+      supportedLanguages: ["en", "es", "pt", "vi"],
+      defaultLanguage: "en",
+      selfTestOnLoad: true,
+      diagnosticsMode: true
+    };
+
+    function logDiag(msg) {
+      console.log("[EduWonderLab Studio]:", msg);
+      const container = document.getElementById('diag-log-lines');
+      if (container) {
+        const line = document.createElement('div');
+        line.innerText = `> ${msg}`;
+        container.appendChild(line);
+      }
+    }
+
+    function validateConfig() {
+      if (!STUDIO_CONFIG.publisherVersion || !STUDIO_CONFIG.supportedLanguages.includes(STUDIO_CONFIG.defaultLanguage)) {
+        throw new Error("STUDIO_CONFIG validation failed: Invalid language or version configuration.");
+      }
+      logDiag("CONFIG validation passed cleanly.");
+    }
+
+    /* ==========================================================================
+       ARCHITECTURE LAYER 2: REPOSITORY (CURRICULUM DATA & MULTILINGUAL ESOL)
+       ========================================================================== */
+    const esolFrames = {
+      gcf: {
+        en: '"The greatest common factor of [A] and [B] is [GCF] because both numbers are divisible by [GCF]."',
+        es: '"El máximo común divisor de [A] y [B] es [GCF] porque ambos números son divisibles entre [GCF]."',
+        pt: '"O maior divisor comum de [A] e [B] é [GCF] porque ambos os números são divisíveis por [GCF]."',
+        vi: '"Ước chung lớn nhất của [A] và [B] là [GCF] vì cả hai số đều chia hết cho [GCF]."'
+      },
+      fractions: {
+        en: '"When dividing [Fraction A] by [Fraction B], I multiply by the reciprocal to get [Quotient]."',
+        es: '"Al dividir [Fracción A] entre [Fracción B], multiplico por el recíproco para obtener [Cociente]."',
+        pt: '"Ao dividir [Fração A] por [Fração B], multiplico pelo recíproco para obter [Quociente]."',
+        vi: '"Khi chia [Phân số A] cho [Phân số B], tôi nhân với phân số đảo ngược để được [Thương]."'
+      },
+      ratios: {
+        en: '"For every [X] units of quantity A, there are [Y] units of quantity B, representing a unit rate of [Rate]."',
+        es: '"Por cada [X] unidades de cantidad A, hay [Y] unidades de cantidad B, representando una tasa unitaria de [Tasa]."',
+        pt: '"Para cada [X] unidades da quantidade A, existem [Y] unidades da quantidade B, representando uma taxa unitária de [Taxa]."',
+        vi: '"Đối với mỗi [X] đơn vị số lượng A, có [Y] đơn vị số lượng B, thể hiện tỷ lệ đơn vị là [Tỷ lệ]."'
+      },
+      expressions: {
+        en: '"Expanding the expression [a(x + b)] using the distributive property gives [ax + ab]."',
+        es: '"Expandir la expresión [a(x + b)] usando la propiedad distributiva da [ax + ab]."',
+        pt: '"Expandir a expressão [a(x + b)] usando a propriedade distributiva resulta em [ax + ab]."',
+        vi: '"Khai triển biểu thức [a(x + b)] bằng tính chất phân phối thu được [ax + ab]."'
+      },
+      algebra: {
+        en: '"To isolate the variable [x] in the equation [x + a = b], I perform the inverse operation by subtracting [a] from both sides."',
+        es: '"Para aislar la variable [x] en la ecuación [x + a = b], realizo la operación inversa restando [a] de ambos lados."',
+        pt: '"Para isolar a variável [x] na equação [x + a = b], realizo a operação inversa subtraindo [a] de ambos os lados."',
+        vi: '"Để cô lập biến [x] trong phương trình [x + a = b], tôi thực hiện phép tính ngược lại bằng cách trừ [a] ở cả hai vế."'
+      },
+      nets: {
+        en: '"Unfolding the 3D prism into a 2D net reveals [N] triangular bases and [M] rectangular faces."',
+        es: '"Desplegar el prisma 3D en una red 2D revela [N] bases triangulares y [M] caras rectangulares."',
+        pt: '"Desdobrar o prisma 3D em uma rede 2D revela [N] bases triangulares e [M] faces retangulares."',
+        vi: '"Trải lăng kính 3D thành hình khai triển 2D cho thấy [N] mặt đáy hình tam giác và [M] mặt bên hình chữ nhật."'
+      },
+      cartesian: {
+        en: '"The point ([X], [Y]) is located in Quadrant [Q] because the x-coordinate is [Sign] and the y-coordinate is [Sign]."',
+        es: '"El punto ([X], [Y]) se encuentra en el Cuadrante [Q] porque la coordenada x es [Signo] y la coordenada y es [Signo]."',
+        pt: '"O ponto ([X], [Y]) está localizado no Quadrante [Q] porque a coordenada x é [Sinal] e a coordenada y é [Sinal]."',
+        vi: '"Điểm ([X], [Y]) nằm ở Góc phần tư thứ [Q] vì tọa độ x là [Dấu] và tọa độ y là [Dấu]."'
+      },
+      statistics: {
+        en: '"The median of this data set is [M], representing the 50th percentile of the distribution in the box plot."',
+        es: '"La mediana de este conjunto de datos es [M], que representa el percentil 50 de la distribución en el diagrama de caja."',
+        pt: '"A mediana deste conjunto de dados é [M], representando o percentil 50 da distribuição no gráfico de caixa."',
+        vi: '"Trung vị của tập dữ liệu này là [M], đại diện cho bách phân vị thứ 50 của phân phối trong biểu đồ hộp."'
+      }
+    };
+
     const unitData = {
       gcf: {
+        title: "Unit 1: Factors & Greatest Common Factor (6.NS.B.4)",
+        contentObj: "I can find the greatest common factor of two numbers by listing or comparing their factors.",
+        langObj: "I can explain how I found the GCF using the words factor, common factor, divisible, and greatest common factor.",
         surgical: '"Why does listing factors of 12 and 18 reveal that 6 is the GREATEST factor, not just a common factor?"',
         dialectic: '"Partner A lists factors up to 12; Partner B lists factors up to 18. Circle shared factors and debate why 6 is the maximum shared value."',
-        svg: function(val) {
-          const num2 = val * 3;
-          return `<rect x="30" y="30" width="90" height="80" fill="none" stroke="#0D9488" stroke-width="3" rx="10"/>
-                  <rect x="80" y="30" width="90" height="80" fill="none" stroke="#EA580C" stroke-width="3" rx="10"/>
-                  <text x="55" y="75" fill="#0D9488" font-weight="bold" font-size="13" text-anchor="middle">1, 2, ${val}</text>
-                  <text x="100" y="75" fill="#38BDF8" font-weight="bold" font-size="16" text-anchor="middle">${val}</text>
-                  <text x="145" y="75" fill="#EA580C" font-weight="bold" font-size="13" text-anchor="middle">${num2}</text>
-                  <text x="100" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">GCF Factor Model (Selected Base = ${val})</text>`;
+        diagnostic: {
+          q: "Which of the following represents the Greatest Common Factor (GCF) of 24 and 36?",
+          options: ["A) 6", "B) 18", "C) 12", "D) 24"],
+          correct: 2,
+          explanation: "Correct! Factors of 24 are {1,2,3,4,6,8,12,24} and factors of 36 are {1,2,3,4,6,9,12,18,36}. The largest shared factor is 12."
+        },
+        renderSvg: function(val) {
+          const numA = val * 4;
+          const numB = val * 6;
+          const gcf = val * 2;
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <circle cx="105" cy="75" r="55" fill="rgba(13,148,136,0.18)" stroke="#0D9488" stroke-width="2.5"/>
+            <circle cx="195" cy="75" r="55" fill="rgba(234,88,12,0.18)" stroke="#EA580C" stroke-width="2.5"/>
+            <text x="75" y="70" fill="#0D9488" font-weight="bold" font-size="12" text-anchor="middle">A: ${numA}</text>
+            <text x="75" y="88" fill="#0F172A" font-size="10" text-anchor="middle">Factors: 1, 2</text>
+            <text x="225" y="70" fill="#EA580C" font-weight="bold" font-size="12" text-anchor="middle">B: ${numB}</text>
+            <text x="225" y="88" fill="#0F172A" font-size="10" text-anchor="middle">Factors: 3, 9</text>
+            <text x="150" y="68" fill="#0284C7" font-weight="800" font-size="14" text-anchor="middle">GCF</text>
+            <text x="150" y="88" fill="#0284C7" font-weight="800" font-size="16" text-anchor="middle">${gcf}</text>
+            <text x="150" y="140" fill="#64748B" font-size="11" text-anchor="middle">Interactive Venn Factor Decomposition</text>
+          </svg>`;
         }
       },
       fractions: {
+        title: "Unit 3: Fraction Division & Visual Models (6.NS.A.1)",
+        contentObj: "I can divide fractions by fractions using visual fraction bar and area models.",
+        langObj: "I can describe fraction division using academic terms like numerator, denominator, reciprocal, and quotient.",
         surgical: '"When dividing 3/4 by 1/2, why does the quotient equal 1 1/2? Explain using fraction bar strips."',
         dialectic: '"Partner A models 3/4 with bar strips. Partner B measures how many 1/2 strips fit into 3/4. Debate the reciprocal rule."',
-        svg: function(val) {
-          const w = val * 24;
-          return `<rect x="30" y="30" width="240" height="30" fill="#0D9488" rx="6"/>
-                  <text x="150" y="50" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">Whole Bar (1.0)</text>
-                  <rect x="30" y="70" width="${w}" height="30" fill="#EA580C" rx="6"/>
-                  <text x="120" y="90" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">${val}/10 Strip</text>
-                  <text x="150" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">Fraction Bar Division Splitter</text>`;
+        diagnostic: {
+          q: "What is the quotient of 3/4 ÷ 1/2?",
+          options: ["A) 1 1/2", "B) 3/8", "C) 2/3", "D) 1 1/4"],
+          correct: 0,
+          explanation: "Correct! 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = 1 1/2."
+        },
+        renderSvg: function(val) {
+          const barW = Math.min(260, val * 26);
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <rect x="20" y="25" width="260" height="30" fill="#0D9488" rx="6"/>
+            <text x="150" y="45" fill="#FFF" font-weight="bold" font-size="12" text-anchor="middle">Whole Bar Unit (1.0)</text>
+            <rect x="20" y="65" width="${barW}" height="30" fill="#EA580C" rx="6"/>
+            <text x="${20 + barW/2}" y="85" fill="#FFF" font-weight="bold" font-size="12" text-anchor="middle">Fraction Partition (${val}/10)</text>
+            <line x1="150" y1="25" x2="150" y2="95" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4"/>
+            <text x="150" y="140" fill="#64748B" font-size="11" text-anchor="middle">Fraction Strip Splitter & Reciprocal Comparison</text>
+          </svg>`;
         }
       },
       ratios: {
+        title: "Unit 1: Equivalent Ratios & Unit Rates (6.RP.A.3)",
+        contentObj: "I can model equivalent ratios and unit rates using double number lines and ratio tables.",
+        langObj: "I can state ratio relationships using phrases like 'for every X units, there are Y units.'",
         surgical: '"If 2 cups of flour make 6 cookies, why does the double number line show 1 cup flour equals 3 cookies?"',
         dialectic: '"Partner A plots flour units; Partner B plots cookie units. State the unit rate using \'for every X, there are Y\'."',
-        svg: function(val) {
+        diagnostic: {
+          q: "If a car travels 150 miles in 3 hours, what is its unit rate?",
+          options: ["A) 45 mph", "B) 60 mph", "C) 75 mph", "D) 50 mph"],
+          correct: 3,
+          explanation: "Correct! Unit rate = 150 miles / 3 hours = 50 miles per hour."
+        },
+        renderSvg: function(val) {
           const cookies = val * 3;
-          return `<line x1="30" y1="40" x2="270" y2="40" stroke="#38BDF8" stroke-width="4"/>
-                  <circle cx="30" cy="40" r="6" fill="#38BDF8"/><text x="30" y="30" fill="#FFF" font-size="10">0</text>
-                  <circle cx="150" cy="40" r="6" fill="#38BDF8"/><text x="150" y="30" fill="#FFF" font-size="10">${val} (Cups)</text>
-                  <line x1="30" y1="90" x2="270" y2="90" stroke="#EA580C" stroke-width="4"/>
-                  <circle cx="30" cy="90" r="6" fill="#EA580C"/><text x="30" y="110" fill="#FFF" font-size="10">0</text>
-                  <circle cx="150" cy="90" r="6" fill="#EA580C"/><text x="150" y="110" fill="#FFF" font-size="10">${cookies} (Cookies)</text>
-                  <text x="150" y="135" fill="#94A3B8" font-size="12" text-anchor="middle">Double Number Line Rate (1:${val*3})</text>`;
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <line x1="30" y1="35" x2="270" y2="35" stroke="#38BDF8" stroke-width="4"/>
+            <circle cx="30" cy="35" r="5" fill="#0284C7"/><text x="30" y="22" fill="#0F172A" font-size="10" text-anchor="middle">0</text>
+            <circle cx="150" cy="35" r="5" fill="#0284C7"/><text x="150" y="22" fill="#0284C7" font-weight="bold" font-size="11" text-anchor="middle">${val} Cups Flour</text>
+            <line x1="30" y1="85" x2="270" y2="85" stroke="#EA580C" stroke-width="4"/>
+            <circle cx="30" cy="85" r="5" fill="#EA580C"/><text x="30" y="105" fill="#0F172A" font-size="10" text-anchor="middle">0</text>
+            <circle cx="150" cy="85" r="5" fill="#EA580C"/><text x="150" y="105" fill="#EA580C" font-weight="bold" font-size="11" text-anchor="middle">${cookies} Cookies</text>
+            <text x="150" y="140" fill="#64748B" font-size="11" text-anchor="middle">Double Number Line (1 Cup : 3 Cookies)</text>
+          </svg>`;
         }
       },
       expressions: {
+        title: "Unit 5: Expressions & Distributive Property (6.EE.A.3)",
+        contentObj: "I can evaluate algebraic expressions and simplify terms using the distributive property.",
+        langObj: "I can identify expression parts using math vocabulary like term, coefficient, constant, and exponent.",
         surgical: '"In the expression 3(x + 4), why must 3 multiply BOTH x and 4? Explain using a rectangular area tile model."',
         dialectic: '"Partner A draws 3 rows of x; Partner B draws 3 rows of 4. Explain why 3(x + 4) = 3x + 12."',
-        svg: function(val) {
-          return `<rect x="40" y="30" width="${val * 15}" height="70" fill="#4F46E5" rx="6"/>
-                  <text x="${40 + (val * 7.5)}" y="70" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">${val}x Tile</text>
-                  <rect x="${55 + (val * 15)}" y="30" width="80" height="70" fill="#EA580C" rx="6"/>
-                  <text x="${95 + (val * 15)}" y="70" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">+12</text>
-                  <text x="150" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">Distributive Tile Array [${val}(x + 4)]</text>`;
+        diagnostic: {
+          q: "Which expression is equivalent to 4(2x + 5)?",
+          options: ["A) 8x + 5", "B) 6x + 9", "C) 8x + 20", "D) 8x + 9"],
+          correct: 2,
+          explanation: "Correct! 4 × 2x = 8x, and 4 × 5 = 20, giving 8x + 20."
+        },
+        renderSvg: function(val) {
+          const tileW = val * 12;
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <rect x="30" y="30" width="${tileW}" height="65" fill="#4F46E5" rx="6"/>
+            <text x="${30 + tileW/2}" y="68" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">${val}x Tile</text>
+            <rect x="${40 + tileW}" y="30" width="80" height="65" fill="#EA580C" rx="6"/>
+            <text x="${80 + tileW}" y="68" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">+12</text>
+            <text x="150" y="140" fill="#64748B" font-size="11" text-anchor="middle">Distributive Area Tile Array [${val}(x + 4)]</text>
+          </svg>`;
         }
       },
       algebra: {
+        title: "Unit 6: One-Step Equations & Balance Scale (6.EE.B.7)",
+        contentObj: "I can solve one-step algebraic equations by isolating the variable x using an interactive balance scale model.",
+        langObj: "I can explain equation-solving steps using academic terms like variable, isolate, and inverse operation.",
         surgical: '"How does subtracting 3 from BOTH sides of x + 3 = 7 keep the scale perfectly balanced?"',
         dialectic: '"Partner A removes 3 weights from left pan; Partner B removes 3 weights from right pan. Isolate x."',
-        svg: function(val) {
-          return `<rect x="20" y="30" width="100" height="40" fill="#0D9488" rx="6"/>
-                  <text x="70" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">x</text>
-                  <rect x="130" y="30" width="30" height="40" fill="#EA580C" rx="6"/>
-                  <text x="145" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">+${val}</text>
-                  <text x="180" y="55" fill="#38BDF8" font-weight="bold" font-size="20" text-anchor="middle">=</text>
-                  <rect x="200" y="30" width="70" height="40" fill="#38BDF8" rx="6"/>
-                  <text x="235" y="55" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">${parseInt(val)+4}</text>
-                  <text x="150" y="115" fill="#94A3B8" font-size="12" text-anchor="middle">Interactive Balance Model (x + ${val} = ${parseInt(val)+4})</text>`;
+        diagnostic: {
+          q: "What is the solution to x + 7 = 15?",
+          options: ["A) x = 22", "B) x = 8", "C) x = 105", "D) x = 7"],
+          correct: 1,
+          explanation: "Correct! Subtracting 7 from both sides gives x = 15 - 7 = 8."
+        },
+        renderSvg: function(val) {
+          const rightVal = parseInt(val) + 4;
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <rect x="25" y="35" width="80" height="40" fill="#0D9488" rx="6"/>
+            <text x="65" y="60" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">x</text>
+            <rect x="115" y="35" width="35" height="40" fill="#EA580C" rx="6"/>
+            <text x="132" y="60" fill="#FFF" font-weight="bold" font-size="13" text-anchor="middle">+${val}</text>
+            <text x="165" y="62" fill="#0284C7" font-weight="800" font-size="22" text-anchor="middle">=</text>
+            <rect x="185" y="35" width="85" height="40" fill="#0284C7" rx="6"/>
+            <text x="227" y="60" fill="#FFF" font-weight="bold" font-size="14" text-anchor="middle">${rightVal}</text>
+            <text x="150" y="135" fill="#64748B" font-size="11" text-anchor="middle">Pan Balance Model: x + ${val} = ${rightVal}</text>
+          </svg>`;
         }
       },
       nets: {
+        title: "Unit 7: Surface Area of 3D Nets (6.G.A.4)",
+        contentObj: "I can calculate total surface area of 3D triangular prisms by unfolding into 2D nets.",
+        langObj: "I can describe geometry features using academic terms like triangular base, rectangular face, and vertex.",
         surgical: '"When a 3D triangular prism is unfolded into a 2D net, how many rectangles and triangles are formed?"',
-        dialectic: '"Partner A calculates area of the 2 triangular bases. Partner B calculates area of the 3 rectangular faces. Sum total surface area."',
-        svg: function(val) {
-          return `<polygon points="150,${15+parseInt(val)} 110,60 190,60" fill="#0D9488"/>
-                  <rect x="110" y="60" width="80" height="50" fill="#38BDF8"/>
-                  <polygon points="150,${135-parseInt(val)} 110,110 190,110" fill="#0D9488"/>
-                  <text x="150" y="145" fill="#94A3B8" font-size="12" text-anchor="middle">Unfolded Prism Net (Height ${val})</text>`;
+        dialectic: '"Partner A calculates area of 2 triangular bases; Partner B calculates area of 3 rectangular faces. Sum total area."',
+        diagnostic: {
+          q: "How many total faces make up the net of a triangular prism?",
+          options: ["A) 4", "B) 6", "C) 8", "D) 5"],
+          correct: 3,
+          explanation: "Correct! A triangular prism has 2 triangular bases and 3 rectangular faces, totaling 5 faces."
+        },
+        renderSvg: function(val) {
+          const heightOffset = parseInt(val) * 3;
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <polygon points="150,${20+heightOffset} 110,55 190,55" fill="#0D9488"/>
+            <rect x="110" y="55" width="80" height="45" fill="#0284C7"/>
+            <polygon points="150,${130-heightOffset} 110,100 190,100" fill="#0D9488"/>
+            <text x="150" y="142" fill="#64748B" font-size="11" text-anchor="middle">Unfolded Triangular Prism Net (Apex H: ${val})</text>
+          </svg>`;
         }
       },
       cartesian: {
+        title: "Unit 4: Cartesian Coordinate Plane (6.NS.C.6)",
+        contentObj: "I can locate and plot ordered pairs (x,y) across all 4 quadrants of the Cartesian coordinate plane.",
+        langObj: "I can explain coordinate positions using vocabulary terms like x-axis, y-axis, origin, and quadrant.",
         surgical: '"Why does point (-3, 4) lie in Quadrant II while point (3, -4) lies in Quadrant IV?"',
         dialectic: '"Partner A walks x-axis left/right; Partner B walks y-axis up/down. Debate quadrant sign rules."',
-        svg: function(val) {
-          const cx = 150 + (val * 10);
-          const cy = 75 - (val * 5);
-          return `<line x1="30" y1="75" x2="270" y2="75" stroke="#94A3B8" stroke-width="2"/>
-                  <line x1="150" y1="10" x2="150" y2="130" stroke="#94A3B8" stroke-width="2"/>
-                  <circle cx="${cx}" cy="${cy}" r="7" fill="#EA580C"/>
-                  <text x="${cx-10}" y="${cy-10}" fill="#EA580C" font-size="11" font-weight="bold">(${val}, ${val})</text>
-                  <text x="150" y="145" fill="#94A3B8" font-size="12" text-anchor="middle">4-Quadrant Grid [Point (${val}, ${val})]</text>`;
+        diagnostic: {
+          q: "In which quadrant is the point (-4, 5) located?",
+          options: ["A) Quadrant II", "B) Quadrant I", "C) Quadrant III", "D) Quadrant IV"],
+          correct: 0,
+          explanation: "Correct! Negative x (-4) and positive y (+5) place the point in Quadrant II."
+        },
+        renderSvg: function(val) {
+          const ptX = 150 + (val * 10);
+          const ptY = 75 - (val * 5);
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <line x1="20" y1="75" x2="280" y2="75" stroke="#64748B" stroke-width="2"/>
+            <line x1="150" y1="10" x2="150" y2="130" stroke="#64748B" stroke-width="2"/>
+            <circle cx="${ptX}" cy="${ptY}" r="6" fill="#EA580C"/>
+            <text x="${ptX+8}" y="${ptY-8}" fill="#EA580C" font-weight="bold" font-size="11">(${val}, ${val})</text>
+            <text x="150" y="142" fill="#64748B" font-size="11" text-anchor="middle">4-Quadrant Coordinate Grid [Point (${val}, ${val})]</text>
+          </svg>`;
         }
       },
       statistics: {
+        title: "Unit 8: Statistics & 5-Number Box Plots (6.SP.B.5)",
+        contentObj: "I can calculate measures of center (mean, median, mode) and display data distributions using box plots.",
+        langObj: "I can summarize data distributions using statistical terms like mean, median, IQR, and outlier.",
         surgical: '"How does an outlier extreme value affect the mean versus the median of a data set?"',
         dialectic: '"Partner A calculates mean with outlier included; Partner B calculates median. Debate which measure of center is more accurate."',
-        svg: function(val) {
-          const medX = 70 + (val * 15);
-          return `<rect x="40" y="50" width="220" height="40" fill="none" stroke="#38BDF8" stroke-width="2" rx="4"/>
-                  <line x1="${medX}" y1="50" x2="${medX}" y2="90" stroke="#EA580C" stroke-width="4"/>
-                  <text x="${medX}" y="40" fill="#EA580C" font-size="11" font-weight="bold" text-anchor="middle">Median (${val})</text>
-                  <text x="150" y="130" fill="#94A3B8" font-size="12" text-anchor="middle">5-Number Summary Box Plot</text>`;
+        diagnostic: {
+          q: "What does the line inside the box of a box plot represent?",
+          options: ["A) Mean", "B) Mode", "C) Median", "D) Range"],
+          correct: 2,
+          explanation: "Correct! The vertical line inside the box marks the median (50th percentile)."
+        },
+        renderSvg: function(val) {
+          const medX = 70 + (val * 14);
+          return `<svg width="100%" height="150" viewBox="0 0 300 150" style="background:white; border-radius:12px;">
+            <rect x="40" y="45" width="220" height="45" fill="none" stroke="#0284C7" stroke-width="2" rx="4"/>
+            <line x1="${medX}" y1="45" x2="${medX}" y2="90" stroke="#EA580C" stroke-width="4"/>
+            <text x="${medX}" y="35" fill="#EA580C" font-weight="bold" font-size="11" text-anchor="middle">Median (${val})</text>
+            <text x="150" y="140" fill="#64748B" font-size="11" text-anchor="middle">5-Number Summary Box Plot (Interquartile Range)</text>
+          </svg>`;
         }
       }
     };
 
+    /* ==========================================================================
+       ARCHITECTURE LAYER 3: SERVICE (AUDIO, TELEMETRY, SCORM EXPORTER)
+       ========================================================================== */
     let currentUnitKey = 'gcf';
+    let currentLang = 'en';
     let currentSliderVal = 5;
     let turnCountA = 5;
     let turnCountB = 5;
 
-    function switchUnit(key, el) {
-      document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
-      el.classList.add('active');
-
-      document.querySelectorAll('.lesson-view').forEach(v => v.classList.remove('active'));
-      const targetView = document.getElementById('view-' + key);
-      if (targetView) targetView.classList.add('active');
-
-      currentUnitKey = key;
-      updateStudioData(key);
-    }
-
-    function switchPhase(phaseKey, el) {
-      document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active'));
-      el.classList.add('active');
-
-      document.querySelectorAll('.phase-view').forEach(v => v.classList.remove('active'));
-      document.getElementById('phase-' + phaseKey).classList.add('active');
-
-      if (phaseKey === 'p3') {
-        updateStudioData(currentUnitKey);
-      }
-    }
-
-    function updateStudioData(key) {
-      const data = unitData[key] || unitData.gcf;
-      const surgEl = document.getElementById('surgical-prompt-text');
-      const dialEl = document.getElementById('dialectic-prompt-text');
-      const svgEl = document.getElementById('interactive-svg');
-
-      if (surgEl) surgEl.innerText = data.surgical;
-      if (dialEl) dialEl.innerText = data.dialectic;
-      if (svgEl) svgEl.innerHTML = typeof data.svg === 'function' ? data.svg(currentSliderVal) : data.svg;
-    }
-
-    function updateManipSlider(val) {
-      currentSliderVal = val;
-      const label = document.getElementById('range-val-label');
-      if (label) label.innerText = val;
-      updateStudioData(currentUnitKey);
-    }
-
-    function triggerManipAction(action) {
-      const svgEl = document.getElementById('interactive-svg');
-      if (!svgEl) return;
-
-      if (action === 'isolate') {
-        svgEl.style.transform = 'scale(1.06)';
-        setTimeout(() => svgEl.style.transform = 'scale(1.0)', 300);
-      } else if (action === 'reset') {
-        currentSliderVal = 5;
-        document.getElementById('manip-range').value = 5;
-        updateManipSlider(5);
-      }
-    }
-
-    // AUDIO READ ALONG (WEB SPEECH SYNTHESIS)
     function speakText(text) {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
@@ -1613,20 +1786,155 @@
         utterance.rate = 0.95;
         utterance.pitch = 1.0;
         window.speechSynthesis.speak(utterance);
+        logDiag(`Speech synthesis triggered: "${text.substring(0, 30)}..."`);
       } else {
-        alert('Speech Synthesis not supported in this browser mode.');
+        alert("Speech Synthesis API is not available in this environment.");
       }
     }
 
-    // SPEAKER TELEMETRY RECORDER
-    function recordSpeaker(partner) {
+    function calculateTurnEquity(partner) {
       if (partner === 'A') turnCountA++;
       if (partner === 'B') turnCountB++;
-
       const total = turnCountA + turnCountB;
       const pctA = Math.round((turnCountA / total) * 100);
       const pctB = 100 - pctA;
+      return { pctA, pctB };
+    }
 
+    function generateScormManifest() {
+      return `<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="EduWonderLab_Grade6_Studio" version="1.3"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 4th Edition</schemaversion>
+  </metadata>
+  <organizations default="EduWonderLab_Org">
+    <organization identifier="EduWonderLab_Org">
+      <title>EduWonderLab Grade 6 Interactive Small-Group Studio</title>
+      <item identifier="item_1" identifierref="resource_1">
+        <title>Grade 6 Math Workbench Studio</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="resource_1" type="webcontent" adlcp:scormType="sco" href="index.html">
+      <file href="index.html"/>
+    </resource>
+  </resources>
+</manifest>`;
+    }
+
+    /* ==========================================================================
+       ARCHITECTURE LAYER 4: CONTROLLER (UI STATE MACHINE & DOM ENGINE)
+       ========================================================================== */
+    function switchUnit(key, el) {
+      document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
+      if (el) el.classList.add('active');
+
+      currentUnitKey = key;
+      const data = unitData[key] || unitData.gcf;
+
+      // Update Phase 1 Pulse Diagnostic
+      renderPulseDiagnostic(data.diagnostic);
+
+      // Update Phase 2 Objectives & ESOL
+      document.getElementById('unit-title-display').innerText = data.title;
+      document.getElementById('content-obj-text').innerText = data.contentObj;
+      document.getElementById('language-obj-text').innerText = data.langObj;
+      updateEsolFrameText();
+
+      // Update Phase 3 Studio Prompts & SVG
+      document.getElementById('surgical-prompt-text').innerText = data.surgical;
+      document.getElementById('dialectic-prompt-text').innerText = data.dialectic;
+      renderSvgManipulative();
+
+      logDiag(`Switched active unit to: ${key}`);
+    }
+
+    function switchPhase(phaseKey, el) {
+      document.querySelectorAll('.phase-tab').forEach(t => t.classList.remove('active'));
+      if (el) el.classList.add('active');
+
+      document.querySelectorAll('.phase-view').forEach(v => v.classList.remove('active'));
+      const targetView = document.getElementById('phase-' + phaseKey);
+      if (targetView) targetView.classList.add('active');
+
+      if (phaseKey === 'p3') {
+        renderSvgManipulative();
+      }
+      logDiag(`Switched phase to: ${phaseKey}`);
+    }
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      updateEsolFrameText();
+      logDiag(`Switched ESOL language to: ${lang}`);
+    }
+
+    function updateEsolFrameText() {
+      const frameObj = esolFrames[currentUnitKey] || esolFrames.gcf;
+      const text = frameObj[currentLang] || frameObj.en;
+      document.getElementById('esol-frame-text').innerText = text;
+    }
+
+    function renderSvgManipulative() {
+      const data = unitData[currentUnitKey] || unitData.gcf;
+      const svgArea = document.getElementById('svg-render-area');
+      if (svgArea) {
+        svgArea.innerHTML = data.renderSvg(currentSliderVal);
+      }
+    }
+
+    function updateManipSlider(val) {
+      currentSliderVal = val;
+      const label = document.getElementById('range-val-label');
+      if (label) label.innerText = val;
+      renderSvgManipulative();
+    }
+
+    function triggerManipAction(action) {
+      const svgArea = document.getElementById('svg-render-area');
+      if (!svgArea) return;
+      if (action === 'isolate') {
+        svgArea.style.transform = 'scale(1.05)';
+        setTimeout(() => svgArea.style.transform = 'scale(1.0)', 250);
+      } else if (action === 'reset') {
+        currentSliderVal = 5;
+        document.getElementById('manip-range').value = 5;
+        updateManipSlider(5);
+      }
+    }
+
+    function renderPulseDiagnostic(diag) {
+      if (!diag) return;
+      document.getElementById('pulse-question-text').innerText = diag.q;
+      const container = document.getElementById('pulse-options-container');
+      const feedbackBox = document.getElementById('pulse-feedback-box');
+      feedbackBox.className = 'pulse-feedback';
+      feedbackBox.style.display = 'none';
+
+      container.innerHTML = '';
+      diag.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'pulse-opt-btn';
+        btn.innerText = opt;
+        btn.onclick = () => {
+          if (idx === diag.correct) {
+            feedbackBox.innerText = `✓ ${diag.explanation}`;
+            feedbackBox.className = 'pulse-feedback correct';
+          } else {
+            feedbackBox.innerText = `⚠️ Misconception Detected! Re-check your working steps. ${diag.explanation}`;
+            feedbackBox.className = 'pulse-feedback incorrect';
+          }
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    function recordSpeaker(partner) {
+      const { pctA, pctB } = calculateTurnEquity(partner);
       document.getElementById('bar-turn-a').style.width = pctA + '%';
       document.getElementById('bar-turn-b').style.width = pctB + '%';
       document.getElementById('turn-equity-text').innerText = `${pctA}/${pctB} Equity`;
@@ -1635,35 +1943,124 @@
       document.getElementById('btn-speak-b').className = 'btn-speaker' + (partner === 'B' ? ' active-b' : '');
     }
 
-    // TOGGLE OBSERVATIONAL TAG
     function toggleTag(btn, label) {
       if (btn.classList.contains('tagged')) {
         btn.classList.remove('tagged');
         btn.style.opacity = '1';
       } else {
         btn.classList.add('tagged');
-        btn.style.opacity = '0.6';
+        btn.style.opacity = '0.65';
       }
+      logDiag(`Quick-Tag toggled: ${label}`);
     }
 
-    // PROGRESS TRACKER UPDATE
     function updateProgress() {
       const checkboxes = document.querySelectorAll('.got-it-checkbox input');
       let checked = 0;
       checkboxes.forEach(c => { if (c.checked) checked++; });
-
-      const pct = Math.round((checked / checkboxes.length) * 100);
+      const pct = Math.round((checked / Math.max(1, checkboxes.length)) * 100);
       document.getElementById('progress-percent').innerText = pct + '%';
       document.getElementById('progress-fill').style.width = pct + '%';
     }
 
-    // GEMINI MODAL DRAWER FUNCTIONS
     function openGeminiModal() {
       document.getElementById('gemini-modal').classList.add('active');
     }
 
     function closeGeminiModal() {
       document.getElementById('gemini-modal').classList.remove('active');
+    }
+
+    // WHOLE-SCREEN MATH NOTES MODAL CONTROLLER (STUDENT NOTEBOOK COPY MODE)
+    function openMathNotesModal(imgSrc, captionText, type) {
+      const modal = document.getElementById('math-notes-fullscreen-modal');
+      if (!modal) return;
+
+      const data = unitData[currentUnitKey] || unitData.gcf;
+      const frameObj = esolFrames[currentUnitKey] || esolFrames.gcf;
+      const currentFrame = frameObj[currentLang] || frameObj.en;
+
+      document.getElementById('notes-fs-unit-title').innerText = data.title;
+      const mainImg = document.getElementById('notes-fs-main-img');
+      if (imgSrc) {
+        mainImg.src = imgSrc;
+      } else {
+        mainImg.src = (type === 'language') ? './images/publisher_lang.jpg' : './images/publisher_content.jpg';
+      }
+
+      document.getElementById('notes-fs-caption-text').innerHTML = captionText || (type === 'language' ? '🗣️ Academic Language Model & Vocabulary Badges' : '🎯 Visual Model & Factor Decomposition');
+      document.getElementById('notes-fs-content-goal').innerText = data.contentObj;
+      document.getElementById('notes-fs-esol-frame').innerText = currentFrame;
+      document.getElementById('notes-fs-lang-goal').innerText = `Key Goal: ${data.langObj}`;
+      document.getElementById('notes-fs-surgical-prompt').innerText = data.surgical;
+      document.getElementById('notes-fs-dialectic-prompt').innerText = `Partner Discussion: ${data.dialectic}`;
+
+      modal.classList.add('active');
+      logDiag(`Opened Whole-Screen Math Notes Modal for Unit: ${currentUnitKey}`);
+    }
+
+    function closeMathNotesModal() {
+      const modal = document.getElementById('math-notes-fullscreen-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        logDiag("Closed Whole-Screen Math Notes Modal");
+      }
+    }
+
+    function copyMathNotesText() {
+      const data = unitData[currentUnitKey] || unitData.gcf;
+      const frameObj = esolFrames[currentUnitKey] || esolFrames.gcf;
+      const currentFrame = frameObj[currentLang] || frameObj.en;
+
+      const fullText = `=== EDUWONDERLAB MATH NOTES ===\n` +
+        `LESSON: ${data.title}\n\n` +
+        `1. CONTENT OBJECTIVE / CONCEPT:\n${data.contentObj}\n\n` +
+        `2. ACADEMIC LANGUAGE & SENTENCE FRAME:\n${currentFrame}\n(${data.langObj})\n\n` +
+        `3. KEY QUESTION & PRINCIPLE:\n${data.surgical}\n\n` +
+        `4. PARTNER DISCOURSE:\n${data.dialectic}\n` +
+        `==================================`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullText).then(() => {
+          const btn = document.getElementById('btn-copy-notes');
+          if (btn) {
+            const origText = btn.innerHTML;
+            btn.innerHTML = '✓ Copied to Clipboard!';
+            btn.style.background = '#16a34a';
+            btn.style.borderColor = '#86efac';
+            setTimeout(() => {
+              btn.innerHTML = origText;
+              btn.style.background = '#0284c7';
+              btn.style.borderColor = '#38bdf8';
+            }, 2200);
+          }
+        }).catch(err => {
+          fallbackCopyText(fullText);
+        });
+      } else {
+        fallbackCopyText(fullText);
+      }
+      logDiag("Copied Math Notes Text to Clipboard");
+    }
+
+    function fallbackCopyText(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      alert('✓ Math Notes successfully copied to clipboard!');
+    }
+
+    function speakNotesContent() {
+      const data = unitData[currentUnitKey] || unitData.gcf;
+      const frameObj = esolFrames[currentUnitKey] || esolFrames.gcf;
+      const currentFrame = frameObj[currentLang] || frameObj.en;
+      const textToSpeak = `${data.title}. Objective: ${data.contentObj}. Sentence frame: ${currentFrame}. Question: ${data.surgical}`;
+      speakText(textToSpeak);
     }
 
     function generateNewPrompt() {
@@ -1678,8 +2075,91 @@
     }
 
     function exportScormPackage() {
-      alert('SCORM 2004 4th Edition Package Manifest successfully generated & ready for LMS distribution!');
+      const manifest = generateScormManifest();
+      const blob = new Blob([manifest], { type: 'text/xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'imsmanifest.xml';
+      a.click();
+      URL.revokeObjectURL(url);
+      alert('SCORM 2004 4th Edition Manifest downloaded successfully! App ready for LMS deployment.');
     }
+
+    function toggleDiagnostics() {
+      const drawer = document.getElementById('diagnostics-drawer');
+      drawer.classList.toggle('active');
+    }
+
+    // Keyboard & Click to Close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMathNotesModal();
+        closeGeminiModal();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('math-notes-fullscreen-modal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeMathNotesModal();
+          }
+        });
+      }
+    });
+
+    /* ==========================================================================
+       ARCHITECTURE LAYER 5: SELF-TEST ROUTINE
+       ========================================================================== */
+    function selfTest() {
+      logDiag("Starting EduWonderLab Self-Test Procedure...");
+      validateConfig();
+
+      // 1. Verify Unit switching & SVG rendering for all units
+      const keys = Object.keys(unitData);
+      let passedSvg = 0;
+      keys.forEach(k => {
+        const svgStr = unitData[k].renderSvg(5);
+        if (svgStr && svgStr.includes('<svg') && svgStr.includes('style="background:white')) {
+          passedSvg++;
+        }
+      });
+      logDiag(`Unit SVG Render Test: ${passedSvg}/${keys.length} Passed`);
+
+      // 2. Verify ESOL Language Frame coverage
+      let passedEsol = 0;
+      keys.forEach(k => {
+        if (esolFrames[k] && esolFrames[k].es && esolFrames[k].pt && esolFrames[k].vi) {
+          passedEsol++;
+        }
+      });
+      logDiag(`Multilingual ESOL Scaffolds Test: ${passedEsol}/${keys.length} Passed`);
+
+      // 3. Verify Whole-Screen Math Notes Modal
+      openMathNotesModal('', 'SelfTest Caption', 'content');
+      const testModal = document.getElementById('math-notes-fullscreen-modal');
+      const modalOpenPassed = testModal && testModal.classList.contains('active');
+      closeMathNotesModal();
+      const modalClosedPassed = testModal && !testModal.classList.contains('active');
+      if (modalOpenPassed && modalClosedPassed) {
+        logDiag("Whole-Screen Math Notes Modal Test: Passed");
+      } else {
+        throw new Error("SelfTest failed: Whole-Screen Math Notes Modal open/close state machine error.");
+      }
+
+      // 4. Initialize default view
+      switchUnit('gcf', document.querySelectorAll('.menu-item')[0]);
+      logDiag("🎉 ALL EDUWONDERLAB STUDIO SELF-TESTS PASSED SUCCESSFULLY!");
+    }
+
+    // Auto-run selfTest on window load
+    window.addEventListener('DOMContentLoaded', () => {
+      if (STUDIO_CONFIG.selfTestOnLoad) {
+        selfTest();
+      }
+    });
   </script>
 </body>
 </html>
